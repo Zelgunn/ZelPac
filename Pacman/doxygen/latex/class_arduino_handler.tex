@@ -1,0 +1,103 @@
+\hypertarget{class_arduino_handler}{}\section{Arduino\+Handler Class Reference}
+\label{class_arduino_handler}\index{Arduino\+Handler@{Arduino\+Handler}}
+
+
+Classe gérant la connexion d\textquotesingle{}un Arduino Uno pour le contrôle du Pacman.  
+
+
+
+
+{\ttfamily \#include $<$arduinohandler.\+h$>$}
+
+Inheritance diagram for Arduino\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_arduino_handler}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_arduino_handler_a1dd15c0e5f445513786357afaaef77c2}{}\hyperlink{class_arduino_handler_a1dd15c0e5f445513786357afaaef77c2}{left\+Pressed} ()\label{class_arduino_handler_a1dd15c0e5f445513786357afaaef77c2}
+
+\begin{DoxyCompactList}\small\item\em Emit lorsque l\textquotesingle{}Arduino Uno écrit \textquotesingle{}0\textquotesingle{} sur le port série. \end{DoxyCompactList}\item 
+\hypertarget{class_arduino_handler_a19385694c1005697b86a87cbf20f1942}{}\hyperlink{class_arduino_handler_a19385694c1005697b86a87cbf20f1942}{right\+Pressed} ()\label{class_arduino_handler_a19385694c1005697b86a87cbf20f1942}
+
+\begin{DoxyCompactList}\small\item\em Emit lorsque l\textquotesingle{}Arduino Uno écrit \textquotesingle{}1\textquotesingle{} sur le port série. \end{DoxyCompactList}\item 
+\hypertarget{class_arduino_handler_a423874e576e74e8cc12907ff129c106e}{}\hyperlink{class_arduino_handler_a423874e576e74e8cc12907ff129c106e}{up\+Pressed} ()\label{class_arduino_handler_a423874e576e74e8cc12907ff129c106e}
+
+\begin{DoxyCompactList}\small\item\em Emit lorsque l\textquotesingle{}Arduino Uno écrit \textquotesingle{}2\textquotesingle{} sur le port série. \end{DoxyCompactList}\item 
+\hypertarget{class_arduino_handler_ad7808be978d8e9206fa60f2cdd27f303}{}\hyperlink{class_arduino_handler_ad7808be978d8e9206fa60f2cdd27f303}{down\+Pressed} ()\label{class_arduino_handler_ad7808be978d8e9206fa60f2cdd27f303}
+
+\begin{DoxyCompactList}\small\item\em Emit lorsque l\textquotesingle{}Arduino Uno écrit \textquotesingle{}3\textquotesingle{} sur le port série. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_arduino_handler_add27f10e1b41f677d1810ddabc5e8870}{Arduino\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de base \hyperlink{class_arduino_handler}{Arduino\+Handler}. \end{DoxyCompactList}\item 
+void \hyperlink{class_arduino_handler_a15d8970b79dd96b1a0b0fdd118b0793f}{start} ()
+\begin{DoxyCompactList}\small\item\em Connecte à l\textquotesingle{}Arduino Uno. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_arduino_handler_a2b34ab08c171c918bc711c93810dadde}{mainloop} ()
+\begin{DoxyCompactList}\small\item\em Boucle principale de lecture du port série. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe gérant la connexion d\textquotesingle{}un Arduino Uno pour le contrôle du Pacman. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+Un \hyperlink{class_arduino_handler}{Arduino\+Handler} emet des signaux Gauche, Droite, Haut, Bas en fonction de la lecture (resp. \textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, \textquotesingle{}2\textquotesingle{} et \textquotesingle{}3\textquotesingle{}) sur le port série où est branché l\textquotesingle{}Arduino Uno. N\textquotesingle{}émet aucun signal si aucun Arduino n\textquotesingle{}est branché. Si plusieurs Arduinos sont branchés, l\textquotesingle{}\hyperlink{class_arduino_handler}{Arduino\+Handler} utilisera le premier disponible. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_arduino_handler_add27f10e1b41f677d1810ddabc5e8870}{}\index{Arduino\+Handler@{Arduino\+Handler}!Arduino\+Handler@{Arduino\+Handler}}
+\index{Arduino\+Handler@{Arduino\+Handler}!Arduino\+Handler@{Arduino\+Handler}}
+\subsubsection[{Arduino\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}Arduino\+Handler\+::\+Arduino\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_arduino_handler_add27f10e1b41f677d1810ddabc5e8870}
+
+
+Constructeur de base \hyperlink{class_arduino_handler}{Arduino\+Handler}. 
+
+Initialise un \hyperlink{class_arduino_handler}{Arduino\+Handler}. Cependant, il faut démarrer manuellement la connexion via la méthode \hyperlink{class_arduino_handler_a15d8970b79dd96b1a0b0fdd118b0793f}{start()}. Le port série doit être ouvert avec un Baud rate de 9600. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_arduino_handler_a2b34ab08c171c918bc711c93810dadde}{}\index{Arduino\+Handler@{Arduino\+Handler}!mainloop@{mainloop}}
+\index{mainloop@{mainloop}!Arduino\+Handler@{Arduino\+Handler}}
+\subsubsection[{mainloop}]{\setlength{\rightskip}{0pt plus 5cm}void Arduino\+Handler\+::mainloop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}\label{class_arduino_handler_a2b34ab08c171c918bc711c93810dadde}
+
+
+Boucle principale de lecture du port série. 
+
+Emet left\+Pressed en lisant \textquotesingle{}0\textquotesingle{}. ~\newline
+ Emet right\+Pressed en lisant \textquotesingle{}1\textquotesingle{}. ~\newline
+ Emet up\+Pressed en lisant \textquotesingle{}2\textquotesingle{}. ~\newline
+ Emet down\+Pressed en lisant \textquotesingle{}3\textquotesingle{}. \hypertarget{class_arduino_handler_a15d8970b79dd96b1a0b0fdd118b0793f}{}\index{Arduino\+Handler@{Arduino\+Handler}!start@{start}}
+\index{start@{start}!Arduino\+Handler@{Arduino\+Handler}}
+\subsubsection[{start()}]{\setlength{\rightskip}{0pt plus 5cm}void Arduino\+Handler\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_arduino_handler_a15d8970b79dd96b1a0b0fdd118b0793f}
+
+
+Connecte à l\textquotesingle{}Arduino Uno. 
+
+Connecte au port série du premier Arduino Uno trouvé. Si aucun Arduino Uno n\textquotesingle{}est disponible, cette fonction ne fait rien. La lecture du port est effectuée toutes les 20mscs. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arduinohandler.\+h\item 
+arduinohandler.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,100 @@
+\hypertarget{class_pacscreen}{}\section{Pacscreen Class Reference}
+\label{class_pacscreen}\index{Pacscreen@{Pacscreen}}
+
+
+Widget affichant l\textquotesingle{}ensemble du jeu.  
+
+
+
+
+{\ttfamily \#include $<$pacscreen.\+h$>$}
+
+Inheritance diagram for Pacscreen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pacscreen}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pacscreen_a8dfe2adcf7e11f715664859db16c6710}{Pacscreen} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructeur de base de la classe \hyperlink{class_pacscreen}{Pacscreen}. \end{DoxyCompactList}\item 
+\hypertarget{class_pacscreen_a4c4bd0bef62cc02bd3798b4d20cd765f}{}\hyperlink{class_pacscreen_a4c4bd0bef62cc02bd3798b4d20cd765f}{$\sim$\+Pacscreen} ()\label{class_pacscreen_a4c4bd0bef62cc02bd3798b4d20cd765f}
+
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \hyperlink{class_pacscreen}{Pacscreen}. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacscreen_a6860cefac4b539818d5d78ace3f61b18}{set\+Game} (\hyperlink{class_game}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_pacscreen_a487bc9941a204557e94c942a4c95552c}{paint\+Event} (Q\+Paint\+Event $\ast$)
+\begin{DoxyCompactList}\small\item\em paint\+Event de la classe, afin d\textquotesingle{}afficher l\textquotesingle{}ensemble du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Widget affichant l\textquotesingle{}ensemble du jeu. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+Grâce à l\textquotesingle{}utilisation d\textquotesingle{}un Paint\+Event, cette classe fille de Q\+Widget permet d\textquotesingle{}afficher tous les éléments graphiques du jeu en plein écran.
+
+Cette classe permet aussi de recevoir les commandes utilisateurs venant du clavier ou d\textquotesingle{}une manette Arduino Uno. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_pacscreen_a8dfe2adcf7e11f715664859db16c6710}{}\index{Pacscreen@{Pacscreen}!Pacscreen@{Pacscreen}}
+\index{Pacscreen@{Pacscreen}!Pacscreen@{Pacscreen}}
+\subsubsection[{Pacscreen(\+Q\+Widget $\ast$parent=0)}]{\setlength{\rightskip}{0pt plus 5cm}Pacscreen\+::\+Pacscreen (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\label{class_pacscreen_a8dfe2adcf7e11f715664859db16c6710}
+
+
+Constructeur de base de la classe \hyperlink{class_pacscreen}{Pacscreen}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent de la fenêtre \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_pacscreen_a487bc9941a204557e94c942a4c95552c}{}\index{Pacscreen@{Pacscreen}!paint\+Event@{paint\+Event}}
+\index{paint\+Event@{paint\+Event}!Pacscreen@{Pacscreen}}
+\subsubsection[{paint\+Event(\+Q\+Paint\+Event $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Paint\+Event $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_a487bc9941a204557e94c942a4c95552c}
+
+
+paint\+Event de la classe, afin d\textquotesingle{}afficher l\textquotesingle{}ensemble du jeu. 
+
+Cet évenement est appelé à chaque fois que le timer du Jeu calcule une frame et affiche la frame (il peut y avoir une frame d\textquotesingle{}écart, soit 16-\/17 ms). \hypertarget{class_pacscreen_a6860cefac4b539818d5d78ace3f61b18}{}\index{Pacscreen@{Pacscreen}!set\+Game@{set\+Game}}
+\index{set\+Game@{set\+Game}!Pacscreen@{Pacscreen}}
+\subsubsection[{set\+Game(\+Game $\ast$game)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::set\+Game (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game}
+\end{DoxyParamCaption}
+)}\label{class_pacscreen_a6860cefac4b539818d5d78ace3f61b18}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Jeu à afficher. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+pacscreen.\+h\item 
+pacscreen.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/Corner_Double_Bas_Droite.png</file>
+        <file>images/Corner_Double_Bas_Gauche.png</file>
+        <file>images/Corner_Double_Haut_Droite.png</file>
+        <file>images/Corner_Double_Haut_Gauche.png</file>
+        <file>images/Corner_Simple_Bas_Droite.png</file>
+        <file>images/Corner_Simple_Bas_Gauche.png</file>
+        <file>images/Corner_Simple_Gaut_Droite.png</file>
+        <file>images/Corner_Simple_Haut_Gauche.png</file>
+        <file>images/Door.png</file>
+        <file>images/Empty_Tile.png</file>
+        <file>images/Energizer_Tile.png</file>
+        <file>images/Ghost.png</file>
+        <file>images/Horizontal_Double_Bas.png</file>
+        <file>images/Horizontal_Double_Haut.png</file>
+        <file>images/Horizontal_Simple.png</file>
+        <file>images/PacMan_Grid.txt</file>
+        <file>images/Pellet_Tile.png</file>
+        <file>images/Vertical_Double_Droit.png</file>
+        <file>images/Vertical_Double_Gauche.png</file>
+        <file>images/Vertical_Simple.png</file>
+        <file>images/Pacman.png</file>
+    </qresource>
+</RCC>

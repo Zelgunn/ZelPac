@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/textures">
+        <file>images/Corner_Double_Bas_Droite.png</file>
+        <file>images/Corner_Double_Bas_Gauche.png</file>
+        <file>images/Corner_Double_Haut_Droite.png</file>
+        <file>images/Corner_Double_Haut_Gauche.png</file>
+        <file>images/Corner_Simple_Bas_Droite.png</file>
+        <file>images/Corner_Simple_Bas_Gauche.png</file>
+        <file>images/Corner_Simple_Gaut_Droite.png</file>
+        <file>images/Corner_Simple_Haut_Gauche.png</file>
+        <file>images/Door.png</file>
+        <file>images/Empty_Tile.png</file>
+        <file>images/Energizer_Tile.png</file>
+        <file>images/Horizontal_Double_Bas.png</file>
+        <file>images/Horizontal_Double_Haut.png</file>
+        <file>images/Horizontal_Simple.png</file>
+        <file>images/Pellet_Tile.png</file>
+        <file>images/Vertical_Double_Droit.png</file>
+        <file>images/Vertical_Double_Gauche.png</file>
+        <file>images/Vertical_Simple.png</file>
+        <file>pacman.xml</file>
+        <file>images/Ghost_Blinky.png</file>
+        <file>images/Ghost_Blue.png</file>
+        <file>images/Ghost_Clyde.png</file>
+        <file>images/Ghost_Inky.png</file>
+        <file>images/Ghost_Pinky.png</file>
+        <file>images/pacman_life.png</file>
+        <file>images/Ghost_Flash.png</file>
+        <file>images/Ghost_Eyes.png</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file>sounds/pacman_chomp.wav</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,317 @@
+\hypertarget{class_double_position}{}\section{Double\+Position Class Reference}
+\label{class_double_position}\index{Double\+Position@{Double\+Position}}
+
+
+Classe imitant une position à virgule avec deux entiers.  
+
+
+
+
+{\ttfamily \#include $<$doubleposition.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_double_position_a801bc7f47d6c1ada127b308e14538a3d}{Double\+Position} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de base \hyperlink{class_double_position}{Double\+Position}. \end{DoxyCompactList}\item 
+\hyperlink{class_double_position_a496aec1866319f503156051b938eafbb}{Double\+Position} (Q\+Point int\+Pos, Q\+Point float\+Pos)
+\begin{DoxyCompactList}\small\item\em Surcharge du constructeur de base. \end{DoxyCompactList}\item 
+\hyperlink{class_double_position_a9eb14f4d74c0bc4dc9a30bcc765f93a4}{Double\+Position} (Q\+Dom\+Element elem)
+\begin{DoxyCompactList}\small\item\em Surcharge du constructeur de base pour X\+M\+L. \end{DoxyCompactList}\item 
+Q\+Point \hyperlink{class_double_position_afc3276b37b2cca9d982f4773b35a450a}{integer\+Position} () const 
+\begin{DoxyCompactList}\small\item\em Getter (m\+\_\+integer\+Position). \end{DoxyCompactList}\item 
+Q\+Point \hyperlink{class_double_position_aa5b3aff5c9c95efefb3f9625ec514fa0}{float\+Position} () const 
+\begin{DoxyCompactList}\small\item\em Getter (m\+\_\+float\+Position). \end{DoxyCompactList}\item 
+bool \hyperlink{class_double_position_a8531d86338f04961d875ee903adb9ec0}{is\+Float\+Position\+Null} () const 
+\begin{DoxyCompactList}\small\item\em Analyse la partie réelle de la position. \end{DoxyCompactList}\item 
+void \hyperlink{class_double_position_a9865b0c4bb41f8337d0063443d2edc7e}{increase\+X} (int pace)
+\begin{DoxyCompactList}\small\item\em Augmente la coordonnée X réelle. \end{DoxyCompactList}\item 
+void \hyperlink{class_double_position_a6b26f1e3875571911cecbcec20760193}{increase\+Y} (int pace)
+\begin{DoxyCompactList}\small\item\em Augmente la coordonnée Y réelle. \end{DoxyCompactList}\item 
+void \hyperlink{class_double_position_ab96be3ead7159a7e736bdf96f73cfbdc}{set\+Integer\+Position} (const Q\+Point \&\hyperlink{class_double_position_afc3276b37b2cca9d982f4773b35a450a}{integer\+Position})
+\begin{DoxyCompactList}\small\item\em Setter (m\+\_\+integer\+Position). \end{DoxyCompactList}\item 
+void \hyperlink{class_double_position_a0af7282f24900a3106ae324ca12c5def}{set\+Integer\+Position\+X} (int x)
+\begin{DoxyCompactList}\small\item\em Setter (X de la partie entière) \end{DoxyCompactList}\item 
+void \hyperlink{class_double_position_a513c186fb02d0b6549e7c80ece398a2b}{set\+Integer\+Position\+Y} (int y)
+\begin{DoxyCompactList}\small\item\em Setter (Y de la partie entière) \end{DoxyCompactList}\item 
+void \hyperlink{class_double_position_ae1730ae16bcc3365d2d3edfbaa66045c}{set\+Float\+Position} (const Q\+Point \&\hyperlink{class_double_position_aa5b3aff5c9c95efefb3f9625ec514fa0}{float\+Position})
+\begin{DoxyCompactList}\small\item\em Setter (m\+\_\+float\+Position). \end{DoxyCompactList}\item 
+void \hyperlink{class_double_position_a3b1a3c85dca66f2640556ffe47970ada}{set\+Float\+Position\+X} (int x)
+\begin{DoxyCompactList}\small\item\em Setter (X de la partie réelle) \end{DoxyCompactList}\item 
+void \hyperlink{class_double_position_a7f09cd0c1bda5695f6417f63b6a06798}{set\+Float\+Position\+Y} (int y)
+\begin{DoxyCompactList}\small\item\em Setter (Y de la partie réelle) \end{DoxyCompactList}\item 
+qreal \hyperlink{class_double_position_a5276d9c2b449a7e7c86545aea825cc75}{euclidian\+Distance\+To} (\hyperlink{class_double_position}{Double\+Position} const \&position)
+\begin{DoxyCompactList}\small\item\em Calcule la distance euclidienne d\textquotesingle{}une position à l\textquotesingle{}autre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe imitant une position à virgule avec deux entiers. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\hyperlink{class_double_position}{Double\+Position} utilise deux couples d\textquotesingle{}entiers afin de simuler un couple de réels afin d\textquotesingle{}éviter les pertes de précisions dûes à la représentation binaire. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_double_position_a801bc7f47d6c1ada127b308e14538a3d}{}\index{Double\+Position@{Double\+Position}!Double\+Position@{Double\+Position}}
+\index{Double\+Position@{Double\+Position}!Double\+Position@{Double\+Position}}
+\subsubsection[{Double\+Position()}]{\setlength{\rightskip}{0pt plus 5cm}Double\+Position\+::\+Double\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_double_position_a801bc7f47d6c1ada127b308e14538a3d}
+
+
+Constructeur de base \hyperlink{class_double_position}{Double\+Position}. 
+
+Constuit une \hyperlink{class_double_position}{Double\+Position} dont les valeurs sont nulles. \hypertarget{class_double_position_a496aec1866319f503156051b938eafbb}{}\index{Double\+Position@{Double\+Position}!Double\+Position@{Double\+Position}}
+\index{Double\+Position@{Double\+Position}!Double\+Position@{Double\+Position}}
+\subsubsection[{Double\+Position(\+Q\+Point int\+Pos, Q\+Point float\+Pos)}]{\setlength{\rightskip}{0pt plus 5cm}Double\+Position\+::\+Double\+Position (
+\begin{DoxyParamCaption}
+\item[{Q\+Point}]{int\+Pos, }
+\item[{Q\+Point}]{float\+Pos}
+\end{DoxyParamCaption}
+)}\label{class_double_position_a496aec1866319f503156051b938eafbb}
+
+
+Surcharge du constructeur de base. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int\+Pos} & Partie entière de la position \\
+\hline
+\mbox{\tt in}  & {\em float\+Pos} & Partie réelle de la position\\
+\hline
+\end{DoxyParams}
+Constuit une \hyperlink{class_double_position}{Double\+Position} dont les valeurs sont égales aux paramètres int\+Pos et float\+Pos donnés. \hypertarget{class_double_position_a9eb14f4d74c0bc4dc9a30bcc765f93a4}{}\index{Double\+Position@{Double\+Position}!Double\+Position@{Double\+Position}}
+\index{Double\+Position@{Double\+Position}!Double\+Position@{Double\+Position}}
+\subsubsection[{Double\+Position(\+Q\+Dom\+Element elem)}]{\setlength{\rightskip}{0pt plus 5cm}Double\+Position\+::\+Double\+Position (
+\begin{DoxyParamCaption}
+\item[{Q\+Dom\+Element}]{elem}
+\end{DoxyParamCaption}
+)}\label{class_double_position_a9eb14f4d74c0bc4dc9a30bcc765f93a4}
+
+
+Surcharge du constructeur de base pour X\+M\+L. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & Balise X\+M\+L contenant les paramètres de la position\\
+\hline
+\end{DoxyParams}
+Construit une \hyperlink{class_double_position}{Double\+Position} en fonction de l\textquotesingle{}élément X\+M\+L donné.
+\begin{DoxyItemize}
+\item ix \+: Coordonnée X entière.
+\item iy \+: Coordonnée Y entière.
+\item fx \+: Coordonnée X réelle. (half pour une demi-\/case, 0 pour les autres valeurs).
+\item fy \+: Coordonnée Y réelle. (half pour une demi-\/case, 0 pour les autres valeurs). 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{class_double_position_a5276d9c2b449a7e7c86545aea825cc75}{}\index{Double\+Position@{Double\+Position}!euclidian\+Distance\+To@{euclidian\+Distance\+To}}
+\index{euclidian\+Distance\+To@{euclidian\+Distance\+To}!Double\+Position@{Double\+Position}}
+\subsubsection[{euclidian\+Distance\+To(\+Double\+Position const \&position)}]{\setlength{\rightskip}{0pt plus 5cm}qreal Double\+Position\+::euclidian\+Distance\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf Double\+Position} const \&}]{position}
+\end{DoxyParamCaption}
+)}\label{class_double_position_a5276d9c2b449a7e7c86545aea825cc75}
+
+
+Calcule la distance euclidienne d\textquotesingle{}une position à l\textquotesingle{}autre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position à partir de laquelle calculer la distance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance euclidienne entre les deux positions (en double).
+\end{DoxyReturn}
+((ix1.\+fx1 -\/ ix2.\+fx2)$^\wedge$2 + (iy1.\+fy1 -\/ iy2.\+fy2)$^\wedge$2)$^\wedge$(1/2) \hypertarget{class_double_position_aa5b3aff5c9c95efefb3f9625ec514fa0}{}\index{Double\+Position@{Double\+Position}!float\+Position@{float\+Position}}
+\index{float\+Position@{float\+Position}!Double\+Position@{Double\+Position}}
+\subsubsection[{float\+Position() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Double\+Position\+::float\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_double_position_aa5b3aff5c9c95efefb3f9625ec514fa0}
+
+
+Getter (m\+\_\+float\+Position). 
+
+\begin{DoxyReturn}{Returns}
+Partie réelle de la position. 
+\end{DoxyReturn}
+\hypertarget{class_double_position_a9865b0c4bb41f8337d0063443d2edc7e}{}\index{Double\+Position@{Double\+Position}!increase\+X@{increase\+X}}
+\index{increase\+X@{increase\+X}!Double\+Position@{Double\+Position}}
+\subsubsection[{increase\+X(int pace)}]{\setlength{\rightskip}{0pt plus 5cm}void Double\+Position\+::increase\+X (
+\begin{DoxyParamCaption}
+\item[{int}]{pace}
+\end{DoxyParamCaption}
+)}\label{class_double_position_a9865b0c4bb41f8337d0063443d2edc7e}
+
+
+Augmente la coordonnée X réelle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pace} & Pas d\textquotesingle{}augmentation de la partie réelle (en X).\\
+\hline
+\end{DoxyParams}
+Augmente de pace la partie réelle selon X. ~\newline
+ Si la partie réelle excède M\+A\+X\+\_\+\+F\+L\+O\+A\+T\+\_\+\+P\+O\+S alors elle devient nulle et la partie entière est augmentée de 1. ~\newline
+ De même, si la partie réelle devient inférieure à 0, la partie entière diminue de 1 et la partie réelle est mise à M\+A\+X\+\_\+\+F\+L\+O\+A\+T\+\_\+\+P\+O\+S moins le pas. ~\newline
+ Si la partie réelle s\textquotesingle{}approche de 0, elle devient alors nulle. \hypertarget{class_double_position_a6b26f1e3875571911cecbcec20760193}{}\index{Double\+Position@{Double\+Position}!increase\+Y@{increase\+Y}}
+\index{increase\+Y@{increase\+Y}!Double\+Position@{Double\+Position}}
+\subsubsection[{increase\+Y(int pace)}]{\setlength{\rightskip}{0pt plus 5cm}void Double\+Position\+::increase\+Y (
+\begin{DoxyParamCaption}
+\item[{int}]{pace}
+\end{DoxyParamCaption}
+)}\label{class_double_position_a6b26f1e3875571911cecbcec20760193}
+
+
+Augmente la coordonnée Y réelle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pace} & Pas d\textquotesingle{}augmentation de la partie réelle (en Y).\\
+\hline
+\end{DoxyParams}
+Augmente de pace la partie réelle selon Y. ~\newline
+ Si la partie réelle excède M\+A\+X\+\_\+\+F\+L\+O\+A\+T\+\_\+\+P\+O\+S alors elle devient nulle et la partie entière est augmentée de 1. ~\newline
+ De même, si la partie réelle devient inférieure à 0, la partie entière diminue de 1 et la partie réelle est mise à M\+A\+X\+\_\+\+F\+L\+O\+A\+T\+\_\+\+P\+O\+S moins le pas. ~\newline
+ Si la partie réelle s\textquotesingle{}approche de 0, elle devient alors nulle. \hypertarget{class_double_position_afc3276b37b2cca9d982f4773b35a450a}{}\index{Double\+Position@{Double\+Position}!integer\+Position@{integer\+Position}}
+\index{integer\+Position@{integer\+Position}!Double\+Position@{Double\+Position}}
+\subsubsection[{integer\+Position() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Double\+Position\+::integer\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_double_position_afc3276b37b2cca9d982f4773b35a450a}
+
+
+Getter (m\+\_\+integer\+Position). 
+
+\begin{DoxyReturn}{Returns}
+Partie entière de la position. 
+\end{DoxyReturn}
+\hypertarget{class_double_position_a8531d86338f04961d875ee903adb9ec0}{}\index{Double\+Position@{Double\+Position}!is\+Float\+Position\+Null@{is\+Float\+Position\+Null}}
+\index{is\+Float\+Position\+Null@{is\+Float\+Position\+Null}!Double\+Position@{Double\+Position}}
+\subsubsection[{is\+Float\+Position\+Null() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Double\+Position\+::is\+Float\+Position\+Null (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_double_position_a8531d86338f04961d875ee903adb9ec0}
+
+
+Analyse la partie réelle de la position. 
+
+\begin{DoxyReturn}{Returns}
+true si la partie réelle est nulle, sinon false. 
+\end{DoxyReturn}
+\hypertarget{class_double_position_ae1730ae16bcc3365d2d3edfbaa66045c}{}\index{Double\+Position@{Double\+Position}!set\+Float\+Position@{set\+Float\+Position}}
+\index{set\+Float\+Position@{set\+Float\+Position}!Double\+Position@{Double\+Position}}
+\subsubsection[{set\+Float\+Position(const Q\+Point \&float\+Position)}]{\setlength{\rightskip}{0pt plus 5cm}void Double\+Position\+::set\+Float\+Position (
+\begin{DoxyParamCaption}
+\item[{const Q\+Point \&}]{float\+Position}
+\end{DoxyParamCaption}
+)}\label{class_double_position_ae1730ae16bcc3365d2d3edfbaa66045c}
+
+
+Setter (m\+\_\+float\+Position). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float\+Position} & Nouvelle position (après la virgule) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_double_position_a3b1a3c85dca66f2640556ffe47970ada}{}\index{Double\+Position@{Double\+Position}!set\+Float\+Position\+X@{set\+Float\+Position\+X}}
+\index{set\+Float\+Position\+X@{set\+Float\+Position\+X}!Double\+Position@{Double\+Position}}
+\subsubsection[{set\+Float\+Position\+X(int x)}]{\setlength{\rightskip}{0pt plus 5cm}void Double\+Position\+::set\+Float\+Position\+X (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\label{class_double_position_a3b1a3c85dca66f2640556ffe47970ada}
+
+
+Setter (X de la partie réelle) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Nouveau X de la partière réelle \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_double_position_a7f09cd0c1bda5695f6417f63b6a06798}{}\index{Double\+Position@{Double\+Position}!set\+Float\+Position\+Y@{set\+Float\+Position\+Y}}
+\index{set\+Float\+Position\+Y@{set\+Float\+Position\+Y}!Double\+Position@{Double\+Position}}
+\subsubsection[{set\+Float\+Position\+Y(int y)}]{\setlength{\rightskip}{0pt plus 5cm}void Double\+Position\+::set\+Float\+Position\+Y (
+\begin{DoxyParamCaption}
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_double_position_a7f09cd0c1bda5695f6417f63b6a06798}
+
+
+Setter (Y de la partie réelle) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & Nouveau Y de la partière réelle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_double_position_ab96be3ead7159a7e736bdf96f73cfbdc}{}\index{Double\+Position@{Double\+Position}!set\+Integer\+Position@{set\+Integer\+Position}}
+\index{set\+Integer\+Position@{set\+Integer\+Position}!Double\+Position@{Double\+Position}}
+\subsubsection[{set\+Integer\+Position(const Q\+Point \&integer\+Position)}]{\setlength{\rightskip}{0pt plus 5cm}void Double\+Position\+::set\+Integer\+Position (
+\begin{DoxyParamCaption}
+\item[{const Q\+Point \&}]{integer\+Position}
+\end{DoxyParamCaption}
+)}\label{class_double_position_ab96be3ead7159a7e736bdf96f73cfbdc}
+
+
+Setter (m\+\_\+integer\+Position). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em integer\+Position} & Nouvelle position entière \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_double_position_a0af7282f24900a3106ae324ca12c5def}{}\index{Double\+Position@{Double\+Position}!set\+Integer\+Position\+X@{set\+Integer\+Position\+X}}
+\index{set\+Integer\+Position\+X@{set\+Integer\+Position\+X}!Double\+Position@{Double\+Position}}
+\subsubsection[{set\+Integer\+Position\+X(int x)}]{\setlength{\rightskip}{0pt plus 5cm}void Double\+Position\+::set\+Integer\+Position\+X (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\label{class_double_position_a0af7282f24900a3106ae324ca12c5def}
+
+
+Setter (X de la partie entière) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Nouveau X de la partière entière \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_double_position_a513c186fb02d0b6549e7c80ece398a2b}{}\index{Double\+Position@{Double\+Position}!set\+Integer\+Position\+Y@{set\+Integer\+Position\+Y}}
+\index{set\+Integer\+Position\+Y@{set\+Integer\+Position\+Y}!Double\+Position@{Double\+Position}}
+\subsubsection[{set\+Integer\+Position\+Y(int y)}]{\setlength{\rightskip}{0pt plus 5cm}void Double\+Position\+::set\+Integer\+Position\+Y (
+\begin{DoxyParamCaption}
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_double_position_a513c186fb02d0b6549e7c80ece398a2b}
+
+
+Setter (Y de la partie entière) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & Nouveau Y de la partière entière \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+doubleposition.\+h\item 
+doubleposition.\+cpp\end{DoxyCompactItemize}

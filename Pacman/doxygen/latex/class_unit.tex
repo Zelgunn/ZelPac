@@ -1,0 +1,509 @@
+\hypertarget{class_unit}{}\section{Unit Class Reference}
+\label{class_unit}\index{Unit@{Unit}}
+
+
+Classe représentant une unité du pacman.  
+
+
+
+
+{\ttfamily \#include $<$unit.\+h$>$}
+
+Inheritance diagram for Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unit}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_unit_a198e5fe8c952e2f1e7e9524a914aa0ed}{Directions} \{ \\*
+\hyperlink{class_unit_a198e5fe8c952e2f1e7e9524a914aa0edadbae641fa2ba279643d63ee3e071c07a}{Up}, 
+\hyperlink{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda6be5329b08ddd45e62b4d70ae9940f09}{Down}, 
+\hyperlink{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda0d0c9e2b7e0bc40ed55e26b44d2eeae6}{Left}, 
+\hyperlink{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda4b5bae12923642cf30197c5ea676154c}{Right}, 
+\\*
+\hyperlink{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda2932642ae5d44019d2d191842b1c818d}{Direction\+Not\+Valid} = -\/1
+ \}\begin{DoxyCompactList}\small\item\em Enum des Directions. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_unit_a8e46f663a95736c8002d85ab271a7581}{Unit} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de base de la classe \hyperlink{class_unit}{Unit}. \end{DoxyCompactList}\item 
+\hyperlink{class_unit_a581eba4325543aef767722a162ca99cb}{Unit} (\hyperlink{class_grid}{Grid} $\ast$grid)
+\begin{DoxyCompactList}\small\item\em Surcharge du constructeur de base référençant la grille. \end{DoxyCompactList}\item 
+\hyperlink{class_unit_ab4ca2daa555261d2fa1b8f0edbba667c}{Unit} (\hyperlink{class_grid}{Grid} $\ast$grid, Q\+Dom\+Element elem)
+\begin{DoxyCompactList}\small\item\em Surcharge du constructeur (avec grille) pour utiliser X\+M\+L. \end{DoxyCompactList}\item 
+Q\+Point \hyperlink{class_unit_a1f96c746ab2d0cc7956e73d59d9c7c70}{position} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+Q\+Point \hyperlink{class_unit_a57e72aa7298681d991bf37966d9f2943}{position\+In\+Tile} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+\hyperlink{class_double_position}{Double\+Position} \hyperlink{class_unit_a115a97bb5d63670215d42dddc46c9c99}{full\+Position} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_unit_a2424bd74d829e4fc79aa97a083918841}{set\+Direction} (int \hyperlink{class_unit_a5d8a5a789acfa4d2502b0c1082876172}{direction})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+int \hyperlink{class_unit_a5d8a5a789acfa4d2502b0c1082876172}{direction} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+char \hyperlink{class_unit_a41b1fa4f39ca207da3ad30202b341cd7}{speed} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_unit_aa1b69d788d11e91ed7b9142cfb1bedfb}{set\+Speed} (char \hyperlink{class_unit_a41b1fa4f39ca207da3ad30202b341cd7}{speed})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+char \hyperlink{class_unit_a3112ab535d2bf6faef29cb4c4685d43f}{scared\+Speed} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_unit_ae9d92b8ca322719ca8c9a994108d749b}{set\+Scared\+Speed} (char \hyperlink{class_unit_a3112ab535d2bf6faef29cb4c4685d43f}{scared\+Speed})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+char \hyperlink{class_unit_a3e8b2e19d807aadc384e5a2092c6bc5c}{base\+Speed} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_unit_a18aa42601bc7e52c2298e87f5ccdd6c5}{set\+Base\+Speed} (char \hyperlink{class_unit_a3e8b2e19d807aadc384e5a2092c6bc5c}{base\+Speed})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+void \hyperlink{class_unit_a7b265c0e213164ee5446e6930c0a2155}{reverse\+Speeds} (bool reverse)
+\begin{DoxyCompactList}\small\item\em Modifie la vitesse actuelle, soit par celle de base, soit par la vitesse lorsque les fantômes ont peur. \end{DoxyCompactList}\item 
+void \hyperlink{class_unit_a3c457eefcea6d9c0e6f07303d4b2f73c}{move\+To\+Tile} (Q\+Point tile)
+\begin{DoxyCompactList}\small\item\em Déplace l\textquotesingle{}unité sur la case ciblée. \end{DoxyCompactList}\item 
+void \hyperlink{class_unit_ad7e1e0f92908be580fbf75a83fd85467}{move\+To\+Tile} (int \hyperlink{class_unit_a5d8a5a789acfa4d2502b0c1082876172}{direction})
+\begin{DoxyCompactList}\small\item\em Déplace l\textquotesingle{}unité sur la prochaine case dans la direction choisie. \end{DoxyCompactList}\item 
+void \hyperlink{class_unit_a3ac85960189eb629b56e00ec231b87fa}{move\+To} (int \hyperlink{class_unit_a5d8a5a789acfa4d2502b0c1082876172}{direction})
+\begin{DoxyCompactList}\small\item\em Déplace l\textquotesingle{}unité de sa vitesse dans la direction choisie. \end{DoxyCompactList}\item 
+void \hyperlink{class_unit_aae1ddaef885741c7b5fc6f1eefd46907}{reset\+Position} ()
+\begin{DoxyCompactList}\small\item\em Réinitialise la position de l\textquotesingle{}unité à sa position d\textquotesingle{}origine. \end{DoxyCompactList}\item 
+bool \hyperlink{class_unit_a9f26369cc967f76ef91daee0927669aa}{is\+Move\+Legal} (int \hyperlink{class_unit_a5d8a5a789acfa4d2502b0c1082876172}{direction})
+\begin{DoxyCompactList}\small\item\em Vérifie si l\textquotesingle{}unité peut se déplacer dans la direction donnée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Q\+Point \hyperlink{class_unit_a20108f02c092e52bf4c008a20370b9ef}{direction\+To\+Move} (int \hyperlink{class_unit_a5d8a5a789acfa4d2502b0c1082876172}{direction})
+\begin{DoxyCompactList}\small\item\em Calcule l\textquotesingle{}écart selon la direction donnée. \end{DoxyCompactList}\item 
+static qreal \hyperlink{class_unit_a4bbd8e88c7b2d16b25067ff2dedcb067}{euclidian\+Distance} (Q\+Point p1, Q\+Point p2)
+\begin{DoxyCompactList}\small\item\em Calcule la distance euclidienne d\textquotesingle{}un point à l\textquotesingle{}autre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_unit_ac4c086ea3b94b3be426c081b33244ca1}{}\hyperlink{class_double_position}{Double\+Position} \hyperlink{class_unit_ac4c086ea3b94b3be426c081b33244ca1}{m\+\_\+position}\label{class_unit_ac4c086ea3b94b3be426c081b33244ca1}
+
+\begin{DoxyCompactList}\small\item\em Position actuelle de l\textquotesingle{}unité \end{DoxyCompactList}\item 
+\hypertarget{class_unit_adf868b599517d73750fe30531164f121}{}\hyperlink{class_double_position}{Double\+Position} \hyperlink{class_unit_adf868b599517d73750fe30531164f121}{m\+\_\+origine}\label{class_unit_adf868b599517d73750fe30531164f121}
+
+\begin{DoxyCompactList}\small\item\em Position de base de l\textquotesingle{}unité \end{DoxyCompactList}\item 
+\hypertarget{class_unit_a6ef9090f1e7e35c32dc2ad88cb1af761}{}char \hyperlink{class_unit_a6ef9090f1e7e35c32dc2ad88cb1af761}{m\+\_\+direction}\label{class_unit_a6ef9090f1e7e35c32dc2ad88cb1af761}
+
+\begin{DoxyCompactList}\small\item\em Direction actuelle de l\textquotesingle{}unité \end{DoxyCompactList}\item 
+\hypertarget{class_unit_a89e65c03176c3485a103c8d74fea84e4}{}char \hyperlink{class_unit_a89e65c03176c3485a103c8d74fea84e4}{m\+\_\+speed}\label{class_unit_a89e65c03176c3485a103c8d74fea84e4}
+
+\begin{DoxyCompactList}\small\item\em Vitesse actuelle de l\textquotesingle{}unité \end{DoxyCompactList}\item 
+\hypertarget{class_unit_aa9dff9898710a724a36c04ef55b1eecd}{}char \hyperlink{class_unit_aa9dff9898710a724a36c04ef55b1eecd}{m\+\_\+scared\+Speed}\label{class_unit_aa9dff9898710a724a36c04ef55b1eecd}
+
+\begin{DoxyCompactList}\small\item\em Vitesse de l\textquotesingle{}unité lorsque les fantômes ont peur. \end{DoxyCompactList}\item 
+\hypertarget{class_unit_ae7e2ef6ed5459b8783e8698142f6037e}{}char \hyperlink{class_unit_ae7e2ef6ed5459b8783e8698142f6037e}{m\+\_\+base\+Speed}\label{class_unit_ae7e2ef6ed5459b8783e8698142f6037e}
+
+\begin{DoxyCompactList}\small\item\em Vitesse de base de l\textquotesingle{}unité \end{DoxyCompactList}\item 
+\hypertarget{class_unit_accaaf0c1e19bf9d254c7c5af96812f34}{}\hyperlink{class_grid}{Grid} $\ast$ \hyperlink{class_unit_accaaf0c1e19bf9d254c7c5af96812f34}{m\+\_\+grid}\label{class_unit_accaaf0c1e19bf9d254c7c5af96812f34}
+
+\begin{DoxyCompactList}\small\item\em Grille sur laquelle circule l\textquotesingle{}unité \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe représentant une unité du pacman. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+La classe \hyperlink{class_unit}{Unit} fournit les éléments de base afin de diriger une unité à travers une grille de Pacman. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_unit_a198e5fe8c952e2f1e7e9524a914aa0ed}{}\index{Unit@{Unit}!Directions@{Directions}}
+\index{Directions@{Directions}!Unit@{Unit}}
+\subsubsection[{Directions}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Unit\+::\+Directions}}\label{class_unit_a198e5fe8c952e2f1e7e9524a914aa0ed}
+
+
+Enum des Directions. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Up@{Up}!Unit@{Unit}}\index{Unit@{Unit}!Up@{Up}}\item[{\em 
+\hypertarget{class_unit_a198e5fe8c952e2f1e7e9524a914aa0edadbae641fa2ba279643d63ee3e071c07a}{}Up\label{class_unit_a198e5fe8c952e2f1e7e9524a914aa0edadbae641fa2ba279643d63ee3e071c07a}
+}]Vers le Haut \index{Down@{Down}!Unit@{Unit}}\index{Unit@{Unit}!Down@{Down}}\item[{\em 
+\hypertarget{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda6be5329b08ddd45e62b4d70ae9940f09}{}Down\label{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda6be5329b08ddd45e62b4d70ae9940f09}
+}]Vers le Bas \index{Left@{Left}!Unit@{Unit}}\index{Unit@{Unit}!Left@{Left}}\item[{\em 
+\hypertarget{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda0d0c9e2b7e0bc40ed55e26b44d2eeae6}{}Left\label{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda0d0c9e2b7e0bc40ed55e26b44d2eeae6}
+}]Vers la Gauche \index{Right@{Right}!Unit@{Unit}}\index{Unit@{Unit}!Right@{Right}}\item[{\em 
+\hypertarget{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda4b5bae12923642cf30197c5ea676154c}{}Right\label{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda4b5bae12923642cf30197c5ea676154c}
+}]Vers la Droite \index{Direction\+Not\+Valid@{Direction\+Not\+Valid}!Unit@{Unit}}\index{Unit@{Unit}!Direction\+Not\+Valid@{Direction\+Not\+Valid}}\item[{\em 
+\hypertarget{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda2932642ae5d44019d2d191842b1c818d}{}Direction\+Not\+Valid\label{class_unit_a198e5fe8c952e2f1e7e9524a914aa0eda2932642ae5d44019d2d191842b1c818d}
+}]Direction invalide \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_unit_a8e46f663a95736c8002d85ab271a7581}{}\index{Unit@{Unit}!Unit@{Unit}}
+\index{Unit@{Unit}!Unit@{Unit}}
+\subsubsection[{Unit()}]{\setlength{\rightskip}{0pt plus 5cm}Unit\+::\+Unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_unit_a8e46f663a95736c8002d85ab271a7581}
+
+
+Constructeur de base de la classe \hyperlink{class_unit}{Unit}. 
+
+Note \+: Cette version du constructeur n\textquotesingle{}est pas destinée à être utilisée en dehors de l\textquotesingle{}initialisation d\textquotesingle{}une classe qui la contient. L\textquotesingle{}objet créé n\textquotesingle{}est pas valide. \hypertarget{class_unit_a581eba4325543aef767722a162ca99cb}{}\index{Unit@{Unit}!Unit@{Unit}}
+\index{Unit@{Unit}!Unit@{Unit}}
+\subsubsection[{Unit(\+Grid $\ast$grid)}]{\setlength{\rightskip}{0pt plus 5cm}Unit\+::\+Unit (
+\begin{DoxyParamCaption}
+\item[{{\bf Grid} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}\label{class_unit_a581eba4325543aef767722a162ca99cb}
+
+
+Surcharge du constructeur de base référençant la grille. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & La grille sur laquelle se trouve l\textquotesingle{}unité.\\
+\hline
+\end{DoxyParams}
+Une unité créée par ce constructeur est valide mais dispose de tous les paramètres par défaut. \hypertarget{class_unit_ab4ca2daa555261d2fa1b8f0edbba667c}{}\index{Unit@{Unit}!Unit@{Unit}}
+\index{Unit@{Unit}!Unit@{Unit}}
+\subsubsection[{Unit(\+Grid $\ast$grid, Q\+Dom\+Element elem)}]{\setlength{\rightskip}{0pt plus 5cm}Unit\+::\+Unit (
+\begin{DoxyParamCaption}
+\item[{{\bf Grid} $\ast$}]{grid, }
+\item[{Q\+Dom\+Element}]{elem}
+\end{DoxyParamCaption}
+)}\label{class_unit_ab4ca2daa555261d2fa1b8f0edbba667c}
+
+
+Surcharge du constructeur (avec grille) pour utiliser X\+M\+L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & La grille sur laquelle se trouve l\textquotesingle{}unité. \\
+\hline
+{\em elem} & Données X\+M\+L à charger lors de la contruction de l\textquotesingle{}objet.\\
+\hline
+\end{DoxyParams}
+Construit une unité attachée à une grille et dont les paramètres sont chargés à partir d\textquotesingle{}une balise X\+M\+L.
+\begin{DoxyItemize}
+\item speed \+: Vitesse par défaut de l\textquotesingle{}unité.
+\item sspeed \+: Vitesse lorsque les fantômes sont apeurés.
+\item Autres \+: Voir \hyperlink{class_double_position}{Double\+Position(\+Q\+Dom\+Element elem)}.
+\end{DoxyItemize}
+
+Les vitesses doivent être proches d\textquotesingle{}un multiple de M\+A\+X\+\_\+\+F\+L\+O\+A\+T\+\_\+\+P\+O\+S. Par exemple, avec M\+A\+X\+\_\+\+F\+L\+O\+A\+T\+\_\+\+P\+O\+S égal à 1000, 80 donne un résultat assez éloigné (80$\ast$12 = 960, 80$\ast$13 = 1040) alors que 91 donne une valeur très proche (91$\ast$11 = 1001). Si la valeur est trop éloignée, les unités auront des erreurs dans leur déplacement. De base, l\textquotesingle{}écart maximal absolu est de 25.
+
+A la construction, l\textquotesingle{}élément X\+M\+L doit aussi contenir la position qu\textquotesingle{}aura l\textquotesingle{}unité.
+
+Exemple \+: $<$Player ix=\char`\"{}14\char`\"{} iy=\char`\"{}23\char`\"{} speed=\char`\"{}77\char`\"{} sspeed = \char`\"{}91\char`\"{} fx = \char`\"{}half\char`\"{}/$>$ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_unit_a3e8b2e19d807aadc384e5a2092c6bc5c}{}\index{Unit@{Unit}!base\+Speed@{base\+Speed}}
+\index{base\+Speed@{base\+Speed}!Unit@{Unit}}
+\subsubsection[{base\+Speed() const }]{\setlength{\rightskip}{0pt plus 5cm}char Unit\+::base\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_unit_a3e8b2e19d807aadc384e5a2092c6bc5c}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Vitesse de base de l\textquotesingle{}unité. 
+\end{DoxyReturn}
+\hypertarget{class_unit_a5d8a5a789acfa4d2502b0c1082876172}{}\index{Unit@{Unit}!direction@{direction}}
+\index{direction@{direction}!Unit@{Unit}}
+\subsubsection[{direction() const }]{\setlength{\rightskip}{0pt plus 5cm}int Unit\+::direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_unit_a5d8a5a789acfa4d2502b0c1082876172}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Direction actuelle de l\textquotesingle{}unité. 
+\end{DoxyReturn}
+\hypertarget{class_unit_a20108f02c092e52bf4c008a20370b9ef}{}\index{Unit@{Unit}!direction\+To\+Move@{direction\+To\+Move}}
+\index{direction\+To\+Move@{direction\+To\+Move}!Unit@{Unit}}
+\subsubsection[{direction\+To\+Move(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Unit\+::direction\+To\+Move (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_unit_a20108f02c092e52bf4c008a20370b9ef}
+
+
+Calcule l\textquotesingle{}écart selon la direction donnée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction de l\textquotesingle{}écart \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ecart (norme toujours égale à 1) dans la direction donnée. 
+\end{DoxyReturn}
+\hypertarget{class_unit_a4bbd8e88c7b2d16b25067ff2dedcb067}{}\index{Unit@{Unit}!euclidian\+Distance@{euclidian\+Distance}}
+\index{euclidian\+Distance@{euclidian\+Distance}!Unit@{Unit}}
+\subsubsection[{euclidian\+Distance(\+Q\+Point p1, Q\+Point p2)}]{\setlength{\rightskip}{0pt plus 5cm}qreal Unit\+::euclidian\+Distance (
+\begin{DoxyParamCaption}
+\item[{Q\+Point}]{p1, }
+\item[{Q\+Point}]{p2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_unit_a4bbd8e88c7b2d16b25067ff2dedcb067}
+
+
+Calcule la distance euclidienne d\textquotesingle{}un point à l\textquotesingle{}autre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & Premier point \\
+\hline
+{\em p2} & Second point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance euclidienne entre p1 et p2 (valeur réelle)
+\end{DoxyReturn}
+racine(x1 -\/ x2)$^\wedge$2 + (y1 -\/ y2)$^\wedge$2) \hypertarget{class_unit_a115a97bb5d63670215d42dddc46c9c99}{}\index{Unit@{Unit}!full\+Position@{full\+Position}}
+\index{full\+Position@{full\+Position}!Unit@{Unit}}
+\subsubsection[{full\+Position() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Double\+Position} Unit\+::full\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_unit_a115a97bb5d63670215d42dddc46c9c99}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_double_position}{Double\+Position} de l\textquotesingle{}unité (partie entière et flottante). 
+\end{DoxyReturn}
+\hypertarget{class_unit_a9f26369cc967f76ef91daee0927669aa}{}\index{Unit@{Unit}!is\+Move\+Legal@{is\+Move\+Legal}}
+\index{is\+Move\+Legal@{is\+Move\+Legal}!Unit@{Unit}}
+\subsubsection[{is\+Move\+Legal(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}bool Unit\+::is\+Move\+Legal (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)}\label{class_unit_a9f26369cc967f76ef91daee0927669aa}
+
+
+Vérifie si l\textquotesingle{}unité peut se déplacer dans la direction donnée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False si la collision est égale à \hyperlink{class_grid_a473f8c5d768a1734d8911bf1213ce10fa2b394e743be772d4a1da354d5b597623}{Grid\+::\+Collision\+On} sinon True.
+\end{DoxyReturn}
+La fonction calcule la nouvelle position dans la direction choisie et regarge la collision à cette nouvelle position. Si la collision est On alors on renvoie Faux sinon Vrai.
+
+Note \+: Il est possible d\textquotesingle{}ajouter des types spéciaux de collision, permettant de se déplacer avec de nouvelles valeurs. \hypertarget{class_unit_a3ac85960189eb629b56e00ec231b87fa}{}\index{Unit@{Unit}!move\+To@{move\+To}}
+\index{move\+To@{move\+To}!Unit@{Unit}}
+\subsubsection[{move\+To(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::move\+To (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)}\label{class_unit_a3ac85960189eb629b56e00ec231b87fa}
+
+
+Déplace l\textquotesingle{}unité de sa vitesse dans la direction choisie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction choisie de déplacement.\\
+\hline
+\end{DoxyParams}
+Déplace l\textquotesingle{}unité de (environ) sa vitesse actuelle dans la direction donnée en paramètre. La valeur est ajoutée/soustraire à la valeur réelle de la position actuelle de l\textquotesingle{}unité.
+
+Si la nouvelle valeur excède la largeur de la grille ou se retrouve sous 0, l\textquotesingle{}unité est déplacée de l\textquotesingle{}autre côté de la grille. \hypertarget{class_unit_a3c457eefcea6d9c0e6f07303d4b2f73c}{}\index{Unit@{Unit}!move\+To\+Tile@{move\+To\+Tile}}
+\index{move\+To\+Tile@{move\+To\+Tile}!Unit@{Unit}}
+\subsubsection[{move\+To\+Tile(\+Q\+Point tile)}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::move\+To\+Tile (
+\begin{DoxyParamCaption}
+\item[{Q\+Point}]{tile}
+\end{DoxyParamCaption}
+)}\label{class_unit_a3c457eefcea6d9c0e6f07303d4b2f73c}
+
+
+Déplace l\textquotesingle{}unité sur la case ciblée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & Case cible. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_unit_ad7e1e0f92908be580fbf75a83fd85467}{}\index{Unit@{Unit}!move\+To\+Tile@{move\+To\+Tile}}
+\index{move\+To\+Tile@{move\+To\+Tile}!Unit@{Unit}}
+\subsubsection[{move\+To\+Tile(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::move\+To\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)}\label{class_unit_ad7e1e0f92908be580fbf75a83fd85467}
+
+
+Déplace l\textquotesingle{}unité sur la prochaine case dans la direction choisie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction choisie de déplacement. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_unit_a1f96c746ab2d0cc7956e73d59d9c7c70}{}\index{Unit@{Unit}!position@{position}}
+\index{position@{position}!Unit@{Unit}}
+\subsubsection[{position() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Unit\+::position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_unit_a1f96c746ab2d0cc7956e73d59d9c7c70}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Position entière de l\textquotesingle{}unité. 
+\end{DoxyReturn}
+\hypertarget{class_unit_a57e72aa7298681d991bf37966d9f2943}{}\index{Unit@{Unit}!position\+In\+Tile@{position\+In\+Tile}}
+\index{position\+In\+Tile@{position\+In\+Tile}!Unit@{Unit}}
+\subsubsection[{position\+In\+Tile() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Unit\+::position\+In\+Tile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_unit_a57e72aa7298681d991bf37966d9f2943}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Position réelle de l\textquotesingle{}unité. 
+\end{DoxyReturn}
+\hypertarget{class_unit_aae1ddaef885741c7b5fc6f1eefd46907}{}\index{Unit@{Unit}!reset\+Position@{reset\+Position}}
+\index{reset\+Position@{reset\+Position}!Unit@{Unit}}
+\subsubsection[{reset\+Position()}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::reset\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_unit_aae1ddaef885741c7b5fc6f1eefd46907}
+
+
+Réinitialise la position de l\textquotesingle{}unité à sa position d\textquotesingle{}origine. 
+
+Déplace l\textquotesingle{}unité à la position qu\textquotesingle{}il avait lorsqu\textquotesingle{}elle a été créée. \hypertarget{class_unit_a7b265c0e213164ee5446e6930c0a2155}{}\index{Unit@{Unit}!reverse\+Speeds@{reverse\+Speeds}}
+\index{reverse\+Speeds@{reverse\+Speeds}!Unit@{Unit}}
+\subsubsection[{reverse\+Speeds(bool reverse)}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::reverse\+Speeds (
+\begin{DoxyParamCaption}
+\item[{bool}]{reverse}
+\end{DoxyParamCaption}
+)}\label{class_unit_a7b265c0e213164ee5446e6930c0a2155}
+
+
+Modifie la vitesse actuelle, soit par celle de base, soit par la vitesse lorsque les fantômes ont peur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reverse} & Si reverse est Vrai alors on utilise la vitesse lorsque les fantômes ont peur, sinon on prend celle de base. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_unit_a3112ab535d2bf6faef29cb4c4685d43f}{}\index{Unit@{Unit}!scared\+Speed@{scared\+Speed}}
+\index{scared\+Speed@{scared\+Speed}!Unit@{Unit}}
+\subsubsection[{scared\+Speed() const }]{\setlength{\rightskip}{0pt plus 5cm}char Unit\+::scared\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_unit_a3112ab535d2bf6faef29cb4c4685d43f}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Vitesse lorsque les fantômes sont appeurés. 
+\end{DoxyReturn}
+\hypertarget{class_unit_a18aa42601bc7e52c2298e87f5ccdd6c5}{}\index{Unit@{Unit}!set\+Base\+Speed@{set\+Base\+Speed}}
+\index{set\+Base\+Speed@{set\+Base\+Speed}!Unit@{Unit}}
+\subsubsection[{set\+Base\+Speed(char base\+Speed)}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::set\+Base\+Speed (
+\begin{DoxyParamCaption}
+\item[{char}]{base\+Speed}
+\end{DoxyParamCaption}
+)}\label{class_unit_a18aa42601bc7e52c2298e87f5ccdd6c5}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Speed} & Nouvelle vitesse de base de l\textquotesingle{}unité. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_unit_a2424bd74d829e4fc79aa97a083918841}{}\index{Unit@{Unit}!set\+Direction@{set\+Direction}}
+\index{set\+Direction@{set\+Direction}!Unit@{Unit}}
+\subsubsection[{set\+Direction(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::set\+Direction (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)}\label{class_unit_a2424bd74d829e4fc79aa97a083918841}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Nouvelle direction de l\textquotesingle{}unité. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_unit_ae9d92b8ca322719ca8c9a994108d749b}{}\index{Unit@{Unit}!set\+Scared\+Speed@{set\+Scared\+Speed}}
+\index{set\+Scared\+Speed@{set\+Scared\+Speed}!Unit@{Unit}}
+\subsubsection[{set\+Scared\+Speed(char scared\+Speed)}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::set\+Scared\+Speed (
+\begin{DoxyParamCaption}
+\item[{char}]{scared\+Speed}
+\end{DoxyParamCaption}
+)}\label{class_unit_ae9d92b8ca322719ca8c9a994108d749b}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scared\+Speed} & Nouvelle vitesse lorsque les fantômessont appeurés. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_unit_aa1b69d788d11e91ed7b9142cfb1bedfb}{}\index{Unit@{Unit}!set\+Speed@{set\+Speed}}
+\index{set\+Speed@{set\+Speed}!Unit@{Unit}}
+\subsubsection[{set\+Speed(char speed)}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::set\+Speed (
+\begin{DoxyParamCaption}
+\item[{char}]{speed}
+\end{DoxyParamCaption}
+)}\label{class_unit_aa1b69d788d11e91ed7b9142cfb1bedfb}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & Nouvelle vitesse actuelle de l\textquotesingle{}unité. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_unit_a41b1fa4f39ca207da3ad30202b341cd7}{}\index{Unit@{Unit}!speed@{speed}}
+\index{speed@{speed}!Unit@{Unit}}
+\subsubsection[{speed() const }]{\setlength{\rightskip}{0pt plus 5cm}char Unit\+::speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_unit_a41b1fa4f39ca207da3ad30202b341cd7}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Vitesse actuelle de l\textquotesingle{}unité. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unit.\+h\item 
+unit.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,562 @@
+\hypertarget{class_ghost}{}\section{Ghost Class Reference}
+\label{class_ghost}\index{Ghost@{Ghost}}
+
+
+Classe d\textquotesingle{}unité de type Fantôme avec les comportements de chaque fantôme.  
+
+
+
+
+{\ttfamily \#include $<$ghost.\+h$>$}
+
+Inheritance diagram for Ghost\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ghost}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_ghost_adc8bee2d77e1ca0e4999cace773c71dd}{Ghosts\+I\+D} \{ \hyperlink{class_ghost_adc8bee2d77e1ca0e4999cace773c71dda41f01d04777c489d40e34d6c058c6b5b}{Blinky}, 
+\hyperlink{class_ghost_adc8bee2d77e1ca0e4999cace773c71ddac04d44f7968750d812d98cb2b3699cb5}{Pinky}, 
+\hyperlink{class_ghost_adc8bee2d77e1ca0e4999cace773c71dda1e770e10aa3bb3f14728210ec28ccf0c}{Inky}, 
+\hyperlink{class_ghost_adc8bee2d77e1ca0e4999cace773c71dda28364f0ec8546ed1dea16de59696ab12}{Clyde}
+ \}\begin{DoxyCompactList}\small\item\em Identités des fantômes. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_ghost_a95bc4313fdf87d827c64fe9607fcc205}{ghost\+Chasing\+Mode\+I\+D} \{ \hyperlink{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a49e7cffc44104e0f3f65579a25804b63}{Scatter}, 
+\hyperlink{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a4e0f748a4d226742a8d524f8386fc6db}{Chase}, 
+\hyperlink{class_ghost_a95bc4313fdf87d827c64fe9607fcc205ae7975f0b636e971a50a0a4285353ac0e}{Caught}
+ \}\begin{DoxyCompactList}\small\item\em Modes de poursuite des fantômes. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ghost_a2e38d3c0c8546cceb74777b49a8e3bb7}{Ghost} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de base de la classe \hyperlink{class_ghost}{Ghost}. \end{DoxyCompactList}\item 
+\hyperlink{class_ghost_a08c2db9f738793076d79de784a17708e}{Ghost} (\hyperlink{class_grid}{Grid} $\ast$grid, int id)
+\begin{DoxyCompactList}\small\item\em Surchage du constructeur de base de la classe \hyperlink{class_ghost}{Ghost}. \end{DoxyCompactList}\item 
+\hyperlink{class_ghost_ad71ada8752f18eaaccb44ef24b3c8718}{Ghost} (\hyperlink{class_grid}{Grid} $\ast$grid, Q\+Dom\+Element elem, int id)
+\begin{DoxyCompactList}\small\item\em Surcharge du constructeur pour utiliser X\+M\+L. \end{DoxyCompactList}\item 
+bool \hyperlink{class_ghost_af19dd8db51fe675e626785ebe44a0a1b}{is\+Inside\+Ghost\+House} () const 
+\begin{DoxyCompactList}\small\item\em Vérifie si le fantôme se trouve dans la maison définie par sa grille. \end{DoxyCompactList}\item 
+\hypertarget{class_ghost_a231a741f4efcc40f47bddb7efa61a19d}{}void \hyperlink{class_ghost_a231a741f4efcc40f47bddb7efa61a19d}{move} ()\label{class_ghost_a231a741f4efcc40f47bddb7efa61a19d}
+
+\begin{DoxyCompactList}\small\item\em Calcule la prochaine position du fantôme en fonction de tous les paramètres et l\textquotesingle{}y déplace. \end{DoxyCompactList}\item 
+\hypertarget{class_ghost_aea663d057631b7857e05b26205cb2c4b}{}void \hyperlink{class_ghost_aea663d057631b7857e05b26205cb2c4b}{reverse\+Direction} ()\label{class_ghost_aea663d057631b7857e05b26205cb2c4b}
+
+\begin{DoxyCompactList}\small\item\em Inverse le sens de déplacement du fantôme (lors des changements de mode de poursuite). \end{DoxyCompactList}\item 
+int \hyperlink{class_ghost_ac3966bbfe1af0b639d983f20289954f9}{find\+Nextdirection} (Q\+Point tile\+Target, bool ignore\+Previous\+Direction=false)
+\begin{DoxyCompactList}\small\item\em Choisit la meilleure direction parmi les options qui s\textquotesingle{}offrent au fantômes. \end{DoxyCompactList}\item 
+int \hyperlink{class_ghost_a9aa8db09a42bad7bd62bb336d0b5c89d}{state} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_ghost_a29195fe389663ae6af139466042bd97c}{set\+State} (int \hyperlink{class_ghost_a9aa8db09a42bad7bd62bb336d0b5c89d}{state})
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}état de poursuite du fantôme. \end{DoxyCompactList}\item 
+bool \hyperlink{class_ghost_a990b12906e22b5064e56d3f961f7c2a9}{is\+Free} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_ghost_a8f20887030473a8ceae63f2fe7722a28}{set\+Free} (bool free)
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+bool \hyperlink{class_ghost_abd3f24e1a2f245865592ba5de5adbcba}{is\+On\+The\+Move} () const 
+\begin{DoxyCompactList}\small\item\em Vérifie si la partie réelle de la position du fantôme est nulle. \end{DoxyCompactList}\item 
+bool \hyperlink{class_ghost_ae1f2d6e6bbedde18fd5f0465eaf20c08}{is\+Chasing} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+bool \hyperlink{class_ghost_aee8ff34fc61b92cc86274fa2b967e814}{is\+Scattering} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+\hypertarget{class_ghost_af5702aa6b5aec6edfa9f00843eacd3bb}{}void \hyperlink{class_ghost_af5702aa6b5aec6edfa9f00843eacd3bb}{set\+Caught} ()\label{class_ghost_af5702aa6b5aec6edfa9f00843eacd3bb}
+
+\begin{DoxyCompactList}\small\item\em Marque le fantôme comme attrapé. \end{DoxyCompactList}\item 
+bool \hyperlink{class_ghost_adb8eaa0f4a713181fd91f758b7862394}{is\+Caught} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+Q\+Point \hyperlink{class_ghost_af538955b257089ee1ab73bcc061b503e}{scatter\+Corner} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+Q\+Image \hyperlink{class_ghost_a4856be59d881a5f39657c837d3ceba2c}{ghost\+Image} (Q\+Size size=Q\+Size(24, 24))
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}image du fantôme en fonction de ses paramètres (identité, direction, ...). \end{DoxyCompactList}\item 
+Q\+Image \hyperlink{class_ghost_a4f22bee60957680cdf68396d8e0c7d69}{ghost\+Eyes\+Image} (Q\+Size size=Q\+Size(24, 24))
+\begin{DoxyCompactList}\small\item\em Dessine les yeux du fantôme en fonction de sa direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_ghost_adb0d9cf00e0918c43abeb4c1bfc116ec}{set\+Ghosts\+Scared} (bool scared)
+\begin{DoxyCompactList}\small\item\em Modifie le comportement en Appeuré ou Normal. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_ghost_a09869588955cc6014359262e4f199300}{are\+Ghosts\+Scared} ()
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+static Q\+Image \hyperlink{class_ghost_aa032481d2ebe66d71b4b0744f043574d}{scared\+Ghost\+Image} (bool flash\+On=false, Q\+Size size=Q\+Size(24, 24))
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}image d\textquotesingle{}un fantôme effrayé (flashant ou non). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ghost_a78fa64d27148af69bd45c57e4261f79d}{}void \hyperlink{class_ghost_a78fa64d27148af69bd45c57e4261f79d}{local\+Move} ()\label{class_ghost_a78fa64d27148af69bd45c57e4261f79d}
+
+\begin{DoxyCompactList}\small\item\em Déplacement au sein d\textquotesingle{}une même case. \end{DoxyCompactList}\item 
+\hypertarget{class_ghost_acb51421b22f418d0443a24ae82ca169b}{}void \hyperlink{class_ghost_acb51421b22f418d0443a24ae82ca169b}{chase} ()\label{class_ghost_acb51421b22f418d0443a24ae82ca169b}
+
+\begin{DoxyCompactList}\small\item\em Sélection d\textquotesingle{}une nouvelle direction pour poursuivre le Pacman. \end{DoxyCompactList}\item 
+\hypertarget{class_ghost_ad713f0afbe29921b18497972debda803}{}void \hyperlink{class_ghost_ad713f0afbe29921b18497972debda803}{scatter} ()\label{class_ghost_ad713f0afbe29921b18497972debda803}
+
+\begin{DoxyCompactList}\small\item\em Sélection d\textquotesingle{}une nouvelle direction pour aller vers le coin du fantôme. \end{DoxyCompactList}\item 
+\hypertarget{class_ghost_a22b8e862c12815a2cfe55bd6583c6a08}{}void \hyperlink{class_ghost_a22b8e862c12815a2cfe55bd6583c6a08}{escape} ()\label{class_ghost_a22b8e862c12815a2cfe55bd6583c6a08}
+
+\begin{DoxyCompactList}\small\item\em Sélection aléatoire d\textquotesingle{}une direction pour fuir le Pacman. \end{DoxyCompactList}\item 
+\hypertarget{class_ghost_a0c6d41d57edf393eb20f08eb10457914}{}void \hyperlink{class_ghost_a0c6d41d57edf393eb20f08eb10457914}{go\+Home} ()\label{class_ghost_a0c6d41d57edf393eb20f08eb10457914}
+
+\begin{DoxyCompactList}\small\item\em Sélection d\textquotesingle{}une nouvelle direction vers la maison et saut d\textquotesingle{}une case d\textquotesingle{}un coup. \end{DoxyCompactList}\item 
+\hypertarget{class_ghost_a38a8da798ef6876dbbdaa294242f6843}{}void \hyperlink{class_ghost_a38a8da798ef6876dbbdaa294242f6843}{release} ()\label{class_ghost_a38a8da798ef6876dbbdaa294242f6843}
+
+\begin{DoxyCompactList}\small\item\em Libère le fantôme de la maison pour partir à la chasse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Q\+Point \hyperlink{class_ghost_a74121faf86c371e66221fe8d312cb7bf}{blinky\+Chase\+Target} ()
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+static Q\+Point \hyperlink{class_ghost_a08e782e5437c63edfbfbdc41301c15cc}{pinky\+Chase\+Target} ()
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+static Q\+Point \hyperlink{class_ghost_a4f4818ff5842e1c640a1edd05aacd8be}{inky\+Chase\+Target} ()
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+static Q\+Point \hyperlink{class_ghost_aaf68a05af1e6a561e1733b889c35a26b}{clyde\+Chase\+Target} ()
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe d\textquotesingle{}unité de type Fantôme avec les comportements de chaque fantôme. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+La classe crée dès le lancement du programme les 4 fantômes en variables globales afin d\textquotesingle{}y accéder à partir de n\textquotesingle{}importe où. Les méthodes de la classe permettent aux fantômes d\textquotesingle{}avoir différents comportement, en fonction de leur identité ou de leur état actuel. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_ghost_a95bc4313fdf87d827c64fe9607fcc205}{}\index{Ghost@{Ghost}!ghost\+Chasing\+Mode\+I\+D@{ghost\+Chasing\+Mode\+I\+D}}
+\index{ghost\+Chasing\+Mode\+I\+D@{ghost\+Chasing\+Mode\+I\+D}!Ghost@{Ghost}}
+\subsubsection[{ghost\+Chasing\+Mode\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Ghost\+::ghost\+Chasing\+Mode\+I\+D}}\label{class_ghost_a95bc4313fdf87d827c64fe9607fcc205}
+
+
+Modes de poursuite des fantômes. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Scatter@{Scatter}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Scatter@{Scatter}}\item[{\em 
+\hypertarget{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a49e7cffc44104e0f3f65579a25804b63}{}Scatter\label{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a49e7cffc44104e0f3f65579a25804b63}
+}]Les fantômes se dirigent vers leur coin spécifique \index{Chase@{Chase}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Chase@{Chase}}\item[{\em 
+\hypertarget{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a4e0f748a4d226742a8d524f8386fc6db}{}Chase\label{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a4e0f748a4d226742a8d524f8386fc6db}
+}]Les fantômes utilisent leur I\+A personnelle pour attraper le Pacman \index{Caught@{Caught}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Caught@{Caught}}\item[{\em 
+\hypertarget{class_ghost_a95bc4313fdf87d827c64fe9607fcc205ae7975f0b636e971a50a0a4285353ac0e}{}Caught\label{class_ghost_a95bc4313fdf87d827c64fe9607fcc205ae7975f0b636e971a50a0a4285353ac0e}
+}]Les fantômes attrapés se dirigent vers leur maison et y reste jusqu\textquotesingle{}à expiration \end{description}
+\end{Desc}
+\hypertarget{class_ghost_adc8bee2d77e1ca0e4999cace773c71dd}{}\index{Ghost@{Ghost}!Ghosts\+I\+D@{Ghosts\+I\+D}}
+\index{Ghosts\+I\+D@{Ghosts\+I\+D}!Ghost@{Ghost}}
+\subsubsection[{Ghosts\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Ghost\+::\+Ghosts\+I\+D}}\label{class_ghost_adc8bee2d77e1ca0e4999cace773c71dd}
+
+
+Identités des fantômes. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Blinky@{Blinky}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Blinky@{Blinky}}\item[{\em 
+\hypertarget{class_ghost_adc8bee2d77e1ca0e4999cace773c71dda41f01d04777c489d40e34d6c058c6b5b}{}Blinky\label{class_ghost_adc8bee2d77e1ca0e4999cace773c71dda41f01d04777c489d40e34d6c058c6b5b}
+}]Shadow \char`\"{}\+Blinky\char`\"{} \index{Pinky@{Pinky}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Pinky@{Pinky}}\item[{\em 
+\hypertarget{class_ghost_adc8bee2d77e1ca0e4999cace773c71ddac04d44f7968750d812d98cb2b3699cb5}{}Pinky\label{class_ghost_adc8bee2d77e1ca0e4999cace773c71ddac04d44f7968750d812d98cb2b3699cb5}
+}]Speedy \char`\"{}\+Pinky\char`\"{} \index{Inky@{Inky}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Inky@{Inky}}\item[{\em 
+\hypertarget{class_ghost_adc8bee2d77e1ca0e4999cace773c71dda1e770e10aa3bb3f14728210ec28ccf0c}{}Inky\label{class_ghost_adc8bee2d77e1ca0e4999cace773c71dda1e770e10aa3bb3f14728210ec28ccf0c}
+}]Bashful \char`\"{}\+Inky\char`\"{} \index{Clyde@{Clyde}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Clyde@{Clyde}}\item[{\em 
+\hypertarget{class_ghost_adc8bee2d77e1ca0e4999cace773c71dda28364f0ec8546ed1dea16de59696ab12}{}Clyde\label{class_ghost_adc8bee2d77e1ca0e4999cace773c71dda28364f0ec8546ed1dea16de59696ab12}
+}]Pokey \char`\"{}\+Clyde\char`\"{} \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_ghost_a2e38d3c0c8546cceb74777b49a8e3bb7}{}\index{Ghost@{Ghost}!Ghost@{Ghost}}
+\index{Ghost@{Ghost}!Ghost@{Ghost}}
+\subsubsection[{Ghost()}]{\setlength{\rightskip}{0pt plus 5cm}Ghost\+::\+Ghost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ghost_a2e38d3c0c8546cceb74777b49a8e3bb7}
+
+
+Constructeur de base de la classe \hyperlink{class_ghost}{Ghost}. 
+
+Note \+: Cette version du constructeur n\textquotesingle{}est pas destinée à être utilisée en dehors de l\textquotesingle{}initialisation d\textquotesingle{}une classe qui la contient. L\textquotesingle{}objet créé n\textquotesingle{}est pas valide. \hypertarget{class_ghost_a08c2db9f738793076d79de784a17708e}{}\index{Ghost@{Ghost}!Ghost@{Ghost}}
+\index{Ghost@{Ghost}!Ghost@{Ghost}}
+\subsubsection[{Ghost(\+Grid $\ast$grid, int id)}]{\setlength{\rightskip}{0pt plus 5cm}Ghost\+::\+Ghost (
+\begin{DoxyParamCaption}
+\item[{{\bf Grid} $\ast$}]{grid, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_ghost_a08c2db9f738793076d79de784a17708e}
+
+
+Surchage du constructeur de base de la classe \hyperlink{class_ghost}{Ghost}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & La grille sur laquelle se trouve le fantôme. \\
+\hline
+{\em id} & Identité du fantôme (cf. Ghosts\+I\+D).\\
+\hline
+\end{DoxyParams}
+Un fantôme créé par ce constructeur est valide mais dispose de tous les paramètres par défaut. \hypertarget{class_ghost_ad71ada8752f18eaaccb44ef24b3c8718}{}\index{Ghost@{Ghost}!Ghost@{Ghost}}
+\index{Ghost@{Ghost}!Ghost@{Ghost}}
+\subsubsection[{Ghost(\+Grid $\ast$grid, Q\+Dom\+Element elem, int id)}]{\setlength{\rightskip}{0pt plus 5cm}Ghost\+::\+Ghost (
+\begin{DoxyParamCaption}
+\item[{{\bf Grid} $\ast$}]{grid, }
+\item[{Q\+Dom\+Element}]{elem, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_ghost_ad71ada8752f18eaaccb44ef24b3c8718}
+
+
+Surcharge du constructeur pour utiliser X\+M\+L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & La grille sur laquelle se trouve le fantôme. \\
+\hline
+{\em elem} & Données X\+M\+L à charger lors de la contruction de l\textquotesingle{}objet. \\
+\hline
+{\em id} & Identité du fantôme (cf. Ghosts\+I\+D).\\
+\hline
+\end{DoxyParams}
+Construit un fantôme attachée à une grille et dont les paramètres sont chargés à partir d\textquotesingle{}une balise X\+M\+L.
+\begin{DoxyItemize}
+\item speed \+: Vitesse par défaut de l\textquotesingle{}unité.
+\item sspeed \+: Vitesse lorsque les fantômes sont apeurés.
+\item cornerx \+: Coordonnée horizontale du coin du fantôme.
+\item cornery \+: Coordonnée verticale du coin du fantôme.
+\item Autres \+: Voir \hyperlink{class_double_position}{Double\+Position(\+Q\+Dom\+Element elem)}.
+\end{DoxyItemize}
+
+Les vitesses doivent être proches d\textquotesingle{}un multiple de M\+A\+X\+\_\+\+F\+L\+O\+A\+T\+\_\+\+P\+O\+S. Par exemple, avec M\+A\+X\+\_\+\+F\+L\+O\+A\+T\+\_\+\+P\+O\+S égal à 1000, 80 donne un résultat assez éloigné (80$\ast$12 = 960, 80$\ast$13 = 1040) alors que 91 donne une valeur très proche (91$\ast$11 = 1001). Si la valeur est trop éloignée, les unités auront des erreurs dans leur déplacement. De base, l\textquotesingle{}écart maximal absolu est de 25.
+
+A la construction, l\textquotesingle{}élément X\+M\+L doit aussi contenir la position qu\textquotesingle{}aura l\textquotesingle{}unité.
+
+Exemple \+: $<$Blinky ix=\char`\"{}13\char`\"{} iy=\char`\"{}11\char`\"{} speed=\char`\"{}71\char`\"{} sspeed = \char`\"{}50\char`\"{} cornerx=\char`\"{}26\char`\"{} cornery=\char`\"{}-\/2\char`\"{} fx = \char`\"{}half\char`\"{}/$>$ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ghost_a09869588955cc6014359262e4f199300}{}\index{Ghost@{Ghost}!are\+Ghosts\+Scared@{are\+Ghosts\+Scared}}
+\index{are\+Ghosts\+Scared@{are\+Ghosts\+Scared}!Ghost@{Ghost}}
+\subsubsection[{are\+Ghosts\+Scared()}]{\setlength{\rightskip}{0pt plus 5cm}bool Ghost\+::are\+Ghosts\+Scared (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_ghost_a09869588955cc6014359262e4f199300}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+true si les fantômes sont appeurés, sinon false. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_a74121faf86c371e66221fe8d312cb7bf}{}\index{Ghost@{Ghost}!blinky\+Chase\+Target@{blinky\+Chase\+Target}}
+\index{blinky\+Chase\+Target@{blinky\+Chase\+Target}!Ghost@{Ghost}}
+\subsubsection[{blinky\+Chase\+Target()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Ghost\+::blinky\+Chase\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_ghost_a74121faf86c371e66221fe8d312cb7bf}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Cible de Blinky 
+\end{DoxyReturn}
+\hypertarget{class_ghost_aaf68a05af1e6a561e1733b889c35a26b}{}\index{Ghost@{Ghost}!clyde\+Chase\+Target@{clyde\+Chase\+Target}}
+\index{clyde\+Chase\+Target@{clyde\+Chase\+Target}!Ghost@{Ghost}}
+\subsubsection[{clyde\+Chase\+Target()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Ghost\+::clyde\+Chase\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_ghost_aaf68a05af1e6a561e1733b889c35a26b}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Cible de Clyde 
+\end{DoxyReturn}
+\hypertarget{class_ghost_ac3966bbfe1af0b639d983f20289954f9}{}\index{Ghost@{Ghost}!find\+Nextdirection@{find\+Nextdirection}}
+\index{find\+Nextdirection@{find\+Nextdirection}!Ghost@{Ghost}}
+\subsubsection[{find\+Nextdirection(\+Q\+Point tile\+Target, bool ignore\+Previous\+Direction=false)}]{\setlength{\rightskip}{0pt plus 5cm}int Ghost\+::find\+Nextdirection (
+\begin{DoxyParamCaption}
+\item[{Q\+Point}]{tile\+Target, }
+\item[{bool}]{ignore\+Previous\+Direction = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_ghost_ac3966bbfe1af0b639d983f20289954f9}
+
+
+Choisit la meilleure direction parmi les options qui s\textquotesingle{}offrent au fantômes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile\+Target} & Cible pour trouver la meilleure direction. \\
+\hline
+{\em ignore\+Previous\+Direction} & false de base. Si true, le fantôme ignore le fait qu\textquotesingle{}il n\textquotesingle{}a pas le droit de se retourner en temps normal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Meilleure direction à suivre (cf. \hyperlink{class_unit_a198e5fe8c952e2f1e7e9524a914aa0ed}{Unit\+::\+Directions}).
+\end{DoxyReturn}
+Le fantôme regarde les quatres cases qui l\textquotesingle{}entourent et empile celles où il peut se déplacer.
+
+Ensuite il cherche celle dans la pile qui a la plus courte distance euclidienne vers la cible.
+
+En temps normal, un fantôme ne peut pas se retourner ni se déplacer sur une case avec la collision activée. \hypertarget{class_ghost_a4f22bee60957680cdf68396d8e0c7d69}{}\index{Ghost@{Ghost}!ghost\+Eyes\+Image@{ghost\+Eyes\+Image}}
+\index{ghost\+Eyes\+Image@{ghost\+Eyes\+Image}!Ghost@{Ghost}}
+\subsubsection[{ghost\+Eyes\+Image(\+Q\+Size size=\+Q\+Size(24, 24))}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Ghost\+::ghost\+Eyes\+Image (
+\begin{DoxyParamCaption}
+\item[{Q\+Size}]{size = {\ttfamily QSize(24,24)}}
+\end{DoxyParamCaption}
+)}\label{class_ghost_a4f22bee60957680cdf68396d8e0c7d69}
+
+
+Dessine les yeux du fantôme en fonction de sa direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Taille de l\textquotesingle{}image finale. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Images des yeux du fantôme. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_a4856be59d881a5f39657c837d3ceba2c}{}\index{Ghost@{Ghost}!ghost\+Image@{ghost\+Image}}
+\index{ghost\+Image@{ghost\+Image}!Ghost@{Ghost}}
+\subsubsection[{ghost\+Image(\+Q\+Size size=\+Q\+Size(24, 24))}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Ghost\+::ghost\+Image (
+\begin{DoxyParamCaption}
+\item[{Q\+Size}]{size = {\ttfamily QSize(24,24)}}
+\end{DoxyParamCaption}
+)}\label{class_ghost_a4856be59d881a5f39657c837d3ceba2c}
+
+
+Dessine l\textquotesingle{}image du fantôme en fonction de ses paramètres (identité, direction, ...). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Taille de l\textquotesingle{}image du fantôme. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Image finale du fantôme. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_a4f4818ff5842e1c640a1edd05aacd8be}{}\index{Ghost@{Ghost}!inky\+Chase\+Target@{inky\+Chase\+Target}}
+\index{inky\+Chase\+Target@{inky\+Chase\+Target}!Ghost@{Ghost}}
+\subsubsection[{inky\+Chase\+Target()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Ghost\+::inky\+Chase\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_ghost_a4f4818ff5842e1c640a1edd05aacd8be}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Cible de Inky 
+\end{DoxyReturn}
+\hypertarget{class_ghost_adb8eaa0f4a713181fd91f758b7862394}{}\index{Ghost@{Ghost}!is\+Caught@{is\+Caught}}
+\index{is\+Caught@{is\+Caught}!Ghost@{Ghost}}
+\subsubsection[{is\+Caught() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Ghost\+::is\+Caught (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ghost_adb8eaa0f4a713181fd91f758b7862394}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+true si le fantôme est attrapé, false sinon. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_ae1f2d6e6bbedde18fd5f0465eaf20c08}{}\index{Ghost@{Ghost}!is\+Chasing@{is\+Chasing}}
+\index{is\+Chasing@{is\+Chasing}!Ghost@{Ghost}}
+\subsubsection[{is\+Chasing() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Ghost\+::is\+Chasing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ghost_ae1f2d6e6bbedde18fd5f0465eaf20c08}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+true si l\textquotesingle{}état est à Chase, sinon false. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_a990b12906e22b5064e56d3f961f7c2a9}{}\index{Ghost@{Ghost}!is\+Free@{is\+Free}}
+\index{is\+Free@{is\+Free}!Ghost@{Ghost}}
+\subsubsection[{is\+Free() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Ghost\+::is\+Free (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ghost_a990b12906e22b5064e56d3f961f7c2a9}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+true si le fantôme a le droit de sortir.
+\end{DoxyReturn}
+De base, seuls Blinky et Pinky sont capables de sortir. Inky attend que Pacman ait mangé 30 pastilles et Clyde attend qu\textquotesingle{}il en ai mangé un tiers. \hypertarget{class_ghost_af19dd8db51fe675e626785ebe44a0a1b}{}\index{Ghost@{Ghost}!is\+Inside\+Ghost\+House@{is\+Inside\+Ghost\+House}}
+\index{is\+Inside\+Ghost\+House@{is\+Inside\+Ghost\+House}!Ghost@{Ghost}}
+\subsubsection[{is\+Inside\+Ghost\+House() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Ghost\+::is\+Inside\+Ghost\+House (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ghost_af19dd8db51fe675e626785ebe44a0a1b}
+
+
+Vérifie si le fantôme se trouve dans la maison définie par sa grille. 
+
+\begin{DoxyReturn}{Returns}
+true si le fantôme se trouve dans la maison, sinon false. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_abd3f24e1a2f245865592ba5de5adbcba}{}\index{Ghost@{Ghost}!is\+On\+The\+Move@{is\+On\+The\+Move}}
+\index{is\+On\+The\+Move@{is\+On\+The\+Move}!Ghost@{Ghost}}
+\subsubsection[{is\+On\+The\+Move() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Ghost\+::is\+On\+The\+Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ghost_abd3f24e1a2f245865592ba5de5adbcba}
+
+
+Vérifie si la partie réelle de la position du fantôme est nulle. 
+
+\begin{DoxyReturn}{Returns}
+true si la partie réelle n\textquotesingle{}est pas nulle, sinon false. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_aee8ff34fc61b92cc86274fa2b967e814}{}\index{Ghost@{Ghost}!is\+Scattering@{is\+Scattering}}
+\index{is\+Scattering@{is\+Scattering}!Ghost@{Ghost}}
+\subsubsection[{is\+Scattering() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Ghost\+::is\+Scattering (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ghost_aee8ff34fc61b92cc86274fa2b967e814}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+true si l\textquotesingle{}état est à Scatter, sinon false. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_a08e782e5437c63edfbfbdc41301c15cc}{}\index{Ghost@{Ghost}!pinky\+Chase\+Target@{pinky\+Chase\+Target}}
+\index{pinky\+Chase\+Target@{pinky\+Chase\+Target}!Ghost@{Ghost}}
+\subsubsection[{pinky\+Chase\+Target()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Ghost\+::pinky\+Chase\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_ghost_a08e782e5437c63edfbfbdc41301c15cc}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Cible de Pinky 
+\end{DoxyReturn}
+\hypertarget{class_ghost_aa032481d2ebe66d71b4b0744f043574d}{}\index{Ghost@{Ghost}!scared\+Ghost\+Image@{scared\+Ghost\+Image}}
+\index{scared\+Ghost\+Image@{scared\+Ghost\+Image}!Ghost@{Ghost}}
+\subsubsection[{scared\+Ghost\+Image(bool flash\+On=false, Q\+Size size=\+Q\+Size(24, 24))}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Ghost\+::scared\+Ghost\+Image (
+\begin{DoxyParamCaption}
+\item[{bool}]{flash\+On = {\ttfamily false}, }
+\item[{Q\+Size}]{size = {\ttfamily QSize(24,24)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_ghost_aa032481d2ebe66d71b4b0744f043574d}
+
+
+Dessine l\textquotesingle{}image d\textquotesingle{}un fantôme effrayé (flashant ou non). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flash\+On} & Si true, alors le fantôme est blanc, sinon bleu foncé. \\
+\hline
+{\em size} & Taille de l\textquotesingle{}image finale. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Image de fantôme effrayé. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_af538955b257089ee1ab73bcc061b503e}{}\index{Ghost@{Ghost}!scatter\+Corner@{scatter\+Corner}}
+\index{scatter\+Corner@{scatter\+Corner}!Ghost@{Ghost}}
+\subsubsection[{scatter\+Corner() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Ghost\+::scatter\+Corner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ghost_af538955b257089ee1ab73bcc061b503e}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Le coin du mode Scatter du fantôme. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_a8f20887030473a8ceae63f2fe7722a28}{}\index{Ghost@{Ghost}!set\+Free@{set\+Free}}
+\index{set\+Free@{set\+Free}!Ghost@{Ghost}}
+\subsubsection[{set\+Free(bool free)}]{\setlength{\rightskip}{0pt plus 5cm}void Ghost\+::set\+Free (
+\begin{DoxyParamCaption}
+\item[{bool}]{free}
+\end{DoxyParamCaption}
+)}\label{class_ghost_a8f20887030473a8ceae63f2fe7722a28}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em free} & Si true alors le fantôme devient capable de sortir de la maison et démarre son I\+A. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ghost_adb0d9cf00e0918c43abeb4c1bfc116ec}{}\index{Ghost@{Ghost}!set\+Ghosts\+Scared@{set\+Ghosts\+Scared}}
+\index{set\+Ghosts\+Scared@{set\+Ghosts\+Scared}!Ghost@{Ghost}}
+\subsubsection[{set\+Ghosts\+Scared(bool scared)}]{\setlength{\rightskip}{0pt plus 5cm}void Ghost\+::set\+Ghosts\+Scared (
+\begin{DoxyParamCaption}
+\item[{bool}]{scared}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_ghost_adb0d9cf00e0918c43abeb4c1bfc116ec}
+
+
+Modifie le comportement en Appeuré ou Normal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scared} & Si true, alors le comportement devient Appeuré sinon Normal. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ghost_a29195fe389663ae6af139466042bd97c}{}\index{Ghost@{Ghost}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!Ghost@{Ghost}}
+\subsubsection[{set\+State(int state)}]{\setlength{\rightskip}{0pt plus 5cm}void Ghost\+::set\+State (
+\begin{DoxyParamCaption}
+\item[{int}]{state}
+\end{DoxyParamCaption}
+)}\label{class_ghost_a29195fe389663ae6af139466042bd97c}
+
+
+Modifie l\textquotesingle{}état de poursuite du fantôme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Nouvel état de poursuite. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ghost_a9aa8db09a42bad7bd62bb336d0b5c89d}{}\index{Ghost@{Ghost}!state@{state}}
+\index{state@{state}!Ghost@{Ghost}}
+\subsubsection[{state() const }]{\setlength{\rightskip}{0pt plus 5cm}int Ghost\+::state (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ghost_a9aa8db09a42bad7bd62bb336d0b5c89d}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Etat de poursuite actuel du fantôme.(cf. ghost\+Chasing\+Mode\+I\+D). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ghost.\+h\item 
+ghost.\+cpp\end{DoxyCompactItemize}

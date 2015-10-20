@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/Ghost_Blinky.png</file>
+        <file>images/Ghost_Blue.png</file>
+        <file>images/Ghost_Clyde.png</file>
+        <file>images/Ghost_Eyes.png</file>
+        <file>images/Ghost_Inky.png</file>
+        <file>images/Ghost_Pinky.png</file>
+        <file>images/pacman_life.png</file>
+        <file>images/plus.png</file>
+    </qresource>
+</RCC>

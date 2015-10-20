@@ -1,0 +1,202 @@
+\hypertarget{class_pacman_unit}{}\section{Pacman\+Unit Class Reference}
+\label{class_pacman_unit}\index{Pacman\+Unit@{Pacman\+Unit}}
+
+
+Classe de l\textquotesingle{}unité Pacman.  
+
+
+
+
+{\ttfamily \#include $<$pacmanunit.\+h$>$}
+
+Inheritance diagram for Pacman\+Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pacman_unit}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_pacman_unit_a7ecbacb0b7f442cd8e8c2483ed89cade}{}\hyperlink{class_pacman_unit_a7ecbacb0b7f442cd8e8c2483ed89cade}{pellet\+Eaten} ()\label{class_pacman_unit_a7ecbacb0b7f442cd8e8c2483ed89cade}
+
+\begin{DoxyCompactList}\small\item\em Emit lorsque le Pacman arrive sur une case avec une pastille. \end{DoxyCompactList}\item 
+\hypertarget{class_pacman_unit_a6723905915943bae1bcadb1cb91a2775}{}\hyperlink{class_pacman_unit_a6723905915943bae1bcadb1cb91a2775}{energizer\+Eaten} ()\label{class_pacman_unit_a6723905915943bae1bcadb1cb91a2775}
+
+\begin{DoxyCompactList}\small\item\em Emit lorsque le Pacman arrive sur une case avec un énergisant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pacman_unit_a5da689e1d96160428b625a861cdb7406}{Pacman\+Unit} (Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructeur de base du \hyperlink{class_pacman_unit}{Pacman\+Unit}. \end{DoxyCompactList}\item 
+\hyperlink{class_pacman_unit_a5aaebd34aa813060d373a5a80597e4ed}{Pacman\+Unit} (\hyperlink{class_grid}{Grid} $\ast$grid, Q\+Dom\+Element elem, Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Surcharge du constructeur (avec grille) pour utiliser X\+M\+L. \end{DoxyCompactList}\item 
+\hypertarget{class_pacman_unit_afea95a3310aad0ad96f7a22b616e1dc3}{}void \hyperlink{class_pacman_unit_afea95a3310aad0ad96f7a22b616e1dc3}{next\+Frame} ()\label{class_pacman_unit_afea95a3310aad0ad96f7a22b616e1dc3}
+
+\begin{DoxyCompactList}\small\item\em Fait passer le dessin du pacman à la prochain frame (pas de calul d\textquotesingle{}image). \end{DoxyCompactList}\item 
+void \hyperlink{class_pacman_unit_a9c4c0c4677e8cda4d9f65d4be17a16f7}{set\+Frame} (int \hyperlink{class_pacman_unit_a55cd713a2c14b16d26c06846598dfbec}{frame})
+\begin{DoxyCompactList}\small\item\em Fait directement passer le dessin du pacman à la frame donnée (pas de calul d\textquotesingle{}image). \end{DoxyCompactList}\item 
+int \hyperlink{class_pacman_unit_a55cd713a2c14b16d26c06846598dfbec}{frame} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacman_unit_a3f5d014178425c2ee077d982ad5f0d7c}{set\+Next\+Direction} (int \hyperlink{class_unit_a5d8a5a789acfa4d2502b0c1082876172}{direction})
+\begin{DoxyCompactList}\small\item\em Modifie la prochaine direction que prendra Pacman dès qu\textquotesingle{}il pourra. \end{DoxyCompactList}\item 
+\hypertarget{class_pacman_unit_adc791959727ea73b022d37be8d60fa8f}{}void \hyperlink{class_pacman_unit_adc791959727ea73b022d37be8d60fa8f}{move} ()\label{class_pacman_unit_adc791959727ea73b022d37be8d60fa8f}
+
+\begin{DoxyCompactList}\small\item\em Calcule le prochain déplacement du Pacman. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacman_unit_a40f1adb4bd0a91b8bef0fb73bd64fb33}{set\+Direction} (int \hyperlink{class_unit_a5d8a5a789acfa4d2502b0c1082876172}{direction})
+\begin{DoxyCompactList}\small\item\em Tente de modifier la direction du pacman. \end{DoxyCompactList}\item 
+\hypertarget{class_pacman_unit_aedfa1c220c161792b887a5ab75efcaac}{}void \hyperlink{class_pacman_unit_aedfa1c220c161792b887a5ab75efcaac}{reset\+Position} ()\label{class_pacman_unit_aedfa1c220c161792b887a5ab75efcaac}
+
+\begin{DoxyCompactList}\small\item\em Réinitialise la position de Pacman à son origine. \end{DoxyCompactList}\item 
+Q\+Image \hyperlink{class_pacman_unit_a602006dba49b71a1b0c75787440b4ea0}{render\+Pacman\+Image} (Q\+Size size=Q\+Size(24, 24))
+\begin{DoxyCompactList}\small\item\em Calcule l\textquotesingle{}image de Pacman en fonction de sa direction et de sa frame actuelle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe de l\textquotesingle{}unité Pacman. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+Cette classe héritée de la classe \hyperlink{class_unit}{Unit} permet d\textquotesingle{}ajouter quelques fonctionnalités uniques au Pacman (comme l\textquotesingle{}enregistrement d\textquotesingle{}un coup en avance) ainsi qu\textquotesingle{}une aide pour le dessin du Pacman. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_pacman_unit_a5da689e1d96160428b625a861cdb7406}{}\index{Pacman\+Unit@{Pacman\+Unit}!Pacman\+Unit@{Pacman\+Unit}}
+\index{Pacman\+Unit@{Pacman\+Unit}!Pacman\+Unit@{Pacman\+Unit}}
+\subsubsection[{Pacman\+Unit(\+Q\+Object $\ast$parent=0)}]{\setlength{\rightskip}{0pt plus 5cm}Pacman\+Unit\+::\+Pacman\+Unit (
+\begin{DoxyParamCaption}
+\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_pacman_unit_a5da689e1d96160428b625a861cdb7406}
+
+
+Constructeur de base du \hyperlink{class_pacman_unit}{Pacman\+Unit}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent de l\textquotesingle{}objet.\\
+\hline
+\end{DoxyParams}
+Note \+: Cette version du constructeur n\textquotesingle{}est pas destinée à être utilisée en dehors de l\textquotesingle{}initialisation d\textquotesingle{}une classe qui la contient. L\textquotesingle{}objet créé n\textquotesingle{}est pas valide. \hypertarget{class_pacman_unit_a5aaebd34aa813060d373a5a80597e4ed}{}\index{Pacman\+Unit@{Pacman\+Unit}!Pacman\+Unit@{Pacman\+Unit}}
+\index{Pacman\+Unit@{Pacman\+Unit}!Pacman\+Unit@{Pacman\+Unit}}
+\subsubsection[{Pacman\+Unit(\+Grid $\ast$grid, Q\+Dom\+Element elem, Q\+Object $\ast$parent=0)}]{\setlength{\rightskip}{0pt plus 5cm}Pacman\+Unit\+::\+Pacman\+Unit (
+\begin{DoxyParamCaption}
+\item[{{\bf Grid} $\ast$}]{grid, }
+\item[{Q\+Dom\+Element}]{elem, }
+\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_pacman_unit_a5aaebd34aa813060d373a5a80597e4ed}
+
+
+Surcharge du constructeur (avec grille) pour utiliser X\+M\+L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & La grille sur laquelle se trouve Pacman. \\
+\hline
+{\em elem} & Données X\+M\+L à charger lors de la contruction de l\textquotesingle{}objet. \\
+\hline
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+Construit un pacman (unité) attaché à une grille et dont les paramètres sont chargés à partir d\textquotesingle{}une balise X\+M\+L.
+\begin{DoxyItemize}
+\item speed \+: Vitesse par défaut de l\textquotesingle{}unité.
+\item sspeed \+: Vitesse lorsque les fantômes sont apeurés.
+\item Autres \+: Voir \hyperlink{class_double_position}{Double\+Position(\+Q\+Dom\+Element elem)}.
+\end{DoxyItemize}
+
+Exemple \+: $<$Player ix=\char`\"{}14\char`\"{} iy=\char`\"{}23\char`\"{} speed=\char`\"{}77\char`\"{} sspeed = \char`\"{}91\char`\"{} fx = \char`\"{}half\char`\"{}/$>$ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_pacman_unit_a55cd713a2c14b16d26c06846598dfbec}{}\index{Pacman\+Unit@{Pacman\+Unit}!frame@{frame}}
+\index{frame@{frame}!Pacman\+Unit@{Pacman\+Unit}}
+\subsubsection[{frame() const }]{\setlength{\rightskip}{0pt plus 5cm}int Pacman\+Unit\+::frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_pacman_unit_a55cd713a2c14b16d26c06846598dfbec}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Frame actuelle du pacman. 
+\end{DoxyReturn}
+\hypertarget{class_pacman_unit_a602006dba49b71a1b0c75787440b4ea0}{}\index{Pacman\+Unit@{Pacman\+Unit}!render\+Pacman\+Image@{render\+Pacman\+Image}}
+\index{render\+Pacman\+Image@{render\+Pacman\+Image}!Pacman\+Unit@{Pacman\+Unit}}
+\subsubsection[{render\+Pacman\+Image(\+Q\+Size size=\+Q\+Size(24, 24))}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Pacman\+Unit\+::render\+Pacman\+Image (
+\begin{DoxyParamCaption}
+\item[{Q\+Size}]{size = {\ttfamily QSize(24,24)}}
+\end{DoxyParamCaption}
+)}\label{class_pacman_unit_a602006dba49b71a1b0c75787440b4ea0}
+
+
+Calcule l\textquotesingle{}image de Pacman en fonction de sa direction et de sa frame actuelle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Taille de l\textquotesingle{}image résultante. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Image du Pacman faisant face dans la direction du Pacman et à la bonne frame. 
+\end{DoxyReturn}
+\hypertarget{class_pacman_unit_a40f1adb4bd0a91b8bef0fb73bd64fb33}{}\index{Pacman\+Unit@{Pacman\+Unit}!set\+Direction@{set\+Direction}}
+\index{set\+Direction@{set\+Direction}!Pacman\+Unit@{Pacman\+Unit}}
+\subsubsection[{set\+Direction(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacman\+Unit\+::set\+Direction (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)}\label{class_pacman_unit_a40f1adb4bd0a91b8bef0fb73bd64fb33}
+
+
+Tente de modifier la direction du pacman. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Nouvelle direction.\\
+\hline
+\end{DoxyParams}
+Essaie de modifier la direction actuelle du joueur par le paramètre. Si le joueur ne peut pas effectuer ce mouvement immédiatement, la direction est stockée et sera prise dès que possible. Si une direction est déjà stockée afin d\textquotesingle{}être utilisée dès que possible, elle est écrasée. Si la nouvelle direction est égale à la direction actuelle, la prochaine direction est écrasée (afin d\textquotesingle{}annuler la commande). \hypertarget{class_pacman_unit_a9c4c0c4677e8cda4d9f65d4be17a16f7}{}\index{Pacman\+Unit@{Pacman\+Unit}!set\+Frame@{set\+Frame}}
+\index{set\+Frame@{set\+Frame}!Pacman\+Unit@{Pacman\+Unit}}
+\subsubsection[{set\+Frame(int frame)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacman\+Unit\+::set\+Frame (
+\begin{DoxyParamCaption}
+\item[{int}]{frame}
+\end{DoxyParamCaption}
+)}\label{class_pacman_unit_a9c4c0c4677e8cda4d9f65d4be17a16f7}
+
+
+Fait directement passer le dessin du pacman à la frame donnée (pas de calul d\textquotesingle{}image). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Nouvelle frame du pacman.\\
+\hline
+\end{DoxyParams}
+Utile pour créer un Pacman Dummy afin d\textquotesingle{}afficher une position particulière. \hypertarget{class_pacman_unit_a3f5d014178425c2ee077d982ad5f0d7c}{}\index{Pacman\+Unit@{Pacman\+Unit}!set\+Next\+Direction@{set\+Next\+Direction}}
+\index{set\+Next\+Direction@{set\+Next\+Direction}!Pacman\+Unit@{Pacman\+Unit}}
+\subsubsection[{set\+Next\+Direction(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacman\+Unit\+::set\+Next\+Direction (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)}\label{class_pacman_unit_a3f5d014178425c2ee077d982ad5f0d7c}
+
+
+Modifie la prochaine direction que prendra Pacman dès qu\textquotesingle{}il pourra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Nouvelle prochaine direction. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+pacmanunit.\+h\item 
+pacmanunit.\+cpp\end{DoxyCompactItemize}

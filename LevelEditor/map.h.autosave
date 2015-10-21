@@ -10,6 +10,8 @@
 
 /**
  * @brief Objet graphique détectant les clics souris et générant des signaux.
+ * @author Valentin D.d.G.
+ * @version 1.0
  */
 class Map : public QObject, public QGraphicsPixmapItem
 {

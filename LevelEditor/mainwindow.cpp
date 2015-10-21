@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     m_ignoreChanges = false;
     m_previousLevelIndex = -1;
     m_loading = false;
+    m_filename = "tmp.xml";
 
     QObject::connect(ui->graphicsView, SIGNAL(wheelEventOnView(QWheelEvent*)), this, SLOT(onViewWheelEvent(QWheelEvent*)));
     QObject::connect(m_map, SIGNAL(mapClicked(QGraphicsSceneMouseEvent*)), this, SLOT(onMapClicked(QGraphicsSceneMouseEvent*)));
@@ -353,6 +354,7 @@ void MainWindow::on_actionSauvegarder_sous_triggered()
     if(filename.isEmpty())
         return;
 
+    m_filename = filename;
     updateUnitsFromUI(ui->levelsComboBox->currentIndex());
     m_game->save(filename);
 }

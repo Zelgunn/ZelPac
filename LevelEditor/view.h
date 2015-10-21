@@ -5,6 +5,11 @@
 
 #include "map.h"
 
+/**
+ * @brief The NewGhostModeDialog class
+ * @author Valentin D.d.G.
+ * @version 1.0
+ */
 class View : public QGraphicsView
 {
     Q_OBJECT

@@ -9,6 +9,7 @@
 
 #include <QDebug>
 
+
 typedef struct UnitData_str
 {
     QPoint position;
@@ -20,7 +21,9 @@ typedef struct UnitData_str
 
 
 /**
- * @brief The EditorLevel class
+ * @brief La classe EditorLevel permet de paramétrer un niveau dans Pacman.
+ * @author Valentin D.d.G.
+ * @version 1.0
  */
 
 class EditorLevel

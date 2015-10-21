@@ -3,6 +3,11 @@
 
 #include <QImage>
 
+/**
+ * @brief The NewGhostModeDialog class
+ * @author Valentin D.d.G.
+ * @version 1.0
+ */
 class TextureHandler
 {
 public:

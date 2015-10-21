@@ -141,6 +141,12 @@ public:
      */
     void setPacmanDirection(int direction);
 
+    /**
+     * @brief Getter
+     * @return Vrai si le jeu est en pause suite à un changement de niveau.
+     */
+    bool isChangingLevel() const;
+
 public slots:
     /**
      * @brief Calcule la prochaine frame.
@@ -185,6 +191,8 @@ private:
     QMediaPlayer *m_shortSoundsPlayer;
     /** @brief Gestionnaire de textures. */
     TextureHandler m_textureHandler;
+    /** @brief Flag de changement de niveau */
+    bool m_isChangingLevel;
 };
 
 #endif // GAME_H

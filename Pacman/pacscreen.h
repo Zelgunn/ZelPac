@@ -31,7 +31,7 @@ public:
      * @brief Constructeur de base de la classe Pacscreen.
      * @param parent Parent de la fenêtre
      */
-    explicit Pacscreen(QWidget *parent = 0);
+    explicit Pacscreen(QString dataFile = ":/textures/pacman.xml", QWidget *parent = 0);
 
     /**
      * @brief Destructeur de la classe Pacscreen.
@@ -44,6 +44,15 @@ public:
      */
     void initGame(const QString &filename = ":/textures/pacman.xml");
 
+    /**
+     * @brief Fonction de traitement des entrées de flèches directionnelles.
+     * @param direction Touche appuyée.
+     * @details Lorsque cette fonction est appelée, si le jeu est totalement arrêté (victoire ou défaite),
+     *  alors il redémarre. Dans le cas où celui ci est uniquement en pause (perte de vie, fin de niveau) alors il reprend.
+     *  Sinon, le signal de la touche est propagé afin de changer la direction du joueur.
+     */
+    void onKeyboardInput(int direction);
+
 protected:
     /**
      * @brief paintEvent de la classe, afin d'afficher l'ensemble du jeu.
@@ -51,6 +60,30 @@ protected:
      *      la frame (il peut y avoir une frame d'écart, soit 16-17 ms).
      */
     void paintEvent(QPaintEvent *);
+
+    /**
+     * @brief Dessine les vies du pacman sur le PaintDevice sur lequel est branché le painter.
+     * @param painter Painter dessinant les vies.
+     */
+    void paintLifes(QPainter *painter);
+
+    /**
+     * @brief Dessine le score du pacman sur le PaintDevice sur lequel est branché le painter.
+     * @param painter Painter dessinant le score.
+     */
+    void paintScore(QPainter *painter);
+
+    /**
+     * @brief Dessine les FPS du jeu sur le PaintDevice sur lequel est branché le painter.
+     * @param painter Painter dessinant les FPS.
+     */
+    void paintFPS(QPainter *painter);
+
+    /**
+     * @brief Dessine le nom du niveau sur le PaintDevice sur lequel est branché le painter.
+     * @param painter Painter dessinant le nom du niveau.
+     */
+    void paintLevelName(QPainter *painter);
 
 private slots:
     /**
@@ -69,6 +102,11 @@ private slots:
      * @brief Modifie la direction du Pacman vers le Bas.
      */
     void on_Down();
+
+    /**
+     * @brief Réveille le jeu si celui-ci est en pause (fin de jeu, fin de niveau, ...).
+     */
+    void on_Enter();
 
     /**
      * @brief Fin d'une session de jeu.
@@ -90,6 +128,8 @@ private:
     int m_fps;
     /** @brief Nombre d'images affichées depuis le démarrage. */
     int m_frameCount;
+    /** @brief Timer de rafraichissement d'images */
+    QTimer *m_timer;
 };
 
 #endif // PACSCREEN_H

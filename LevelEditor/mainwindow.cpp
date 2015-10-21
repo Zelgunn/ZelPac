@@ -168,6 +168,8 @@ void MainWindow::etablishUIConnections()
         QObject::connect(unitWidgetSet.halfy, SIGNAL(clicked(bool)), this, SLOT(onUIValuesChanged()));
         QObject::connect(unitWidgetSet.posx, SIGNAL(valueChanged(int)), this, SLOT(onUIValuesChanged()));
         QObject::connect(unitWidgetSet.posy, SIGNAL(valueChanged(int)), this, SLOT(onUIValuesChanged()));
+        QObject::connect(unitWidgetSet.speed, SIGNAL(valueChanged(int)), this, SLOT(onSpeedChanged()));
+        QObject::connect(unitWidgetSet.sspeed, SIGNAL(valueChanged(int)), this, SLOT(onSpeedChanged()));
     }
 }
 
@@ -273,6 +275,21 @@ void MainWindow::onUIValuesChanged()
     }
 
     m_ignoreChanges = false;
+}
+
+void MainWindow::onSpeedChanged()
+{
+    UnitData unitData;
+    UnitWidgetSet unitWidgetSet;
+
+    for(int i=0; i<5; i++)
+    {
+        unitData = currentLevel()->unitsData()[i];
+        unitWidgetSet = m_unitsWidgetSets[i];
+
+        unitData.speed = unitWidgetSet.speed->value();
+        unitData.sspeed = unitWidgetSet.sspeed->value();
+    }
 }
 
 void MainWindow::updateUnitsFromUI(int idx)
@@ -382,6 +399,8 @@ void MainWindow::on_actionOuvrir_triggered()
     ui->listWidget->setCurrentRow(0);
     file.close();
     m_loading = false;
+    m_filename = filename;
+    ui->actionLancer_dans_Pacman->setEnabled(true);
 }
 
 void MainWindow::on_toolBox_currentChanged(int index)
@@ -416,6 +435,7 @@ void MainWindow::on_levelsComboBox_currentIndexChanged(int index)
     QList<int> modes = currentLevel()->ghostTimer().ghostMode();
     QString tmp;
 
+    ui->lw_GhostModes->clear();
     for(int i=0; i<durations.size(); i++)
     {
         if(modes.at(i) == 0)
@@ -530,4 +550,10 @@ void MainWindow::on_tb_energizerTile_clicked()
 void MainWindow::on_dsb_scaredTime_valueChanged(double arg1)
 {
     currentLevel()->setScaredTime(arg1);
+}
+
+void MainWindow::on_actionLancer_dans_Pacman_triggered()
+{
+    m_game->save(m_filename);
+    QProcess::execute(QApplication::applicationDirPath() + "/Pacman.exe", QStringList(m_filename));
 }

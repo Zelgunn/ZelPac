@@ -30,5 +30,6 @@
     </qresource>
     <qresource prefix="/sounds">
         <file>sounds/pacman_chomp.wav</file>
+        <file>sounds/Get Jinxed.mp3</file>
     </qresource>
 </RCC>

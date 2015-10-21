@@ -24,7 +24,7 @@ public:
     bool usePreviousGrid() const;
 
 private slots:
-    void on_levelNameLineEdit_textChanged(const QString &arg1);
+    void on_levelNameLineEdit_textChanged(const QString &);
 
 private:
     Ui::NewLevelDialog *ui;

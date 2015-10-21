@@ -166,7 +166,8 @@ QDomElement EditorLevel::toXML(QDomDocument *dom) const
     elem2.setAttribute("width", 6);
     elem2.setAttribute("height", 5);
     elem.appendChild(elem2);
-        // UsedTextures
+
+      // UsedTextures
     for(int i=0; i<m_usedTextures.size(); i++)
     {
         elem2 = dom->createElement("UsedTexture");

@@ -9,6 +9,7 @@
 #include <QGraphicsPixmapItem>
 #include <QSpinBox>
 #include <QCheckBox>
+#include <QProcess>
 
 #include <QDebug>
 
@@ -56,6 +57,7 @@ private slots:
     void onViewWheelEvent(QWheelEvent *event);
     void onUnitMoved();
     void onUIValuesChanged();
+    void onSpeedChanged();
     void updateUnitsFromUI(int idx);
 
     void on_actionNouveau_triggered();
@@ -76,6 +78,8 @@ private slots:
 
     void on_dsb_scaredTime_valueChanged(double arg1);
 
+    void on_actionLancer_dans_Pacman_triggered();
+
 private:
     Ui::MainWindow *ui;
     EditorGame *m_game;
@@ -85,6 +89,7 @@ private:
     bool m_ignoreChanges;
     int m_previousLevelIndex;
     bool m_loading;
+    QString m_filename;
 
     //QString gameFilename;
 };

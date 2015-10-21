@@ -1,26 +1,110 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
- <TileCount width="28" height="31"/>
- <TileSize width="16" height="16"/>
- <Player posx="14" posy="23"/>
- <Grid values="dmmmmmmmmmmmmcdmmmmmmmmmmmmcqoooooooooooorroooooooooooopqohnngohnnngorrohnnngohnngopqjrjjrorjjjrorrorjjjrorjjrjpqofnneofnnneofeofnnneofnneopqoooooooooooooooooooooooooopqohnngohgohnnnnnngohgohnngopqofnneorrofnnghnneorrofnneopqoooooorroooorroooorroooooopbllllgorfnngjrrjhnnerohllllajjjjjqorhnnejfejfnngropjjjjjjjjjjqorrjjjjjjjjjjrropjjjjjjjjjjqorrjhlliillgjrropjjjjjmmmmmeofejpjjjjjjqjfeofmmmmmjjjjjjojjjpjjjjjjqjjjojjjjjjlllllgohgjpjjjjjjqjhgohllllljjjjjqorrjfmmmmmmejrropjjjjjjjjjjqorrjjjjjjjjjjrropjjjjjjjjjjqorrjhnnnnnngjrropjjjjjdmmmmeofejfnnghnnejfeofmmmmcqoooooooooooorroooooooooooopqohnngohnnngorrohnnngohnngopqofngrofnnneofeofnnneorhneopqjoorroooooooooooooooorroojpbngorrohgohnnnnnngohgorrohnadneofeorrofnnghnneorrofeofncqoooooorroooorroooorroooooopqohnnnnefnngorrohnnefnnnngopqofnnnnnnnneofeofnnnnnnnneopqoooooooooooooooooooooooooopblllllllllllllllllllllllllla"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Corner_Double_Bas_Droite.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Corner_Double_Bas_Gauche.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Corner_Double_Haut_Droite.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Corner_Double_Haut_Gauche.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Corner_Simple_Bas_Droite.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Corner_Simple_Bas_Gauche.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Corner_Simple_Gaut_Droite.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Corner_Simple_Haut_Gauche.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Door.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Empty_Tile.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Energizer_Tile.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Horizontal_Double_Bas.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Horizontal_Double_Haut.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Horizontal_Simple.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Pellet_Tile.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Vertical_Double_Droit.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Vertical_Double_Gauche.png"/>
- <Texture filename="C:/Users/Degva_000/Documents/C++/Pacman/images/Vertical_Simple.png"/>
- <Collisions values="1111111111111111111111111111100000000000011000000000000110111101111101101111101111011010010100010110100010100101101111011111011011111011110110000000000000000000000000011011110110111111110110111101101111011011111111011011110110000001100001100001100000011111110111110110111110111111000001011111011011111010000000000101100000000001101000000000010110111221110110100000111111011010000001011011111120000000001000000100000000021111110110100000010110111111000001011011111111011010000000000101100000000001101000000000010110111111110110100000111111011011111111011011111110000000000001100000000000011011110111110110111110111101101111011111011011111011110110001100000000000000001100011110110110111111110110110111111011011011111111011011011110000001100001100001100000011011111111110110111111111101101111111111011011111111110110000000000000000000000000011111111111111111111111111111"/>
+ <TileSize value="24"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Double_Bas_Droite.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Double_Bas_Gauche.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Double_Haut_Droite.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Double_Haut_Gauche.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Simple_Bas_Droite.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Simple_Bas_Gauche.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Simple_Gaut_Droite.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Simple_Haut_Gauche.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Door.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Empty_Tile.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Energizer_Tile.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Horizontal_Double_Bas.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Horizontal_Double_Haut.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Horizontal_Simple.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Pellet_Tile.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Vertical_Double_Droit.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Vertical_Double_Gauche.png"/>
+ <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Vertical_Simple.png"/>
+ <Level name="Niveau 1">
+  <Grid>
+   <TileCount height="31" width="28"/>
+   <TileSize value="24"/>
+   <GridValues values="dmmmmmmmmmmmmcdmmmmmmmmmmmmcqoooooooooooorroooooooooooopqohnngohnnngorrohnnngohnngopqkrjjrorjjjrorrorjjjrorjjrkpqofnneofnnneofeofnnneofnneopqoooooooooooooooooooooooooopqohnngohgohnnnnnngohgohnngopqofnneorrofnnghnneorrofnneopqoooooorroooorroooorroooooopbllllgorfnngjrrjhnnerohllllajjjjjqorhnnejfejfnngropjjjjjjjjjjqorrjjjjjjjjjjrropjjjjjjjjjjqorrjhlliillgjrropjjjjjmmmmmeofejpjjjjjjqjfeofmmmmmjjjjjjojjjpjjjjjjqjjjojjjjjjlllllgohgjpjjjjjjqjhgohllllljjjjjqorrjfmmmmmmejrropjjjjjjjjjjqorrjjjjjjjjjjrropjjjjjjjjjjqorrjhnnnnnngjrropjjjjjdmmmmeofejfnnghnnejfeofmmmmcqoooooooooooorroooooooooooopqohnngohnnngorrohnnngohnngopqofngrofnnneofeofnnneorhneopqkoorroooooooooooooooorrookpbngorrohgohnnnnnngohgorrohnadneofeorrofnnghnneorrofeofncqoooooorroooorroooorroooooopqohnnnnefnngorrohnnefnnnngopqofnnnnnnnneofeofnnnnnnnneopqoooooooooooooooooooooooooopblllllllllllllllllllllllllla"/>
+   <CollisionsGrid values="1111111111111111111111111111100000000000011000000000000110111101111101101111101111011010010100010110100010100101101111011111011011111011110110000000000000000000000000011011110110111111110110111101101111011011111111011011110110000001100001100001100000011111110111110110111110111111000001011111011011111010000000000101100000000001101000000000010110111111110110100000111111011011111111011011111100000000001111111100000000001111110110111111110110111111000001011011111111011010000000000101100000000001101000000000010110111111110110100000111111011011111111011011111110000000000001100000000000011011110111110110111110111101101111011111011011111011110110001100000000000000001100011110110110111111110110110111111011011011111111011011011110000001100001100001100000011011111111110110111111111101101111111111011011111111110110000000000000000000000000011111111111111111111111111111"/>
+   <GhostHouse y="12" height="5" x="10" width="6"/>
+   <UsedTexture shortname="Corner_Double_Haut_Gauche.png" as="3"/>
+   <UsedTexture shortname="Horizontal_Double_Haut.png" as="12"/>
+   <UsedTexture shortname="Corner_Double_Haut_Droite.png" as="2"/>
+   <UsedTexture shortname="Vertical_Double_Gauche.png" as="16"/>
+   <UsedTexture shortname="Pellet_Tile.png" as="14"/>
+   <UsedTexture shortname="Vertical_Simple.png" as="17"/>
+   <UsedTexture shortname="Vertical_Double_Droit.png" as="15"/>
+   <UsedTexture shortname="Corner_Simple_Haut_Gauche.png" as="7"/>
+   <UsedTexture shortname="Horizontal_Simple.png" as="13"/>
+   <UsedTexture shortname="Corner_Simple_Gaut_Droite.png" as="6"/>
+   <UsedTexture shortname="Energizer_Tile.png" as="10"/>
+   <UsedTexture shortname="Empty_Tile.png" as="9"/>
+   <UsedTexture shortname="Corner_Simple_Bas_Gauche.png" as="5"/>
+   <UsedTexture shortname="Corner_Simple_Bas_Droite.png" as="4"/>
+   <UsedTexture shortname="Corner_Double_Bas_Gauche.png" as="1"/>
+   <UsedTexture shortname="Horizontal_Double_Bas.png" as="11"/>
+   <UsedTexture shortname="Corner_Double_Bas_Droite.png" as="0"/>
+   <UsedTexture shortname="Door.png" as="8"/>
+  </Grid>
+  <Player fx="half" ix="13" speed="77" iy="17" sspeed="91"/>
+  <Blinky fx="half" ix="13" speed="71" iy="11" sspeed="50"/>
+  <Pinky ix="12" speed="71" iy="14" sspeed="50"/>
+  <Inky fx="half" ix="13" speed="71" iy="14" sspeed="50"/>
+  <Clyde ix="15" speed="71" iy="14" sspeed="50"/>
+  <GhostTimer>
+   <Step time="7" mode="1"/>
+   <Step time="20" mode="0"/>
+   <Step time="7" mode="1"/>
+   <Step time="20" mode="0"/>
+   <Step time="5" mode="1"/>
+   <Step time="20" mode="0"/>
+   <Step time="5" mode="1"/>
+   <Step time="1" mode="0"/>
+  </GhostTimer>
+  <ScaredMode duration="7000" flashs="5"/>
+  <SpecTextures energizer="k" pellet="o" empty="j"/>
+ </Level>
+ <Level name="Niveau 2">
+  <Grid>
+   <TileCount height="31" width="28"/>
+   <TileSize value="24"/>
+   <GridValues values="dmmmmmmmmmmmmcdmmmmmmmmmmmmcqoooooooooooorroooooooooooopqohnngohnnngorrohnnngohnngopqkrjjrorjjjrorrorjjjrorjjrkpqofnneofnnneofeofnnneofnneopqoooooooooooooooooooooooooopqohnngohgohnnnnnngohgohnngopqofnneorrofnnghnneorrofnneopqoooooorroooorroooorroooooopbllllgorfnngjrrjhnnerohllllajjjjjqorhnnejfejfnngropjjjjjjjjjjqorrjjjjjjjjjjrropjjjjjjjjjjqorrjhlliillgjrropjjjjjmmmmmeofejpjjjjjjqjfeofmmmmmjjjjjjojjjpjjjjjjqjjjojjjjjjlllllgohgjpjjjjjjqjhgohllllljjjjjqorrjfmmmmmmejrropjjjjjjjjjjqorrjjjjjjjjjjrropjjjjjjjjjjqorrjhnnnnnngjrropjjjjjdmmmmeofejfnnghnnejfeofmmmmcqoooooooooooorroooooooooooopqohnngohnnngorrohnnngohnngopqofngrofnnneofeofnnneorhneopqkoorroooooooooooooooorrookpbngorrohgohnnnnnngohgorrohnadneofeorrofnnghnneorrofeofncqoooooorroooorroooorroooooopqohnnnnefnngorrohnnefnnnngopqofnnnnnnnneofeofnnnnnnnneopqoooooooooooooooooooooooooopblllllllllllllllllllllllllla"/>
+   <CollisionsGrid values="1111111111111111111111111111100000000000011000000000000110111101111101101111101111011010010100010110100010100101101111011111011011111011110110000000000000000000000000011011110110111111110110111101101111011011111111011011110110000001100001100001100000011111110111110110111110111111000001011111011011111010000000000101100000000001101000000000010110111221110110100000111111011010000001011011111120000000001000000100000000021111110110100000010110111111000001011011111111011010000000000101100000000001101000000000010110111111110110100000111111011011111111011011111110000000000001100000000000011011110111110110111110111101101111011111011011111011110110001100000000000000001100011110110110111111110110110111111011011011111111011011011110000001100001100001100000011011111111110110111111111101101111111111011011111111110110000000000000000000000000011111111111111111111111111111"/>
+   <GhostHouse y="12" height="5" x="10" width="6"/>
+   <UsedTexture shortname="Corner_Double_Haut_Gauche.png" as="3"/>
+   <UsedTexture shortname="Horizontal_Double_Haut.png" as="12"/>
+   <UsedTexture shortname="Corner_Double_Haut_Droite.png" as="2"/>
+   <UsedTexture shortname="Vertical_Double_Gauche.png" as="16"/>
+   <UsedTexture shortname="Pellet_Tile.png" as="14"/>
+   <UsedTexture shortname="Vertical_Simple.png" as="17"/>
+   <UsedTexture shortname="Vertical_Double_Droit.png" as="15"/>
+   <UsedTexture shortname="Corner_Simple_Haut_Gauche.png" as="7"/>
+   <UsedTexture shortname="Horizontal_Simple.png" as="13"/>
+   <UsedTexture shortname="Corner_Simple_Gaut_Droite.png" as="6"/>
+   <UsedTexture shortname="Energizer_Tile.png" as="10"/>
+   <UsedTexture shortname="Empty_Tile.png" as="9"/>
+   <UsedTexture shortname="Corner_Simple_Bas_Gauche.png" as="5"/>
+   <UsedTexture shortname="Corner_Simple_Bas_Droite.png" as="4"/>
+   <UsedTexture shortname="Corner_Double_Bas_Gauche.png" as="1"/>
+   <UsedTexture shortname="Horizontal_Double_Bas.png" as="11"/>
+   <UsedTexture shortname="Corner_Double_Bas_Droite.png" as="0"/>
+   <UsedTexture shortname="Door.png" as="8"/>
+  </Grid>
+  <Player fx="half" ix="13" speed="77" iy="17" sspeed="91"/>
+  <Blinky fx="half" ix="13" speed="71" iy="11" sspeed="50"/>
+  <Pinky ix="12" speed="71" iy="14" sspeed="50"/>
+  <Inky fx="half" ix="13" speed="71" iy="14" sspeed="50"/>
+  <Clyde ix="15" speed="71" iy="14" sspeed="50"/>
+  <GhostTimer>
+   <Step time="7" mode="1"/>
+   <Step time="20" mode="0"/>
+   <Step time="7" mode="1"/>
+   <Step time="20" mode="0"/>
+   <Step time="5" mode="1"/>
+   <Step time="20" mode="0"/>
+   <Step time="5" mode="1"/>
+   <Step time="1" mode="0"/>
+  </GhostTimer>
+  <ScaredMode duration="7000" flashs="5"/>
+  <SpecTextures energizer="k" pellet="o" empty="j"/>
+ </Level>
 </root>

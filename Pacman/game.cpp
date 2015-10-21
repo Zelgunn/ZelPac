@@ -39,10 +39,15 @@ Game::Game(QDomDocument *dom)
     m_score = 0;
     m_consecutivesEnergizers = 0;
     m_lifes = 3;
+    m_isChangingLevel = true;
     m_shortSoundsPlayer = new QMediaPlayer;
+
+    level = m_levels.at(0);
+    level->startLevel();
 
     m_timer = new QTimer(this);
     QObject::connect(m_timer, SIGNAL(timeout()), this, SLOT(nextGameFrame()));
+    nextGameFrame();
 }
 
 Game::~Game()
@@ -68,6 +73,7 @@ Game::~Game()
 
 void Game::startGame()
 {
+    m_isChangingLevel = false;
     m_timer->start(TIME_BETWEEN_FRAMES);
     Level *level = m_levels.at(m_currentLevel);
 
@@ -96,15 +102,16 @@ void Game::nextGameFrame()
     //
     if(level->eatenPellets()==level->pelletCount())
     {
+        m_timer->stop();
         m_currentLevel++;
         if(m_currentLevel == m_levels.size())
         {
-            m_timer->stop();
             emit gameFinished();
             return;
         }
         else
         {
+            m_isChangingLevel = true;
             Level *level = m_levels.at(m_currentLevel);
             level->startLevel();
         }
@@ -118,7 +125,6 @@ void Game::nextGameFrame()
             if(m_lifes>0)
             {
                 level->resetUnitsPosition();
-                QTimer::singleShot(2000, this, SLOT(resumeGame()));
             }
             else
             {
@@ -149,6 +155,7 @@ void Game::nextGameFrame()
 
 void Game::resumeGame()
 {
+    m_isChangingLevel = false;
     m_timer->start(TIME_BETWEEN_FRAMES);
 }
 
@@ -169,6 +176,10 @@ void Game::onPelletEaten()
 void Game::onEnergizerEaten()
 {
     m_score += 50;
+}
+bool Game::isChangingLevel() const
+{
+    return m_isChangingLevel;
 }
 
 QPixmap Game::image() const

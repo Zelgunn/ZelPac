@@ -295,11 +295,6 @@ QPoint Ghost::clydeChaseTarget()
 
 void Ghost::localMove()
 {
-    if(m_id == Ghost::Inky)
-    {
-        int meow;
-        meow = 0;
-    }
     int speed = m_speed;
     if((m_direction == Unit::Up)||(m_direction == Unit::Left))
         speed = -speed;

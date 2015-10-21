@@ -169,6 +169,12 @@ public:
      */
     void startLevel();
 
+    /**
+     * @brief Getter
+     * @return Nom du niveau.
+     */
+    QString name() const;
+
 public slots:
     /**
      * @brief Répercute les conséquences d'un énergisant sur le mode Appeuré.
@@ -229,6 +235,8 @@ private:
     QTimer *m_flasher;
     /** @brief Gestionnaire de texture. */
     TextureHandler *m_textureHandler;
+    /** @brief Nom du niveau */
+    QString m_name;
 };
 
 #endif // LEVEL_H

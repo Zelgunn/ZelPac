@@ -3,6 +3,8 @@
 Level::Level(QDomElement elem, TextureHandler *textureHandler)
 {
     m_textureHandler = textureHandler;
+    m_name = elem.attribute("name");
+
     QDomNode node = elem.firstChild();
     while(!node.isNull())
     {
@@ -307,3 +309,8 @@ void Level::addPacmanToImage(QPixmap *res)
 
     painter.end();
 }
+QString Level::name() const
+{
+    return m_name;
+}
+

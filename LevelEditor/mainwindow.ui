@@ -84,7 +84,7 @@
             <x>0</x>
             <y>0</y>
             <width>280</width>
-            <height>495</height>
+            <height>463</height>
            </rect>
           </property>
           <attribute name="label">
@@ -133,7 +133,7 @@
             <x>0</x>
             <y>0</y>
             <width>280</width>
-            <height>495</height>
+            <height>463</height>
            </rect>
           </property>
           <attribute name="label">
@@ -801,7 +801,7 @@
             <x>0</x>
             <y>0</y>
             <width>468</width>
-            <height>495</height>
+            <height>463</height>
            </rect>
           </property>
           <attribute name="label">
@@ -1089,6 +1089,18 @@
     </layout>
    </widget>
   </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionLancer_dans_Pacman"/>
+  </widget>
   <action name="actionNouveau">
    <property name="text">
     <string>Nouveau...</string>
@@ -1118,6 +1130,24 @@
    </property>
    <property name="text">
     <string>Panneau outils</string>
+   </property>
+  </action>
+  <action name="actionLancer_dans_Pacman">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="dependencies.qrc">
+     <normaloff>:/images/images/play.png</normaloff>:/images/images/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Lancer dans Pacman</string>
+   </property>
+   <property name="toolTip">
+    <string>Lancer dans Pacman</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
    </property>
   </action>
  </widget>

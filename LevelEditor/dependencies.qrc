@@ -8,5 +8,6 @@
         <file>images/Ghost_Pinky.png</file>
         <file>images/pacman_life.png</file>
         <file>images/plus.png</file>
+        <file>images/play.png</file>
     </qresource>
 </RCC>

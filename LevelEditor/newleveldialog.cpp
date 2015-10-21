@@ -45,7 +45,7 @@ bool NewLevelDialog::usePreviousGrid() const
     return ui->cb_usePreviousGrid->isChecked();
 }
 
-void NewLevelDialog::on_levelNameLineEdit_textChanged(const QString &arg1)
+void NewLevelDialog::on_levelNameLineEdit_textChanged(const QString &)
 {
     ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(!ui->levelNameLineEdit->text().isEmpty());
 }

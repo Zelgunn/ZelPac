@@ -107,22 +107,55 @@ Inheritance diagram for Pacscreen:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8dfe2adcf7e11f715664859db16c6710"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a8dfe2adcf7e11f715664859db16c6710">Pacscreen</a> (QWidget *parent=0)</td></tr>
-<tr class="memdesc:a8dfe2adcf7e11f715664859db16c6710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de la classe <a class="el" href="class_pacscreen.html" title="Widget affichant l&#39;ensemble du jeu. ">Pacscreen</a>.  <a href="#a8dfe2adcf7e11f715664859db16c6710">More...</a><br /></td></tr>
-<tr class="separator:a8dfe2adcf7e11f715664859db16c6710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28ad19885d3b4ebff6ec8fca42fe177a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a28ad19885d3b4ebff6ec8fca42fe177a">Pacscreen</a> (QString dataFile=&quot;:/textures/pacman.xml&quot;, QWidget *parent=0)</td></tr>
+<tr class="memdesc:a28ad19885d3b4ebff6ec8fca42fe177a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de la classe <a class="el" href="class_pacscreen.html" title="Widget affichant l&#39;ensemble du jeu. ">Pacscreen</a>.  <a href="#a28ad19885d3b4ebff6ec8fca42fe177a">More...</a><br /></td></tr>
+<tr class="separator:a28ad19885d3b4ebff6ec8fca42fe177a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c4bd0bef62cc02bd3798b4d20cd765f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c4bd0bef62cc02bd3798b4d20cd765f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a4c4bd0bef62cc02bd3798b4d20cd765f">~Pacscreen</a> ()</td></tr>
 <tr class="memdesc:a4c4bd0bef62cc02bd3798b4d20cd765f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de la classe <a class="el" href="class_pacscreen.html" title="Widget affichant l&#39;ensemble du jeu. ">Pacscreen</a>. <br /></td></tr>
 <tr class="separator:a4c4bd0bef62cc02bd3798b4d20cd765f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6860cefac4b539818d5d78ace3f61b18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a6860cefac4b539818d5d78ace3f61b18">setGame</a> (<a class="el" href="class_game.html">Game</a> *game)</td></tr>
-<tr class="memdesc:a6860cefac4b539818d5d78ace3f61b18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter.  <a href="#a6860cefac4b539818d5d78ace3f61b18">More...</a><br /></td></tr>
-<tr class="separator:a6860cefac4b539818d5d78ace3f61b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3320b3943d0e14e262f2aac35f4f0028"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a3320b3943d0e14e262f2aac35f4f0028">initGame</a> (const QString &amp;filename=&quot;:/textures/pacman.xml&quot;)</td></tr>
+<tr class="memdesc:a3320b3943d0e14e262f2aac35f4f0028"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarre une session de jeu.  <a href="#a3320b3943d0e14e262f2aac35f4f0028">More...</a><br /></td></tr>
+<tr class="separator:a3320b3943d0e14e262f2aac35f4f0028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc8132b62b670a5bffc59abffda2ba5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#afc8132b62b670a5bffc59abffda2ba5d">onKeyboardInput</a> (int direction)</td></tr>
+<tr class="memdesc:afc8132b62b670a5bffc59abffda2ba5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de traitement des entrées de flèches directionnelles.  <a href="#afc8132b62b670a5bffc59abffda2ba5d">More...</a><br /></td></tr>
+<tr class="separator:afc8132b62b670a5bffc59abffda2ba5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99449fdac361b7d947204e4298dabcea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a99449fdac361b7d947204e4298dabcea">restingTimeOff</a> ()</td></tr>
+<tr class="memdesc:a99449fdac361b7d947204e4298dabcea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marque une pause entre une victoire ou une défaite du joueur avant de continuer.  <a href="#a99449fdac361b7d947204e4298dabcea">More...</a><br /></td></tr>
+<tr class="separator:a99449fdac361b7d947204e4298dabcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a487bc9941a204557e94c942a4c95552c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a487bc9941a204557e94c942a4c95552c">paintEvent</a> (QPaintEvent *)</td></tr>
-<tr class="memdesc:a487bc9941a204557e94c942a4c95552c"><td class="mdescLeft">&#160;</td><td class="mdescRight">paintEvent de la classe, afin d'afficher l'ensemble du jeu.  <a href="#a487bc9941a204557e94c942a4c95552c">More...</a><br /></td></tr>
-<tr class="separator:a487bc9941a204557e94c942a4c95552c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ad3be852db68118d6eb50e979b6e2e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a2ad3be852db68118d6eb50e979b6e2e9">paintEvent</a> (QPaintEvent *event)</td></tr>
+<tr class="memdesc:a2ad3be852db68118d6eb50e979b6e2e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">paintEvent de la classe, afin d'afficher l'ensemble du jeu.  <a href="#a2ad3be852db68118d6eb50e979b6e2e9">More...</a><br /></td></tr>
+<tr class="separator:a2ad3be852db68118d6eb50e979b6e2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb0eadb554235b7a777ec9caa61be3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#aafb0eadb554235b7a777ec9caa61be3d">paintLifes</a> (QPainter *painter)</td></tr>
+<tr class="memdesc:aafb0eadb554235b7a777ec9caa61be3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine les vies du pacman sur le PaintDevice sur lequel est branché le painter.  <a href="#aafb0eadb554235b7a777ec9caa61be3d">More...</a><br /></td></tr>
+<tr class="separator:aafb0eadb554235b7a777ec9caa61be3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a458fdc2040c60b27ca03ce936c94358a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a458fdc2040c60b27ca03ce936c94358a">paintScore</a> (QPainter *painter)</td></tr>
+<tr class="memdesc:a458fdc2040c60b27ca03ce936c94358a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine le score du pacman sur le PaintDevice sur lequel est branché le painter.  <a href="#a458fdc2040c60b27ca03ce936c94358a">More...</a><br /></td></tr>
+<tr class="separator:a458fdc2040c60b27ca03ce936c94358a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd28b9d528ac6bf79eaff0668eb71175"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#afd28b9d528ac6bf79eaff0668eb71175">paintFPS</a> (QPainter *painter)</td></tr>
+<tr class="memdesc:afd28b9d528ac6bf79eaff0668eb71175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine les FPS du jeu sur le PaintDevice sur lequel est branché le painter.  <a href="#afd28b9d528ac6bf79eaff0668eb71175">More...</a><br /></td></tr>
+<tr class="separator:afd28b9d528ac6bf79eaff0668eb71175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ce0c981b27c21501d0fd49a79abe5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a31ce0c981b27c21501d0fd49a79abe5f">paintLevelName</a> (QPainter *painter)</td></tr>
+<tr class="memdesc:a31ce0c981b27c21501d0fd49a79abe5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine le nom du niveau sur le PaintDevice sur lequel est branché le painter.  <a href="#a31ce0c981b27c21501d0fd49a79abe5f">More...</a><br /></td></tr>
+<tr class="separator:a31ce0c981b27c21501d0fd49a79abe5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cf6fe4c2b68c588de61b5111f29d7de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a7cf6fe4c2b68c588de61b5111f29d7de">paintGame</a> (QPainter *painter)</td></tr>
+<tr class="memdesc:a7cf6fe4c2b68c588de61b5111f29d7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine le jeu sur PaintDevice sur lequel est branché le painter.  <a href="#a7cf6fe4c2b68c588de61b5111f29d7de">More...</a><br /></td></tr>
+<tr class="separator:a7cf6fe4c2b68c588de61b5111f29d7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d75e03446f7e8edac55a6896b2a3c40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a7d75e03446f7e8edac55a6896b2a3c40">paintFirstFrame</a> (QPainter *painter)</td></tr>
+<tr class="memdesc:a7d75e03446f7e8edac55a6896b2a3c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine la première image du jeu sur PaintDevice sur lequel est branché le painter.  <a href="#a7d75e03446f7e8edac55a6896b2a3c40">More...</a><br /></td></tr>
+<tr class="separator:a7d75e03446f7e8edac55a6896b2a3c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb89930eaa69c8b952af7b5653afc6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#afeb89930eaa69c8b952af7b5653afc6c">paintStartAnimation</a> (QPainter *painter)</td></tr>
+<tr class="memdesc:afeb89930eaa69c8b952af7b5653afc6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine l'animation d'introduction sur PaintDevice sur lequel est branché le painter.  <a href="#afeb89930eaa69c8b952af7b5653afc6c">More...</a><br /></td></tr>
+<tr class="separator:afeb89930eaa69c8b952af7b5653afc6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646b6aab801e38b3eae62b255183f83b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#a646b6aab801e38b3eae62b255183f83b">paintVictoryAnimation</a> (QPainter *painter)</td></tr>
+<tr class="memdesc:a646b6aab801e38b3eae62b255183f83b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine l'animation de victoire sur PaintDevice sur lequel est branché le painter.  <a href="#a646b6aab801e38b3eae62b255183f83b">More...</a><br /></td></tr>
+<tr class="separator:a646b6aab801e38b3eae62b255183f83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d6b203e0b0dcb57bb3e9065fab46fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacscreen.html#ae1d6b203e0b0dcb57bb3e9065fab46fa">paintDefeatAnimation</a> (QPainter *painter)</td></tr>
+<tr class="memdesc:ae1d6b203e0b0dcb57bb3e9065fab46fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine l'animation de défaite sur PaintDevice sur lequel est branché le painter.  <a href="#ae1d6b203e0b0dcb57bb3e9065fab46fa">More...</a><br /></td></tr>
+<tr class="separator:ae1d6b203e0b0dcb57bb3e9065fab46fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Widget affichant l'ensemble du jeu. </p>
@@ -131,7 +164,7 @@ Protected Member Functions</h2></td></tr>
 <p>Grâce à l'utilisation d'un PaintEvent, cette classe fille de QWidget permet d'afficher tous les éléments graphiques du jeu en plein écran.</p>
 <p>Cette classe permet aussi de recevoir les commandes utilisateurs venant du clavier ou d'une manette Arduino Uno. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8dfe2adcf7e11f715664859db16c6710"></a>
+<a class="anchor" id="a28ad19885d3b4ebff6ec8fca42fe177a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -141,9 +174,19 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Pacscreen::Pacscreen </td>
           <td>(</td>
-          <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>0</code></td><td>)</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>dataFile</em> = <code>&quot;:/textures/pacman.xml&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -156,6 +199,7 @@ Protected Member Functions</h2></td></tr>
 <p>Constructeur de base de la classe <a class="el" href="class_pacscreen.html" title="Widget affichant l&#39;ensemble du jeu. ">Pacscreen</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">dataFile</td><td>Fichier chargé par le jeu contenant l'intégralité des paramètres modulables. </td></tr>
     <tr><td class="paramname">parent</td><td>Parent de la fenêtre </td></tr>
   </table>
   </dd>
@@ -164,7 +208,88 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a487bc9941a204557e94c942a4c95552c"></a>
+<a class="anchor" id="a3320b3943d0e14e262f2aac35f4f0028"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacscreen::initGame </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>filename</em> = <code>&quot;:/textures/pacman.xml&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Démarre une session de jeu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Fichier XML contenant les paramètres de la session. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afc8132b62b670a5bffc59abffda2ba5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacscreen::onKeyboardInput </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de traitement des entrées de flèches directionnelles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>Touche appuyée.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Lorsque cette fonction est appelée, si le jeu est totalement arrêté (victoire ou défaite), alors il redémarre. Dans le cas où celui ci est uniquement en pause (perte de vie, fin de niveau) alors il reprend. Sinon, le signal de la touche est propagé afin de changer la direction du joueur. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae1d6b203e0b0dcb57bb3e9065fab46fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacscreen::paintDefeatAnimation </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dessine l'animation de défaite sur PaintDevice sur lequel est branché le painter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">painter</td><td>Painter dessinant l'animation de défaite. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ad3be852db68118d6eb50e979b6e2e9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -175,7 +300,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">void Pacscreen::paintEvent </td>
           <td>(</td>
           <td class="paramtype">QPaintEvent *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -191,27 +316,277 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6860cefac4b539818d5d78ace3f61b18"></a>
+<a class="anchor" id="a7d75e03446f7e8edac55a6896b2a3c40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacscreen::paintFirstFrame </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dessine la première image du jeu sur PaintDevice sur lequel est branché le painter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">painter</td><td>Painter dessinant la première image du jeu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afd28b9d528ac6bf79eaff0668eb71175"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacscreen::paintFPS </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dessine les FPS du jeu sur le PaintDevice sur lequel est branché le painter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">painter</td><td>Painter dessinant les FPS. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7cf6fe4c2b68c588de61b5111f29d7de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacscreen::paintGame </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dessine le jeu sur PaintDevice sur lequel est branché le painter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">painter</td><td>Painter dessinant le jeu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a31ce0c981b27c21501d0fd49a79abe5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacscreen::paintLevelName </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dessine le nom du niveau sur le PaintDevice sur lequel est branché le painter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">painter</td><td>Painter dessinant le nom du niveau. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aafb0eadb554235b7a777ec9caa61be3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacscreen::paintLifes </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dessine les vies du pacman sur le PaintDevice sur lequel est branché le painter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">painter</td><td>Painter dessinant les vies. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a458fdc2040c60b27ca03ce936c94358a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacscreen::paintScore </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dessine le score du pacman sur le PaintDevice sur lequel est branché le painter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">painter</td><td>Painter dessinant le score. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afeb89930eaa69c8b952af7b5653afc6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacscreen::paintStartAnimation </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dessine l'animation d'introduction sur PaintDevice sur lequel est branché le painter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">painter</td><td>Painter dessinant l'animation d'introduction. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a646b6aab801e38b3eae62b255183f83b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacscreen::paintVictoryAnimation </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dessine l'animation de victoire sur PaintDevice sur lequel est branché le painter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">painter</td><td>Painter dessinant l'animation de victoire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a99449fdac361b7d947204e4298dabcea"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Pacscreen::setGame </td>
+          <td class="memname">bool Pacscreen::restingTimeOff </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_game.html">Game</a> *&#160;</td>
-          <td class="paramname"><em>game</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Setter. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">game</td><td>Jeu à afficher. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Marque une pause entre une victoire ou une défaite du joueur avant de continuer. </p>
+<dl class="section return"><dt>Returns</dt><dd>Vrai si la pause est terminée ou s'il n'y a pas de pause, sinon Faux. </dd></dl>
 
 </div>
 </div>

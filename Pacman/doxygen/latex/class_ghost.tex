@@ -24,8 +24,8 @@ enum \hyperlink{class_ghost_adc8bee2d77e1ca0e4999cace773c71dd}{Ghosts\+I\+D} \{ 
 \hyperlink{class_ghost_adc8bee2d77e1ca0e4999cace773c71dda28364f0ec8546ed1dea16de59696ab12}{Clyde}
  \}\begin{DoxyCompactList}\small\item\em Identités des fantômes. \end{DoxyCompactList}
 \item 
-enum \hyperlink{class_ghost_a95bc4313fdf87d827c64fe9607fcc205}{ghost\+Chasing\+Mode\+I\+D} \{ \hyperlink{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a49e7cffc44104e0f3f65579a25804b63}{Scatter}, 
-\hyperlink{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a4e0f748a4d226742a8d524f8386fc6db}{Chase}, 
+enum \hyperlink{class_ghost_a95bc4313fdf87d827c64fe9607fcc205}{ghost\+Chasing\+Mode\+I\+D} \{ \hyperlink{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a4e0f748a4d226742a8d524f8386fc6db}{Chase}, 
+\hyperlink{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a49e7cffc44104e0f3f65579a25804b63}{Scatter}, 
 \hyperlink{class_ghost_a95bc4313fdf87d827c64fe9607fcc205ae7975f0b636e971a50a0a4285353ac0e}{Caught}
  \}\begin{DoxyCompactList}\small\item\em Modes de poursuite des fantômes. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
@@ -69,9 +69,9 @@ bool \hyperlink{class_ghost_adb8eaa0f4a713181fd91f758b7862394}{is\+Caught} () co
 \begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
 Q\+Point \hyperlink{class_ghost_af538955b257089ee1ab73bcc061b503e}{scatter\+Corner} () const 
 \begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
-Q\+Image \hyperlink{class_ghost_a4856be59d881a5f39657c837d3ceba2c}{ghost\+Image} (Q\+Size size=Q\+Size(24, 24))
+Q\+Pixmap \hyperlink{class_ghost_a829efb522dca9924e8228573a08e11c8}{ghost\+Image} (int size=24)
 \begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}image du fantôme en fonction de ses paramètres (identité, direction, ...). \end{DoxyCompactList}\item 
-Q\+Image \hyperlink{class_ghost_a4f22bee60957680cdf68396d8e0c7d69}{ghost\+Eyes\+Image} (Q\+Size size=Q\+Size(24, 24))
+Q\+Pixmap \hyperlink{class_ghost_a756b09568125dbb619ff93d97ffc9eff}{ghost\+Eyes\+Image} (int size=24)
 \begin{DoxyCompactList}\small\item\em Dessine les yeux du fantôme en fonction de sa direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -80,7 +80,7 @@ static void \hyperlink{class_ghost_adb0d9cf00e0918c43abeb4c1bfc116ec}{set\+Ghost
 \begin{DoxyCompactList}\small\item\em Modifie le comportement en Appeuré ou Normal. \end{DoxyCompactList}\item 
 static bool \hyperlink{class_ghost_a09869588955cc6014359262e4f199300}{are\+Ghosts\+Scared} ()
 \begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
-static Q\+Image \hyperlink{class_ghost_aa032481d2ebe66d71b4b0744f043574d}{scared\+Ghost\+Image} (bool flash\+On=false, Q\+Size size=Q\+Size(24, 24))
+static Q\+Pixmap \hyperlink{class_ghost_a89c202713c5640f09a3cffc73b40d38a}{scared\+Ghost\+Image} (bool flash\+On=false, int size=24)
 \begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}image d\textquotesingle{}un fantôme effrayé (flashant ou non). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -139,11 +139,11 @@ Modes de poursuite des fantômes.
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
-\index{Scatter@{Scatter}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Scatter@{Scatter}}\item[{\em 
-\hypertarget{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a49e7cffc44104e0f3f65579a25804b63}{}Scatter\label{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a49e7cffc44104e0f3f65579a25804b63}
-}]Les fantômes se dirigent vers leur coin spécifique \index{Chase@{Chase}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Chase@{Chase}}\item[{\em 
+\index{Chase@{Chase}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Chase@{Chase}}\item[{\em 
 \hypertarget{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a4e0f748a4d226742a8d524f8386fc6db}{}Chase\label{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a4e0f748a4d226742a8d524f8386fc6db}
-}]Les fantômes utilisent leur I\+A personnelle pour attraper le Pacman \index{Caught@{Caught}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Caught@{Caught}}\item[{\em 
+}]Les fantômes utilisent leur I\+A personnelle pour attraper le Pacman \index{Scatter@{Scatter}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Scatter@{Scatter}}\item[{\em 
+\hypertarget{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a49e7cffc44104e0f3f65579a25804b63}{}Scatter\label{class_ghost_a95bc4313fdf87d827c64fe9607fcc205a49e7cffc44104e0f3f65579a25804b63}
+}]Les fantômes se dirigent vers leur coin spécifique \index{Caught@{Caught}!Ghost@{Ghost}}\index{Ghost@{Ghost}!Caught@{Caught}}\item[{\em 
 \hypertarget{class_ghost_a95bc4313fdf87d827c64fe9607fcc205ae7975f0b636e971a50a0a4285353ac0e}{}Caught\label{class_ghost_a95bc4313fdf87d827c64fe9607fcc205ae7975f0b636e971a50a0a4285353ac0e}
 }]Les fantômes attrapés se dirigent vers leur maison et y reste jusqu\textquotesingle{}à expiration \end{description}
 \end{Desc}
@@ -306,13 +306,13 @@ Le fantôme regarde les quatres cases qui l\textquotesingle{}entourent et empile
 
 Ensuite il cherche celle dans la pile qui a la plus courte distance euclidienne vers la cible.
 
-En temps normal, un fantôme ne peut pas se retourner ni se déplacer sur une case avec la collision activée. \hypertarget{class_ghost_a4f22bee60957680cdf68396d8e0c7d69}{}\index{Ghost@{Ghost}!ghost\+Eyes\+Image@{ghost\+Eyes\+Image}}
+En temps normal, un fantôme ne peut pas se retourner ni se déplacer sur une case avec la collision activée. \hypertarget{class_ghost_a756b09568125dbb619ff93d97ffc9eff}{}\index{Ghost@{Ghost}!ghost\+Eyes\+Image@{ghost\+Eyes\+Image}}
 \index{ghost\+Eyes\+Image@{ghost\+Eyes\+Image}!Ghost@{Ghost}}
-\subsubsection[{ghost\+Eyes\+Image(\+Q\+Size size=\+Q\+Size(24, 24))}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Ghost\+::ghost\+Eyes\+Image (
+\subsubsection[{ghost\+Eyes\+Image(int size=24)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pixmap Ghost\+::ghost\+Eyes\+Image (
 \begin{DoxyParamCaption}
-\item[{Q\+Size}]{size = {\ttfamily QSize(24,24)}}
+\item[{int}]{size = {\ttfamily 24}}
 \end{DoxyParamCaption}
-)}\label{class_ghost_a4f22bee60957680cdf68396d8e0c7d69}
+)}\label{class_ghost_a756b09568125dbb619ff93d97ffc9eff}
 
 
 Dessine les yeux du fantôme en fonction de sa direction. 
@@ -325,13 +325,13 @@ Dessine les yeux du fantôme en fonction de sa direction.
 \begin{DoxyReturn}{Returns}
 Images des yeux du fantôme. 
 \end{DoxyReturn}
-\hypertarget{class_ghost_a4856be59d881a5f39657c837d3ceba2c}{}\index{Ghost@{Ghost}!ghost\+Image@{ghost\+Image}}
+\hypertarget{class_ghost_a829efb522dca9924e8228573a08e11c8}{}\index{Ghost@{Ghost}!ghost\+Image@{ghost\+Image}}
 \index{ghost\+Image@{ghost\+Image}!Ghost@{Ghost}}
-\subsubsection[{ghost\+Image(\+Q\+Size size=\+Q\+Size(24, 24))}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Ghost\+::ghost\+Image (
+\subsubsection[{ghost\+Image(int size=24)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pixmap Ghost\+::ghost\+Image (
 \begin{DoxyParamCaption}
-\item[{Q\+Size}]{size = {\ttfamily QSize(24,24)}}
+\item[{int}]{size = {\ttfamily 24}}
 \end{DoxyParamCaption}
-)}\label{class_ghost_a4856be59d881a5f39657c837d3ceba2c}
+)}\label{class_ghost_a829efb522dca9924e8228573a08e11c8}
 
 
 Dessine l\textquotesingle{}image du fantôme en fonction de ses paramètres (identité, direction, ...). 
@@ -456,14 +456,14 @@ Getter.
 \begin{DoxyReturn}{Returns}
 Cible de Pinky 
 \end{DoxyReturn}
-\hypertarget{class_ghost_aa032481d2ebe66d71b4b0744f043574d}{}\index{Ghost@{Ghost}!scared\+Ghost\+Image@{scared\+Ghost\+Image}}
+\hypertarget{class_ghost_a89c202713c5640f09a3cffc73b40d38a}{}\index{Ghost@{Ghost}!scared\+Ghost\+Image@{scared\+Ghost\+Image}}
 \index{scared\+Ghost\+Image@{scared\+Ghost\+Image}!Ghost@{Ghost}}
-\subsubsection[{scared\+Ghost\+Image(bool flash\+On=false, Q\+Size size=\+Q\+Size(24, 24))}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Ghost\+::scared\+Ghost\+Image (
+\subsubsection[{scared\+Ghost\+Image(bool flash\+On=false, int size=24)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pixmap Ghost\+::scared\+Ghost\+Image (
 \begin{DoxyParamCaption}
 \item[{bool}]{flash\+On = {\ttfamily false}, }
-\item[{Q\+Size}]{size = {\ttfamily QSize(24,24)}}
+\item[{int}]{size = {\ttfamily 24}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\label{class_ghost_aa032481d2ebe66d71b4b0744f043574d}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_ghost_a89c202713c5640f09a3cffc73b40d38a}
 
 
 Dessine l\textquotesingle{}image d\textquotesingle{}un fantôme effrayé (flashant ou non). 

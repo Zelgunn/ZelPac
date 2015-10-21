@@ -26,11 +26,6 @@
  *      Enfin, la classe Game effectue le rendu final de la grille (sans les à côtés commme
  *      l'affichage du score) qu'il fait calculer au niveau actuellement en cours.
  *
- * NOTE :
- *          - La classe Game ne gère pas encore le passage d'un niveau à l'autre.
- *          - La classe Game ne gère pas encore le son.
- *          - La classe Game ne dispose pas encore de toutes les animations.
- *          - La classe Game ne dispose pas encore de la table de correspondance des textures.
  */
 
 class Game : public QObject
@@ -40,36 +35,6 @@ public:
     /**
      * @brief Constructeur de base de la classe Game.
      * @param dom Document XML d'où le jeu charge toutes les données.
-     * @details
-     * Exemple (3x3 avec 5 textures):
-     * - \<?xml version="1.0" encoding="ISO-8859-1"?>
-     * - \<root>
-     *     - \<Level>
-     *          - \<Grid>
-     *              - \<TileCount height="3" width="3"/>
-     *              - \<TileSize height="24" width="24"/>
-     *              - \<GridValues values="aaacdebbb"/>
-     *              - \<Texture filename="Texture1.png"/>
-     *              - \<Texture filename="Texture2.png"/>
-     *              - \<Texture filename="Texture_Pastille.png"/>
-     *              - \<Texture filename="Texture_Energisant.png"/>
-     *              - \<Texture filename="Texture_Vide.png"/>
-     *              - \<CollisionsGrid values="000111000"/>
-     *              - \<GhostHouse x="1" y="1" width="1" height="1"/>
-     *          - \</ Grid>
-     *          - \<Player ix="0" iy="0" speed="77" sspeed = "91" fx = "half"/>
-     *          - \<Blinky ix="1" iy="2" speed="71" sspeed = "50" cornerx="26" cornery="-2" fx = "half"/>
-     *          - \<Pinky ix="2" iy="2" speed="71" sspeed = "50"  cornerx="2" cornery="-2"/>
-     *          - \<Inky ix="1" iy="2" speed="71" sspeed = "50"  cornerx="28" cornery="32" fx = "half"/>
-     *          - \<Clyde ix="2" iy="2" speed="71" sspeed = "50"  cornerx="0" cornery="32"/>
-     *          - \<GhostTimer>
-     *              - \<Step time="7" mode="0"/>
-     *              - \<Step time="20" mode="1"/>
-     *              - \<Step time="7" mode="0"/>
-     *          - \</ GhostTimer>
-     *          - \<ScaredMode duration="6000" flashs="5"/>
-     *     - \</ Level>
-     * - \</root>
      *
      */
     Game(QDomDocument *dom);
@@ -127,7 +92,7 @@ public:
      * @brief Getter
      * @return Grille du jeu sous forme d'image.
      */
-    QPixmap image() const;
+    QPixmap image();
 
     /**
      * @brief Modifie la direction actuelle du joueur.
@@ -146,6 +111,24 @@ public:
      * @return Vrai si le jeu est en pause suite à un changement de niveau.
      */
     bool isChangingLevel() const;
+
+    /**
+     * @brief Calcul l'image que donnerait le jeu s'il commençait tout juste.
+     * @return Première frame du jeu.
+     */
+    QPixmap *firstFrame() const;
+
+    /**
+     * @brief Getter
+     * @return Vrai si le joueur a gagné, sinon Faux.
+     */
+    bool victory() const;
+
+    /**
+     * @brief Getter
+     * @return Vrai si le joueur a perdu, sinon Faux.
+     */
+    bool defeat() const;
 
 public slots:
     /**
@@ -170,6 +153,9 @@ protected slots:
     void onEnergizerEaten();
 
 signals:
+    /**
+     * @brief Signal émit lorsque le joueur gagne ou perd.
+     */
     void gameFinished();
 
 private:
@@ -193,6 +179,12 @@ private:
     TextureHandler m_textureHandler;
     /** @brief Flag de changement de niveau */
     bool m_isChangingLevel;
+    /** @brief Flag de victoire */
+    bool m_victory;
+    /** @brief Flag de défaite */
+    bool m_defeat;
+    /** @brief Flag pour vérifier si l'image du niveau courant est déjà calculée */
+    bool m_currentLevelImageReady;
 };
 
 #endif // GAME_H

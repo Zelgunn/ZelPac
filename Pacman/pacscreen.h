@@ -10,7 +10,7 @@
 
 #include "game.h"
 #include "arduinohandler.h"
-
+#include "firework.h"
 
 /**
  * @brief Widget affichant l'ensemble du jeu.
@@ -29,6 +29,7 @@ class Pacscreen : public QWidget
 public:
     /**
      * @brief Constructeur de base de la classe Pacscreen.
+     * @param dataFile Fichier chargé par le jeu contenant l'intégralité des paramètres modulables.
      * @param parent Parent de la fenêtre
      */
     explicit Pacscreen(QString dataFile = ":/textures/pacman.xml", QWidget *parent = 0);
@@ -53,13 +54,19 @@ public:
      */
     void onKeyboardInput(int direction);
 
+    /**
+     * @brief Marque une pause entre une victoire ou une défaite du joueur avant de continuer.
+     * @return Vrai si la pause est terminée ou s'il n'y a pas de pause, sinon Faux.
+     */
+    bool restingTimeOff();
+
 protected:
     /**
      * @brief paintEvent de la classe, afin d'afficher l'ensemble du jeu.
      * @details Cet évenement est appelé à chaque fois que le timer du Jeu calcule une frame et affiche
      *      la frame (il peut y avoir une frame d'écart, soit 16-17 ms).
      */
-    void paintEvent(QPaintEvent *);
+    void paintEvent(QPaintEvent *event);
 
     /**
      * @brief Dessine les vies du pacman sur le PaintDevice sur lequel est branché le painter.
@@ -84,6 +91,36 @@ protected:
      * @param painter Painter dessinant le nom du niveau.
      */
     void paintLevelName(QPainter *painter);
+
+    /**
+     * @brief Dessine le jeu sur PaintDevice sur lequel est branché le painter.
+     * @param painter Painter dessinant le jeu.
+     */
+    void paintGame(QPainter *painter);
+
+    /**
+     * @brief Dessine la première image du jeu sur PaintDevice sur lequel est branché le painter.
+     * @param painter Painter dessinant la première image du jeu.
+     */
+    void paintFirstFrame(QPainter *painter);
+
+    /**
+     * @brief Dessine l'animation d'introduction sur PaintDevice sur lequel est branché le painter.
+     * @param painter Painter dessinant l'animation d'introduction.
+     */
+    void paintStartAnimation(QPainter *painter);
+
+    /**
+     * @brief Dessine l'animation de victoire sur PaintDevice sur lequel est branché le painter.
+     * @param painter Painter dessinant l'animation de victoire.
+     */
+    void paintVictoryAnimation(QPainter *painter);
+
+    /**
+     * @brief Dessine l'animation de défaite sur PaintDevice sur lequel est branché le painter.
+     * @param painter Painter dessinant l'animation de défaite.
+     */
+    void paintDefeatAnimation(QPainter *painter);
 
 private slots:
     /**
@@ -130,6 +167,12 @@ private:
     int m_frameCount;
     /** @brief Timer de rafraichissement d'images */
     QTimer *m_timer;
+    /** @brief Flag qui vérifie si l'animation d'introduction a été jouée. */
+    bool m_startAnimationDone;
+    /** @brief Feux d'artifices tirés en cas de victoire (classe pour animation compartimentée) */
+    QList<Firework *> m_fireworks;
+    /** @brief Marqueur temporel pour éviter que le joueur ne relance immédiatement le jeu */
+    QTime m_restingTime;
 };
 
 #endif // PACSCREEN_H

@@ -1,0 +1,95 @@
+\hypertarget{class_firework}{}\section{Firework Class Reference}
+\label{class_firework}\index{Firework@{Firework}}
+
+
+Classe d\textquotesingle{}animation de feu d\textquotesingle{}artifices.  
+
+
+
+
+{\ttfamily \#include $<$firework.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_firework_af032da470d5bca6f9a36bec0a3228b8a}{Firework} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Constructeur de base de la classe \hyperlink{class_firework}{Firework}. \end{DoxyCompactList}\item 
+\hypertarget{class_firework_aba631b83c2df26f8bd9fa124bd711974}{}void \hyperlink{class_firework_aba631b83c2df26f8bd9fa124bd711974}{init} ()\label{class_firework_aba631b83c2df26f8bd9fa124bd711974}
+
+\begin{DoxyCompactList}\small\item\em Réinitialise les paramètres aléatoires de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+Q\+Pixmap \hyperlink{class_firework_a23dd6268486eb91b6c5cfa2279bc0b41}{paint\+Firework} ()
+\begin{DoxyCompactList}\small\item\em Calcule et renvoie la prochaine image de l\textquotesingle{}animation. \end{DoxyCompactList}\item 
+Q\+Point \hyperlink{class_firework_ace6e4734843019521c0e2a244e5f6c1c}{center} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe d\textquotesingle{}animation de feu d\textquotesingle{}artifices. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+Cette classe s\textquotesingle{}instancie avec la taille maximale de la destination (par exemple, la taille de l\textquotesingle{}écran) et génère automatiquement une image. L\textquotesingle{}image générée ne prend pas en compte la position de l\textquotesingle{}objet (afin de placer cette image librement) et fait la taille maximale que fera l\textquotesingle{}animation. L\textquotesingle{}image générée est modifiée à chaque fois que la fonction est appelée afin de calculer la prochaine image de l\textquotesingle{}animation.
+
+L\textquotesingle{}animation en elle même affiche une dispersion de lignes qui simulent un feu d\textquotesingle{}artifice. Les lignes peuvent prendre plusieurs couleurs aléatoires et s\textquotesingle{}estompent au fil du temps. La façon dont les lignes s\textquotesingle{}estompent simule un effet de deccélaration soudaine (comme dans le cas d\textquotesingle{}une explosion). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_firework_af032da470d5bca6f9a36bec0a3228b8a}{}\index{Firework@{Firework}!Firework@{Firework}}
+\index{Firework@{Firework}!Firework@{Firework}}
+\subsubsection[{Firework(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}Firework\+::\+Firework (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{class_firework_af032da470d5bca6f9a36bec0a3228b8a}
+
+
+Constructeur de base de la classe \hyperlink{class_firework}{Firework}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Largeur de la destination qui affichera l\textquotesingle{}animation. \\
+\hline
+{\em height} & Hauteur de la destination qui affichera l\textquotesingle{}animation.\\
+\hline
+\end{DoxyParams}
+Lors de la construction de l\textquotesingle{}objet, les différents paramètres aléatoire de la classe (tels que la taille de l\textquotesingle{}animation, les lignes qui la compose, leur longueur) sont automatiquement réglés (à une valeur aléatoire). Cependant, la classe ne modifie pas la graine aléatore utilisée. Afin de réinitialiser les paramètres de façon aléatoire, voire la fonction \hyperlink{class_firework_aba631b83c2df26f8bd9fa124bd711974}{init()}; 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_firework_ace6e4734843019521c0e2a244e5f6c1c}{}\index{Firework@{Firework}!center@{center}}
+\index{center@{center}!Firework@{Firework}}
+\subsubsection[{center() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Firework\+::center (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_firework_ace6e4734843019521c0e2a244e5f6c1c}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Centre de l\textquotesingle{}animation.
+\end{DoxyReturn}
+Généré aléatoirement au sein de la taille donnée lors de la construction de l\textquotesingle{}objet. \hypertarget{class_firework_a23dd6268486eb91b6c5cfa2279bc0b41}{}\index{Firework@{Firework}!paint\+Firework@{paint\+Firework}}
+\index{paint\+Firework@{paint\+Firework}!Firework@{Firework}}
+\subsubsection[{paint\+Firework()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pixmap Firework\+::paint\+Firework (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_firework_a23dd6268486eb91b6c5cfa2279bc0b41}
+
+
+Calcule et renvoie la prochaine image de l\textquotesingle{}animation. 
+
+\begin{DoxyReturn}{Returns}
+Une frame de l\textquotesingle{}animation (dans l\textquotesingle{}ordre). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+firework.\+h\item 
+firework.\+cpp\end{DoxyCompactItemize}

@@ -18,18 +18,40 @@ Inheritance diagram for Pacscreen\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_pacscreen_a8dfe2adcf7e11f715664859db16c6710}{Pacscreen} (Q\+Widget $\ast$parent=0)
+\hyperlink{class_pacscreen_a28ad19885d3b4ebff6ec8fca42fe177a}{Pacscreen} (Q\+String data\+File=\char`\"{}\+:/textures/pacman.\+xml\char`\"{}, Q\+Widget $\ast$parent=0)
 \begin{DoxyCompactList}\small\item\em Constructeur de base de la classe \hyperlink{class_pacscreen}{Pacscreen}. \end{DoxyCompactList}\item 
 \hypertarget{class_pacscreen_a4c4bd0bef62cc02bd3798b4d20cd765f}{}\hyperlink{class_pacscreen_a4c4bd0bef62cc02bd3798b4d20cd765f}{$\sim$\+Pacscreen} ()\label{class_pacscreen_a4c4bd0bef62cc02bd3798b4d20cd765f}
 
 \begin{DoxyCompactList}\small\item\em Destructeur de la classe \hyperlink{class_pacscreen}{Pacscreen}. \end{DoxyCompactList}\item 
-void \hyperlink{class_pacscreen_a6860cefac4b539818d5d78ace3f61b18}{set\+Game} (\hyperlink{class_game}{Game} $\ast$game)
-\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{class_pacscreen_a3320b3943d0e14e262f2aac35f4f0028}{init\+Game} (const Q\+String \&filename=\char`\"{}\+:/textures/pacman.\+xml\char`\"{})
+\begin{DoxyCompactList}\small\item\em Démarre une session de jeu. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacscreen_afc8132b62b670a5bffc59abffda2ba5d}{on\+Keyboard\+Input} (int direction)
+\begin{DoxyCompactList}\small\item\em Fonction de traitement des entrées de flèches directionnelles. \end{DoxyCompactList}\item 
+bool \hyperlink{class_pacscreen_a99449fdac361b7d947204e4298dabcea}{resting\+Time\+Off} ()
+\begin{DoxyCompactList}\small\item\em Marque une pause entre une victoire ou une défaite du joueur avant de continuer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_pacscreen_a487bc9941a204557e94c942a4c95552c}{paint\+Event} (Q\+Paint\+Event $\ast$)
-\begin{DoxyCompactList}\small\item\em paint\+Event de la classe, afin d\textquotesingle{}afficher l\textquotesingle{}ensemble du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{class_pacscreen_a2ad3be852db68118d6eb50e979b6e2e9}{paint\+Event} (Q\+Paint\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em paint\+Event de la classe, afin d\textquotesingle{}afficher l\textquotesingle{}ensemble du jeu. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacscreen_aafb0eadb554235b7a777ec9caa61be3d}{paint\+Lifes} (Q\+Painter $\ast$painter)
+\begin{DoxyCompactList}\small\item\em Dessine les vies du pacman sur le Paint\+Device sur lequel est branché le painter. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacscreen_a458fdc2040c60b27ca03ce936c94358a}{paint\+Score} (Q\+Painter $\ast$painter)
+\begin{DoxyCompactList}\small\item\em Dessine le score du pacman sur le Paint\+Device sur lequel est branché le painter. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacscreen_afd28b9d528ac6bf79eaff0668eb71175}{paint\+F\+P\+S} (Q\+Painter $\ast$painter)
+\begin{DoxyCompactList}\small\item\em Dessine les F\+P\+S du jeu sur le Paint\+Device sur lequel est branché le painter. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacscreen_a31ce0c981b27c21501d0fd49a79abe5f}{paint\+Level\+Name} (Q\+Painter $\ast$painter)
+\begin{DoxyCompactList}\small\item\em Dessine le nom du niveau sur le Paint\+Device sur lequel est branché le painter. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacscreen_a7cf6fe4c2b68c588de61b5111f29d7de}{paint\+Game} (Q\+Painter $\ast$painter)
+\begin{DoxyCompactList}\small\item\em Dessine le jeu sur Paint\+Device sur lequel est branché le painter. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacscreen_a7d75e03446f7e8edac55a6896b2a3c40}{paint\+First\+Frame} (Q\+Painter $\ast$painter)
+\begin{DoxyCompactList}\small\item\em Dessine la première image du jeu sur Paint\+Device sur lequel est branché le painter. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacscreen_afeb89930eaa69c8b952af7b5653afc6c}{paint\+Start\+Animation} (Q\+Painter $\ast$painter)
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}animation d\textquotesingle{}introduction sur Paint\+Device sur lequel est branché le painter. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacscreen_a646b6aab801e38b3eae62b255183f83b}{paint\+Victory\+Animation} (Q\+Painter $\ast$painter)
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}animation de victoire sur Paint\+Device sur lequel est branché le painter. \end{DoxyCompactList}\item 
+void \hyperlink{class_pacscreen_ae1d6b203e0b0dcb57bb3e9065fab46fa}{paint\+Defeat\+Animation} (Q\+Painter $\ast$painter)
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}animation de défaite sur Paint\+Device sur lequel est branché le painter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -46,52 +68,229 @@ Grâce à l\textquotesingle{}utilisation d\textquotesingle{}un Paint\+Event, cet
 Cette classe permet aussi de recevoir les commandes utilisateurs venant du clavier ou d\textquotesingle{}une manette Arduino Uno. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_pacscreen_a8dfe2adcf7e11f715664859db16c6710}{}\index{Pacscreen@{Pacscreen}!Pacscreen@{Pacscreen}}
+\hypertarget{class_pacscreen_a28ad19885d3b4ebff6ec8fca42fe177a}{}\index{Pacscreen@{Pacscreen}!Pacscreen@{Pacscreen}}
 \index{Pacscreen@{Pacscreen}!Pacscreen@{Pacscreen}}
-\subsubsection[{Pacscreen(\+Q\+Widget $\ast$parent=0)}]{\setlength{\rightskip}{0pt plus 5cm}Pacscreen\+::\+Pacscreen (
+\subsubsection[{Pacscreen(\+Q\+String data\+File=""\+:/textures/pacman.\+xml"", Q\+Widget $\ast$parent=0)}]{\setlength{\rightskip}{0pt plus 5cm}Pacscreen\+::\+Pacscreen (
 \begin{DoxyParamCaption}
+\item[{Q\+String}]{data\+File = {\ttfamily \char`\"{}\+:/textures/pacman.xml\char`\"{}}, }
 \item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [explicit]}}\label{class_pacscreen_a8dfe2adcf7e11f715664859db16c6710}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\label{class_pacscreen_a28ad19885d3b4ebff6ec8fca42fe177a}
 
 
 Constructeur de base de la classe \hyperlink{class_pacscreen}{Pacscreen}. 
 
 
 \begin{DoxyParams}{Parameters}
+{\em data\+File} & Fichier chargé par le jeu contenant l\textquotesingle{}intégralité des paramètres modulables. \\
+\hline
 {\em parent} & Parent de la fenêtre \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_pacscreen_a487bc9941a204557e94c942a4c95552c}{}\index{Pacscreen@{Pacscreen}!paint\+Event@{paint\+Event}}
-\index{paint\+Event@{paint\+Event}!Pacscreen@{Pacscreen}}
-\subsubsection[{paint\+Event(\+Q\+Paint\+Event $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+Event (
+\hypertarget{class_pacscreen_a3320b3943d0e14e262f2aac35f4f0028}{}\index{Pacscreen@{Pacscreen}!init\+Game@{init\+Game}}
+\index{init\+Game@{init\+Game}!Pacscreen@{Pacscreen}}
+\subsubsection[{init\+Game(const Q\+String \&filename=""\+:/textures/pacman.\+xml"")}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::init\+Game (
 \begin{DoxyParamCaption}
-\item[{Q\+Paint\+Event $\ast$}]{}
+\item[{const Q\+String \&}]{filename = {\ttfamily \char`\"{}\+:/textures/pacman.xml\char`\"{}}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_a487bc9941a204557e94c942a4c95552c}
+)}\label{class_pacscreen_a3320b3943d0e14e262f2aac35f4f0028}
+
+
+Démarre une session de jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Fichier X\+M\+L contenant les paramètres de la session. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pacscreen_afc8132b62b670a5bffc59abffda2ba5d}{}\index{Pacscreen@{Pacscreen}!on\+Keyboard\+Input@{on\+Keyboard\+Input}}
+\index{on\+Keyboard\+Input@{on\+Keyboard\+Input}!Pacscreen@{Pacscreen}}
+\subsubsection[{on\+Keyboard\+Input(int direction)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::on\+Keyboard\+Input (
+\begin{DoxyParamCaption}
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)}\label{class_pacscreen_afc8132b62b670a5bffc59abffda2ba5d}
+
+
+Fonction de traitement des entrées de flèches directionnelles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Touche appuyée.\\
+\hline
+\end{DoxyParams}
+Lorsque cette fonction est appelée, si le jeu est totalement arrêté (victoire ou défaite), alors il redémarre. Dans le cas où celui ci est uniquement en pause (perte de vie, fin de niveau) alors il reprend. Sinon, le signal de la touche est propagé afin de changer la direction du joueur. \hypertarget{class_pacscreen_ae1d6b203e0b0dcb57bb3e9065fab46fa}{}\index{Pacscreen@{Pacscreen}!paint\+Defeat\+Animation@{paint\+Defeat\+Animation}}
+\index{paint\+Defeat\+Animation@{paint\+Defeat\+Animation}!Pacscreen@{Pacscreen}}
+\subsubsection[{paint\+Defeat\+Animation(\+Q\+Painter $\ast$painter)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+Defeat\+Animation (
+\begin{DoxyParamCaption}
+\item[{Q\+Painter $\ast$}]{painter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_ae1d6b203e0b0dcb57bb3e9065fab46fa}
+
+
+Dessine l\textquotesingle{}animation de défaite sur Paint\+Device sur lequel est branché le painter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Painter dessinant l\textquotesingle{}animation de défaite. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pacscreen_a2ad3be852db68118d6eb50e979b6e2e9}{}\index{Pacscreen@{Pacscreen}!paint\+Event@{paint\+Event}}
+\index{paint\+Event@{paint\+Event}!Pacscreen@{Pacscreen}}
+\subsubsection[{paint\+Event(\+Q\+Paint\+Event $\ast$event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Paint\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_a2ad3be852db68118d6eb50e979b6e2e9}
 
 
 paint\+Event de la classe, afin d\textquotesingle{}afficher l\textquotesingle{}ensemble du jeu. 
 
-Cet évenement est appelé à chaque fois que le timer du Jeu calcule une frame et affiche la frame (il peut y avoir une frame d\textquotesingle{}écart, soit 16-\/17 ms). \hypertarget{class_pacscreen_a6860cefac4b539818d5d78ace3f61b18}{}\index{Pacscreen@{Pacscreen}!set\+Game@{set\+Game}}
-\index{set\+Game@{set\+Game}!Pacscreen@{Pacscreen}}
-\subsubsection[{set\+Game(\+Game $\ast$game)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::set\+Game (
+Cet évenement est appelé à chaque fois que le timer du Jeu calcule une frame et affiche la frame (il peut y avoir une frame d\textquotesingle{}écart, soit 16-\/17 ms). \hypertarget{class_pacscreen_a7d75e03446f7e8edac55a6896b2a3c40}{}\index{Pacscreen@{Pacscreen}!paint\+First\+Frame@{paint\+First\+Frame}}
+\index{paint\+First\+Frame@{paint\+First\+Frame}!Pacscreen@{Pacscreen}}
+\subsubsection[{paint\+First\+Frame(\+Q\+Painter $\ast$painter)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+First\+Frame (
 \begin{DoxyParamCaption}
-\item[{{\bf Game} $\ast$}]{game}
+\item[{Q\+Painter $\ast$}]{painter}
 \end{DoxyParamCaption}
-)}\label{class_pacscreen_a6860cefac4b539818d5d78ace3f61b18}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_a7d75e03446f7e8edac55a6896b2a3c40}
 
 
-Setter. 
+Dessine la première image du jeu sur Paint\+Device sur lequel est branché le painter. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em game} & Jeu à afficher. \\
+{\em painter} & Painter dessinant la première image du jeu. \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_pacscreen_afd28b9d528ac6bf79eaff0668eb71175}{}\index{Pacscreen@{Pacscreen}!paint\+F\+P\+S@{paint\+F\+P\+S}}
+\index{paint\+F\+P\+S@{paint\+F\+P\+S}!Pacscreen@{Pacscreen}}
+\subsubsection[{paint\+F\+P\+S(\+Q\+Painter $\ast$painter)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+F\+P\+S (
+\begin{DoxyParamCaption}
+\item[{Q\+Painter $\ast$}]{painter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_afd28b9d528ac6bf79eaff0668eb71175}
+
+
+Dessine les F\+P\+S du jeu sur le Paint\+Device sur lequel est branché le painter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Painter dessinant les F\+P\+S. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pacscreen_a7cf6fe4c2b68c588de61b5111f29d7de}{}\index{Pacscreen@{Pacscreen}!paint\+Game@{paint\+Game}}
+\index{paint\+Game@{paint\+Game}!Pacscreen@{Pacscreen}}
+\subsubsection[{paint\+Game(\+Q\+Painter $\ast$painter)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+Game (
+\begin{DoxyParamCaption}
+\item[{Q\+Painter $\ast$}]{painter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_a7cf6fe4c2b68c588de61b5111f29d7de}
+
+
+Dessine le jeu sur Paint\+Device sur lequel est branché le painter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Painter dessinant le jeu. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pacscreen_a31ce0c981b27c21501d0fd49a79abe5f}{}\index{Pacscreen@{Pacscreen}!paint\+Level\+Name@{paint\+Level\+Name}}
+\index{paint\+Level\+Name@{paint\+Level\+Name}!Pacscreen@{Pacscreen}}
+\subsubsection[{paint\+Level\+Name(\+Q\+Painter $\ast$painter)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+Level\+Name (
+\begin{DoxyParamCaption}
+\item[{Q\+Painter $\ast$}]{painter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_a31ce0c981b27c21501d0fd49a79abe5f}
+
+
+Dessine le nom du niveau sur le Paint\+Device sur lequel est branché le painter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Painter dessinant le nom du niveau. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pacscreen_aafb0eadb554235b7a777ec9caa61be3d}{}\index{Pacscreen@{Pacscreen}!paint\+Lifes@{paint\+Lifes}}
+\index{paint\+Lifes@{paint\+Lifes}!Pacscreen@{Pacscreen}}
+\subsubsection[{paint\+Lifes(\+Q\+Painter $\ast$painter)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+Lifes (
+\begin{DoxyParamCaption}
+\item[{Q\+Painter $\ast$}]{painter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_aafb0eadb554235b7a777ec9caa61be3d}
+
+
+Dessine les vies du pacman sur le Paint\+Device sur lequel est branché le painter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Painter dessinant les vies. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pacscreen_a458fdc2040c60b27ca03ce936c94358a}{}\index{Pacscreen@{Pacscreen}!paint\+Score@{paint\+Score}}
+\index{paint\+Score@{paint\+Score}!Pacscreen@{Pacscreen}}
+\subsubsection[{paint\+Score(\+Q\+Painter $\ast$painter)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+Score (
+\begin{DoxyParamCaption}
+\item[{Q\+Painter $\ast$}]{painter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_a458fdc2040c60b27ca03ce936c94358a}
+
+
+Dessine le score du pacman sur le Paint\+Device sur lequel est branché le painter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Painter dessinant le score. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pacscreen_afeb89930eaa69c8b952af7b5653afc6c}{}\index{Pacscreen@{Pacscreen}!paint\+Start\+Animation@{paint\+Start\+Animation}}
+\index{paint\+Start\+Animation@{paint\+Start\+Animation}!Pacscreen@{Pacscreen}}
+\subsubsection[{paint\+Start\+Animation(\+Q\+Painter $\ast$painter)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+Start\+Animation (
+\begin{DoxyParamCaption}
+\item[{Q\+Painter $\ast$}]{painter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_afeb89930eaa69c8b952af7b5653afc6c}
+
+
+Dessine l\textquotesingle{}animation d\textquotesingle{}introduction sur Paint\+Device sur lequel est branché le painter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Painter dessinant l\textquotesingle{}animation d\textquotesingle{}introduction. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pacscreen_a646b6aab801e38b3eae62b255183f83b}{}\index{Pacscreen@{Pacscreen}!paint\+Victory\+Animation@{paint\+Victory\+Animation}}
+\index{paint\+Victory\+Animation@{paint\+Victory\+Animation}!Pacscreen@{Pacscreen}}
+\subsubsection[{paint\+Victory\+Animation(\+Q\+Painter $\ast$painter)}]{\setlength{\rightskip}{0pt plus 5cm}void Pacscreen\+::paint\+Victory\+Animation (
+\begin{DoxyParamCaption}
+\item[{Q\+Painter $\ast$}]{painter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pacscreen_a646b6aab801e38b3eae62b255183f83b}
+
+
+Dessine l\textquotesingle{}animation de victoire sur Paint\+Device sur lequel est branché le painter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Painter dessinant l\textquotesingle{}animation de victoire. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pacscreen_a99449fdac361b7d947204e4298dabcea}{}\index{Pacscreen@{Pacscreen}!resting\+Time\+Off@{resting\+Time\+Off}}
+\index{resting\+Time\+Off@{resting\+Time\+Off}!Pacscreen@{Pacscreen}}
+\subsubsection[{resting\+Time\+Off()}]{\setlength{\rightskip}{0pt plus 5cm}bool Pacscreen\+::resting\+Time\+Off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pacscreen_a99449fdac361b7d947204e4298dabcea}
+
+
+Marque une pause entre une victoire ou une défaite du joueur avant de continuer. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si la pause est terminée ou s\textquotesingle{}il n\textquotesingle{}y a pas de pause, sinon Faux. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

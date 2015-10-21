@@ -127,9 +127,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a610ec153d154322c3d42af030bf54425"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a610ec153d154322c3d42af030bf54425">Level</a> (QDomElement elem)</td></tr>
-<tr class="memdesc:a610ec153d154322c3d42af030bf54425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de la classe <a class="el" href="class_level.html" title="La classe de Niveau de Pacman. ">Level</a>.  <a href="#a610ec153d154322c3d42af030bf54425">More...</a><br /></td></tr>
-<tr class="separator:a610ec153d154322c3d42af030bf54425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae03897e1ca36f7f22c6a071b105e6376"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#ae03897e1ca36f7f22c6a071b105e6376">Level</a> (QDomElement elem, <a class="el" href="class_texture_handler.html">TextureHandler</a> *textureHandler)</td></tr>
+<tr class="memdesc:ae03897e1ca36f7f22c6a071b105e6376"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de la classe <a class="el" href="class_level.html" title="La classe de Niveau de Pacman. ">Level</a>.  <a href="#ae03897e1ca36f7f22c6a071b105e6376">More...</a><br /></td></tr>
+<tr class="separator:ae03897e1ca36f7f22c6a071b105e6376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdd877e4e92747abb3718060e77b9cd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_pacman_unit.html">PacmanUnit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#afdd877e4e92747abb3718060e77b9cd6">player</a> () const </td></tr>
 <tr class="memdesc:afdd877e4e92747abb3718060e77b9cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#afdd877e4e92747abb3718060e77b9cd6">More...</a><br /></td></tr>
 <tr class="separator:afdd877e4e92747abb3718060e77b9cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,9 +169,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a89da34148d40923b1a1448efd9e68486"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="class_ghost.html">Ghost</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a89da34148d40923b1a1448efd9e68486">checkUnitsPositions</a> ()</td></tr>
 <tr class="memdesc:a89da34148d40923b1a1448efd9e68486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si les unités ne se trouvent pas trop proches les unes des autres.  <a href="#a89da34148d40923b1a1448efd9e68486">More...</a><br /></td></tr>
 <tr class="separator:a89da34148d40923b1a1448efd9e68486"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50346e8af1e9b6c6107a104ce70e962e"><td class="memItemLeft" align="right" valign="top">QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a50346e8af1e9b6c6107a104ce70e962e">render</a> ()</td></tr>
-<tr class="memdesc:a50346e8af1e9b6c6107a104ce70e962e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère l'image de base de la grille et y ajoute les unités.  <a href="#a50346e8af1e9b6c6107a104ce70e962e">More...</a><br /></td></tr>
-<tr class="separator:a50346e8af1e9b6c6107a104ce70e962e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13ed4f189fc75b8b1a98c378216af2c"><td class="memItemLeft" align="right" valign="top">QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#ae13ed4f189fc75b8b1a98c378216af2c">render</a> ()</td></tr>
+<tr class="memdesc:ae13ed4f189fc75b8b1a98c378216af2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère l'image de base de la grille et y ajoute les unités.  <a href="#ae13ed4f189fc75b8b1a98c378216af2c">More...</a><br /></td></tr>
+<tr class="separator:ae13ed4f189fc75b8b1a98c378216af2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac61a6b945f5947beed35fea97495c719"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac61a6b945f5947beed35fea97495c719"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#ac61a6b945f5947beed35fea97495c719">movePacman</a> ()</td></tr>
 <tr class="memdesc:ac61a6b945f5947beed35fea97495c719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule le déplacement du pacman du niveau. <br /></td></tr>
@@ -192,18 +192,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#af9979f888060289a08dbc72dc7ab5573">startLevel</a> ()</td></tr>
 <tr class="memdesc:af9979f888060289a08dbc72dc7ab5573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalise le niveau. <br /></td></tr>
 <tr class="separator:af9979f888060289a08dbc72dc7ab5573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5d0dee7439f36dfe2c55f4d90ef8d9"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a8d5d0dee7439f36dfe2c55f4d90ef8d9">name</a> () const </td></tr>
+<tr class="memdesc:a8d5d0dee7439f36dfe2c55f4d90ef8d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#a8d5d0dee7439f36dfe2c55f4d90ef8d9">More...</a><br /></td></tr>
+<tr class="separator:a8d5d0dee7439f36dfe2c55f4d90ef8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae29473d13944d0ac362d4ab6f7651e29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#ae29473d13944d0ac362d4ab6f7651e29">addUnitsToImage</a> (QImage *res)</td></tr>
-<tr class="memdesc:ae29473d13944d0ac362d4ab6f7651e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute toutes les unités à l'image.  <a href="#ae29473d13944d0ac362d4ab6f7651e29">More...</a><br /></td></tr>
-<tr class="separator:ae29473d13944d0ac362d4ab6f7651e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afba61ca4ae1267e6b015443d56fdb4dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#afba61ca4ae1267e6b015443d56fdb4dd">addGhostsToImage</a> (QImage *res)</td></tr>
-<tr class="memdesc:afba61ca4ae1267e6b015443d56fdb4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute tous les fantômes à l'image.  <a href="#afba61ca4ae1267e6b015443d56fdb4dd">More...</a><br /></td></tr>
-<tr class="separator:afba61ca4ae1267e6b015443d56fdb4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a973582da2a41b2641cfcfa79d7915b3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a973582da2a41b2641cfcfa79d7915b3b">addPacmanToImage</a> (QImage *res)</td></tr>
-<tr class="memdesc:a973582da2a41b2641cfcfa79d7915b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute pacman à l'image.  <a href="#a973582da2a41b2641cfcfa79d7915b3b">More...</a><br /></td></tr>
-<tr class="separator:a973582da2a41b2641cfcfa79d7915b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95500fd5118b926928fb078d93c5f662"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a95500fd5118b926928fb078d93c5f662">addUnitsToImage</a> (QPixmap *res)</td></tr>
+<tr class="memdesc:a95500fd5118b926928fb078d93c5f662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute toutes les unités à l'image.  <a href="#a95500fd5118b926928fb078d93c5f662">More...</a><br /></td></tr>
+<tr class="separator:a95500fd5118b926928fb078d93c5f662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0671e3c309756abb0fc819a340775e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a8f0671e3c309756abb0fc819a340775e">addGhostsToImage</a> (QPixmap *res)</td></tr>
+<tr class="memdesc:a8f0671e3c309756abb0fc819a340775e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute tous les fantômes à l'image.  <a href="#a8f0671e3c309756abb0fc819a340775e">More...</a><br /></td></tr>
+<tr class="separator:a8f0671e3c309756abb0fc819a340775e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05dd1ccdace4c4b4428ebaca9c659ca9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a05dd1ccdace4c4b4428ebaca9c659ca9">addPacmanToImage</a> (QPixmap *res)</td></tr>
+<tr class="memdesc:a05dd1ccdace4c4b4428ebaca9c659ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute pacman à l'image.  <a href="#a05dd1ccdace4c4b4428ebaca9c659ca9">More...</a><br /></td></tr>
+<tr class="separator:a05dd1ccdace4c4b4428ebaca9c659ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>La classe de Niveau de Pacman. </p>
@@ -211,7 +214,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
 <p>Cette classe s'occupe des paramètres propres à un seul niveau (Grille, Nombre de pastilles/énergisants, Unités...). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a610ec153d154322c3d42af030bf54425"></a>
+<a class="anchor" id="ae03897e1ca36f7f22c6a071b105e6376"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -219,8 +222,18 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">Level::Level </td>
           <td>(</td>
           <td class="paramtype">QDomElement&#160;</td>
-          <td class="paramname"><em>elem</em></td><td>)</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_texture_handler.html">TextureHandler</a> *&#160;</td>
+          <td class="paramname"><em>textureHandler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -228,48 +241,16 @@ Protected Member Functions</h2></td></tr>
 <p>Constructeur de base de la classe <a class="el" href="class_level.html" title="La classe de Niveau de Pacman. ">Level</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">elem</td><td>Données XML à charger lors de la contruction de l'objet.</td></tr>
+    <tr><td class="paramname">elem</td><td>Données XML à charger lors de la contruction de l'objet. </td></tr>
+    <tr><td class="paramname">textureHandler</td><td>Gestionnaire de texture déjà instancié d'où la grille du niveau va extraire les textures. </td></tr>
   </table>
   </dd>
 </dl>
-<p>L'élément XML doit ressembler au template suivant :</p><ul>
-<li>&lt;<a class="el" href="class_level.html" title="La classe de Niveau de Pacman. ">Level</a>&gt;<ul>
-<li>&lt;<a class="el" href="class_grid.html" title="Classe de grille de Pacman. ">Grid</a>&gt;<ul>
-<li>&lt;TileCount height="3" width="3"/&gt;</li>
-<li>&lt;TileSize height="24" width="24"/&gt;</li>
-<li>&lt;GridValues values="aaacdebbb"/&gt;</li>
-<li>&lt;Texture filename="Texture1.png"/&gt;</li>
-<li>&lt;Texture filename="Texture2.png"/&gt;</li>
-<li>&lt;Texture filename="Texture_Pastille.png"/&gt;</li>
-<li>&lt;Texture filename="Texture_Energisant.png"/&gt;</li>
-<li>&lt;Texture filename="Texture_Vide.png"/&gt;</li>
-<li>&lt;CollisionsGrid values="000111000"/&gt;</li>
-<li>&lt;GhostHouse x="1" y="1" width="1" height="1"/&gt;</li>
-</ul>
-</li>
-<li>&lt;/ <a class="el" href="class_grid.html" title="Classe de grille de Pacman. ">Grid</a>&gt;</li>
-<li>&lt;Player ix="0" iy="0" speed="77" sspeed = "91" fx = "half"/&gt;</li>
-<li>&lt;Blinky ix="1" iy="2" speed="71" sspeed = "50" cornerx="26" cornery="-2" fx = "half"/&gt;</li>
-<li>&lt;Pinky ix="2" iy="2" speed="71" sspeed = "50" cornerx="2" cornery="-2"/&gt;</li>
-<li>&lt;Inky ix="1" iy="2" speed="71" sspeed = "50" cornerx="28" cornery="32" fx = "half"/&gt;</li>
-<li>&lt;Clyde ix="2" iy="2" speed="71" sspeed = "50" cornerx="0" cornery="32"/&gt;</li>
-<li>&lt;<a class="el" href="class_ghost_timer.html" title="Classe de Timer pour les modes des fantômes. ">GhostTimer</a>&gt;<ul>
-<li>&lt;Step time="7" mode="0"/&gt;</li>
-<li>&lt;Step time="20" mode="1"/&gt;</li>
-<li>&lt;Step time="7" mode="0"/&gt;</li>
-</ul>
-</li>
-<li>&lt;/ <a class="el" href="class_ghost_timer.html" title="Classe de Timer pour les modes des fantômes. ">GhostTimer</a>&gt;</li>
-<li>&lt;ScaredMode duration="6000" flashs="5"/&gt;</li>
-</ul>
-</li>
-<li>&lt;/ <a class="el" href="class_level.html" title="La classe de Niveau de Pacman. ">Level</a>&gt; </li>
-</ul>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="afba61ca4ae1267e6b015443d56fdb4dd"></a>
+<a class="anchor" id="a8f0671e3c309756abb0fc819a340775e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -279,7 +260,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Level::addGhostsToImage </td>
           <td>(</td>
-          <td class="paramtype">QImage *&#160;</td>
+          <td class="paramtype">QPixmap *&#160;</td>
           <td class="paramname"><em>res</em></td><td>)</td>
           <td></td>
         </tr>
@@ -301,7 +282,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a973582da2a41b2641cfcfa79d7915b3b"></a>
+<a class="anchor" id="a05dd1ccdace4c4b4428ebaca9c659ca9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -311,7 +292,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Level::addPacmanToImage </td>
           <td>(</td>
-          <td class="paramtype">QImage *&#160;</td>
+          <td class="paramtype">QPixmap *&#160;</td>
           <td class="paramname"><em>res</em></td><td>)</td>
           <td></td>
         </tr>
@@ -333,7 +314,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae29473d13944d0ac362d4ab6f7651e29"></a>
+<a class="anchor" id="a95500fd5118b926928fb078d93c5f662"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -343,7 +324,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Level::addUnitsToImage </td>
           <td>(</td>
-          <td class="paramtype">QImage *&#160;</td>
+          <td class="paramtype">QPixmap *&#160;</td>
           <td class="paramname"><em>res</em></td><td>)</td>
           <td></td>
         </tr>
@@ -462,6 +443,24 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8d5d0dee7439f36dfe2c55f4d90ef8d9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Level::name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Nom du niveau. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a05f5d955db2a800d9073d5cd9159d6f7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -498,12 +497,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a50346e8af1e9b6c6107a104ce70e962e"></a>
+<a class="anchor" id="ae13ed4f189fc75b8b1a98c378216af2c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QImage * Level::render </td>
+          <td class="memname">QPixmap * Level::render </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

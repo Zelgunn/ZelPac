@@ -7,6 +7,4 @@
 #define MAX_FLOAT_POS           (100*FPS/6)
 #define FLOAT_PACE              (MAX_FLOAT_POS/24)
 
-#include <QDebug>
-
 #endif // PACMANPARAMETERS_H

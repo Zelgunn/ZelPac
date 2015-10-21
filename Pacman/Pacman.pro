@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     doubleposition.cpp \
     pacmanunit.cpp \
     ghosttimer.cpp \
-    texturehandler.cpp
+    texturehandler.cpp \
+    firework.cpp
 
 HEADERS  += \
     grid.h \
@@ -40,7 +41,8 @@ HEADERS  += \
     doubleposition.h \
     pacmanunit.h \
     ghosttimer.h \
-    texturehandler.h
+    texturehandler.h \
+    firework.h
 
 FORMS    +=
 

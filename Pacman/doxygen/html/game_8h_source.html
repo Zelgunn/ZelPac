@@ -99,67 +99,93 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;level.h&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;pacmanparameters.h&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_game.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_game.html">Game</a> : <span class="keyword">public</span> QObject</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="class_game.html#a07651e12402cbf4ffb116870594cb347">Game</a>(QDomDocument *dom);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#ae8638ccdb0ef3bf39a6affa30aa1258f">startGame</a>();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#aa23771d9b5897ab65aae22f930b6e7a8">currentLevel</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#ad7c1d10b807c0707e4b9f71e975135f4">setCurrentLevel</a>(<span class="keywordtype">int</span> currentLevel);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    QList&lt;Level*&gt; <a class="code" href="class_game.html#a827328224e2d00cca5534a87b655e3c4">levels</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#acd638924aa59358846e55e78d272a2ec">score</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a5cf4da142ff72734ee8713b2c37b2b9b">lifes</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    QTimer *<a class="code" href="class_game.html#a8c93ee78acb3dc311aaf5b7bae06e70c">timer</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    QImage <a class="code" href="class_game.html#a355b625103201150c07114b4b2fccb03">image</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#aa9db7117b627f79bac876506fa6733d3">setPacmanDirection</a>(<span class="keywordtype">int</span> direction);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#a3c0e737b028fae5e5fc323efe6326880">nextGameFrame</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;texturehandler.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_game.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_game.html">Game</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_game.html#a07651e12402cbf4ffb116870594cb347">Game</a>(QDomDocument *dom);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">~Game</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#ae8638ccdb0ef3bf39a6affa30aa1258f">startGame</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#aa23771d9b5897ab65aae22f930b6e7a8">currentLevel</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#ad7c1d10b807c0707e4b9f71e975135f4">setCurrentLevel</a>(<span class="keywordtype">int</span> currentLevel);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    QList&lt;Level*&gt; <a class="code" href="class_game.html#a827328224e2d00cca5534a87b655e3c4">levels</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#acd638924aa59358846e55e78d272a2ec">score</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a5cf4da142ff72734ee8713b2c37b2b9b">lifes</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    QTimer *<a class="code" href="class_game.html#a8c93ee78acb3dc311aaf5b7bae06e70c">timer</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    QPixmap <a class="code" href="class_game.html#a5de3afc0984fe73c91ab3b4fdef6ef8f">image</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#aa9db7117b627f79bac876506fa6733d3">setPacmanDirection</a>(<span class="keywordtype">int</span> direction);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_game.html#a2cbd90709b9a9924d5c541eb023a7600">isChangingLevel</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    QPixmap *<a class="code" href="class_game.html#abb00a545733e9241b62eedf8e92123d2">firstFrame</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_game.html#a5cce97ff777796abe02d4b0a4218eb42">victory</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_game.html#a1644c9e27d75c2f4a98e1f5de9f7d66b">defeat</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#a3c0e737b028fae5e5fc323efe6326880">nextGameFrame</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#a5ec2daf2a7fe95ee03dea84b4f5d6883">resumeGame</a>();</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#a5ec2daf2a7fe95ee03dea84b4f5d6883">resumeGame</a>();</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">protected</span> slots:</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#afaad4867b30abbd7005f336c9f270986">onPelletEaten</a>();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">protected</span> slots:</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#afaad4867b30abbd7005f336c9f270986">onPelletEaten</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#ad3a2fed489f6bb930e3a88785ddf8c9d">onEnergizerEaten</a>();</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#ad3a2fed489f6bb930e3a88785ddf8c9d">onEnergizerEaten</a>();</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">int</span> m_currentLevel;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    QList&lt;Level*&gt; m_levels;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">int</span> m_score;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">int</span> m_lifes;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">int</span> m_consecutivesEnergizers;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    QTimer *m_timer;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    QImage m_image;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    QMediaPlayer *m_shortSoundsPlayer;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;};</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#endif // GAME_H</span></div>
-<div class="ttc" id="class_game_html_ad3a2fed489f6bb930e3a88785ddf8c9d"><div class="ttname"><a href="class_game.html#ad3a2fed489f6bb930e3a88785ddf8c9d">Game::onEnergizerEaten</a></div><div class="ttdeci">void onEnergizerEaten()</div><div class="ttdoc">Modifie les valeurs du jeu lorsque le joueur mange un énergisant et fait peur aux fantômes...</div><div class="ttdef"><b>Definition:</b> game.cpp:119</div></div>
-<div class="ttc" id="class_game_html_a5cf4da142ff72734ee8713b2c37b2b9b"><div class="ttname"><a href="class_game.html#a5cf4da142ff72734ee8713b2c37b2b9b">Game::lifes</a></div><div class="ttdeci">int lifes() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:140</div></div>
-<div class="ttc" id="class_game_html_a3c0e737b028fae5e5fc323efe6326880"><div class="ttname"><a href="class_game.html#a3c0e737b028fae5e5fc323efe6326880">Game::nextGameFrame</a></div><div class="ttdeci">void nextGameFrame()</div><div class="ttdoc">Calcule la prochaine frame. </div><div class="ttdef"><b>Definition:</b> game.cpp:45</div></div>
-<div class="ttc" id="class_game_html_afaad4867b30abbd7005f336c9f270986"><div class="ttname"><a href="class_game.html#afaad4867b30abbd7005f336c9f270986">Game::onPelletEaten</a></div><div class="ttdeci">void onPelletEaten()</div><div class="ttdoc">Modifie les valeurs du jeu lorsque le joueur mange une pastille. </div><div class="ttdef"><b>Definition:</b> game.cpp:105</div></div>
-<div class="ttc" id="class_game_html_ae8638ccdb0ef3bf39a6affa30aa1258f"><div class="ttname"><a href="class_game.html#ae8638ccdb0ef3bf39a6affa30aa1258f">Game::startGame</a></div><div class="ttdeci">void startGame()</div><div class="ttdoc">Démarre le jeu avec FPS (cf. pacmanparameters.h) images par seconde. </div><div class="ttdef"><b>Definition:</b> game.cpp:37</div></div>
-<div class="ttc" id="class_game_html_ad7c1d10b807c0707e4b9f71e975135f4"><div class="ttname"><a href="class_game.html#ad7c1d10b807c0707e4b9f71e975135f4">Game::setCurrentLevel</a></div><div class="ttdeci">void setCurrentLevel(int currentLevel)</div><div class="ttdoc">Setter. </div><div class="ttdef"><b>Definition:</b> game.cpp:160</div></div>
-<div class="ttc" id="class_game_html_a355b625103201150c07114b4b2fccb03"><div class="ttname"><a href="class_game.html#a355b625103201150c07114b4b2fccb03">Game::image</a></div><div class="ttdeci">QImage image() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:124</div></div>
-<div class="ttc" id="class_game_html_a5ec2daf2a7fe95ee03dea84b4f5d6883"><div class="ttname"><a href="class_game.html#a5ec2daf2a7fe95ee03dea84b4f5d6883">Game::resumeGame</a></div><div class="ttdeci">void resumeGame()</div><div class="ttdoc">Relance le timer du jeu. </div><div class="ttdef"><b>Definition:</b> game.cpp:100</div></div>
-<div class="ttc" id="class_game_html_aa23771d9b5897ab65aae22f930b6e7a8"><div class="ttname"><a href="class_game.html#aa23771d9b5897ab65aae22f930b6e7a8">Game::currentLevel</a></div><div class="ttdeci">int currentLevel() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:155</div></div>
-<div class="ttc" id="class_game_html_a827328224e2d00cca5534a87b655e3c4"><div class="ttname"><a href="class_game.html#a827328224e2d00cca5534a87b655e3c4">Game::levels</a></div><div class="ttdeci">QList&lt; Level * &gt; levels() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:150</div></div>
-<div class="ttc" id="class_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdoc">La classe Game gère l&#39;ensemble des paramètres de Pacman. </div><div class="ttdef"><b>Definition:</b> game.h:35</div></div>
-<div class="ttc" id="class_game_html_acd638924aa59358846e55e78d272a2ec"><div class="ttname"><a href="class_game.html#acd638924aa59358846e55e78d272a2ec">Game::score</a></div><div class="ttdeci">int score() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:145</div></div>
-<div class="ttc" id="class_game_html_a8c93ee78acb3dc311aaf5b7bae06e70c"><div class="ttname"><a href="class_game.html#a8c93ee78acb3dc311aaf5b7bae06e70c">Game::timer</a></div><div class="ttdeci">QTimer * timer() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:135</div></div>
-<div class="ttc" id="class_game_html_aa9db7117b627f79bac876506fa6733d3"><div class="ttname"><a href="class_game.html#aa9db7117b627f79bac876506fa6733d3">Game::setPacmanDirection</a></div><div class="ttdeci">void setPacmanDirection(int direction)</div><div class="ttdoc">Modifie la direction actuelle du joueur. </div><div class="ttdef"><b>Definition:</b> game.cpp:129</div></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;signals:</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game.html#abb2334c12764f9b5d240315dc06e8698">gameFinished</a>();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">int</span> m_currentLevel;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    QList&lt;Level*&gt; m_levels;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">int</span> m_score;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">int</span> m_lifes;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">int</span> m_consecutivesEnergizers;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    QTimer *m_timer;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    QPixmap m_image;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    QMediaPlayer *m_shortSoundsPlayer;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="class_texture_handler.html">TextureHandler</a> m_textureHandler;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">bool</span> m_isChangingLevel;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">bool</span> m_victory;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">bool</span> m_defeat;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">bool</span> m_currentLevelImageReady;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;};</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#endif // GAME_H</span></div>
+<div class="ttc" id="class_game_html_ad3a2fed489f6bb930e3a88785ddf8c9d"><div class="ttname"><a href="class_game.html#ad3a2fed489f6bb930e3a88785ddf8c9d">Game::onEnergizerEaten</a></div><div class="ttdeci">void onEnergizerEaten()</div><div class="ttdoc">Modifie les valeurs du jeu lorsque le joueur mange un énergisant et fait peur aux fantômes...</div><div class="ttdef"><b>Definition:</b> game.cpp:183</div></div>
+<div class="ttc" id="class_game_html_ae3d112ca6e0e55150d2fdbc704474530"><div class="ttname"><a href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">Game::~Game</a></div><div class="ttdeci">~Game()</div><div class="ttdoc">Destructeur de la classe. </div><div class="ttdef"><b>Definition:</b> game.cpp:55</div></div>
+<div class="ttc" id="class_game_html_a5cf4da142ff72734ee8713b2c37b2b9b"><div class="ttname"><a href="class_game.html#a5cf4da142ff72734ee8713b2c37b2b9b">Game::lifes</a></div><div class="ttdeci">int lifes() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:225</div></div>
+<div class="ttc" id="class_game_html_a5cce97ff777796abe02d4b0a4218eb42"><div class="ttname"><a href="class_game.html#a5cce97ff777796abe02d4b0a4218eb42">Game::victory</a></div><div class="ttdeci">bool victory() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:187</div></div>
+<div class="ttc" id="class_game_html_a3c0e737b028fae5e5fc323efe6326880"><div class="ttname"><a href="class_game.html#a3c0e737b028fae5e5fc323efe6326880">Game::nextGameFrame</a></div><div class="ttdeci">void nextGameFrame()</div><div class="ttdoc">Calcule la prochaine frame. </div><div class="ttdef"><b>Definition:</b> game.cpp:85</div></div>
+<div class="ttc" id="class_game_html_a2cbd90709b9a9924d5c541eb023a7600"><div class="ttname"><a href="class_game.html#a2cbd90709b9a9924d5c541eb023a7600">Game::isChangingLevel</a></div><div class="ttdeci">bool isChangingLevel() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:197</div></div>
+<div class="ttc" id="class_game_html_afaad4867b30abbd7005f336c9f270986"><div class="ttname"><a href="class_game.html#afaad4867b30abbd7005f336c9f270986">Game::onPelletEaten</a></div><div class="ttdeci">void onPelletEaten()</div><div class="ttdoc">Modifie les valeurs du jeu lorsque le joueur mange une pastille. </div><div class="ttdef"><b>Definition:</b> game.cpp:169</div></div>
+<div class="ttc" id="class_game_html_a1644c9e27d75c2f4a98e1f5de9f7d66b"><div class="ttname"><a href="class_game.html#a1644c9e27d75c2f4a98e1f5de9f7d66b">Game::defeat</a></div><div class="ttdeci">bool defeat() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:192</div></div>
+<div class="ttc" id="class_game_html_abb2334c12764f9b5d240315dc06e8698"><div class="ttname"><a href="class_game.html#abb2334c12764f9b5d240315dc06e8698">Game::gameFinished</a></div><div class="ttdeci">void gameFinished()</div><div class="ttdoc">Signal émit lorsque le joueur gagne ou perd. </div></div>
+<div class="ttc" id="class_game_html_ae8638ccdb0ef3bf39a6affa30aa1258f"><div class="ttname"><a href="class_game.html#ae8638ccdb0ef3bf39a6affa30aa1258f">Game::startGame</a></div><div class="ttdeci">void startGame()</div><div class="ttdoc">Démarre le jeu avec FPS (cf. pacmanparameters.h) images par seconde. </div><div class="ttdef"><b>Definition:</b> game.cpp:76</div></div>
+<div class="ttc" id="class_game_html_ad7c1d10b807c0707e4b9f71e975135f4"><div class="ttname"><a href="class_game.html#ad7c1d10b807c0707e4b9f71e975135f4">Game::setCurrentLevel</a></div><div class="ttdeci">void setCurrentLevel(int currentLevel)</div><div class="ttdoc">Setter. </div><div class="ttdef"><b>Definition:</b> game.cpp:245</div></div>
+<div class="ttc" id="class_game_html_a5de3afc0984fe73c91ab3b4fdef6ef8f"><div class="ttname"><a href="class_game.html#a5de3afc0984fe73c91ab3b4fdef6ef8f">Game::image</a></div><div class="ttdeci">QPixmap image()</div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:207</div></div>
+<div class="ttc" id="class_game_html_abb00a545733e9241b62eedf8e92123d2"><div class="ttname"><a href="class_game.html#abb00a545733e9241b62eedf8e92123d2">Game::firstFrame</a></div><div class="ttdeci">QPixmap * firstFrame() const </div><div class="ttdoc">Calcul l&#39;image que donnerait le jeu s&#39;il commençait tout juste. </div><div class="ttdef"><b>Definition:</b> game.cpp:202</div></div>
+<div class="ttc" id="class_game_html_a5ec2daf2a7fe95ee03dea84b4f5d6883"><div class="ttname"><a href="class_game.html#a5ec2daf2a7fe95ee03dea84b4f5d6883">Game::resumeGame</a></div><div class="ttdeci">void resumeGame()</div><div class="ttdoc">Relance le timer du jeu. </div><div class="ttdef"><b>Definition:</b> game.cpp:163</div></div>
+<div class="ttc" id="class_game_html_aa23771d9b5897ab65aae22f930b6e7a8"><div class="ttname"><a href="class_game.html#aa23771d9b5897ab65aae22f930b6e7a8">Game::currentLevel</a></div><div class="ttdeci">int currentLevel() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:240</div></div>
+<div class="ttc" id="class_game_html_a827328224e2d00cca5534a87b655e3c4"><div class="ttname"><a href="class_game.html#a827328224e2d00cca5534a87b655e3c4">Game::levels</a></div><div class="ttdeci">QList&lt; Level * &gt; levels() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:235</div></div>
+<div class="ttc" id="class_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdoc">La classe Game gère l&#39;ensemble des paramètres de Pacman. </div><div class="ttdef"><b>Definition:</b> game.h:31</div></div>
+<div class="ttc" id="class_texture_handler_html"><div class="ttname"><a href="class_texture_handler.html">TextureHandler</a></div><div class="ttdoc">Gestionnaire de textures. </div><div class="ttdef"><b>Definition:</b> texturehandler.h:15</div></div>
+<div class="ttc" id="class_game_html_acd638924aa59358846e55e78d272a2ec"><div class="ttname"><a href="class_game.html#acd638924aa59358846e55e78d272a2ec">Game::score</a></div><div class="ttdeci">int score() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:230</div></div>
+<div class="ttc" id="class_game_html_a8c93ee78acb3dc311aaf5b7bae06e70c"><div class="ttname"><a href="class_game.html#a8c93ee78acb3dc311aaf5b7bae06e70c">Game::timer</a></div><div class="ttdeci">QTimer * timer() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> game.cpp:220</div></div>
+<div class="ttc" id="class_game_html_aa9db7117b627f79bac876506fa6733d3"><div class="ttname"><a href="class_game.html#aa9db7117b627f79bac876506fa6733d3">Game::setPacmanDirection</a></div><div class="ttdeci">void setPacmanDirection(int direction)</div><div class="ttdoc">Modifie la direction actuelle du joueur. </div><div class="ttdef"><b>Definition:</b> game.cpp:214</div></div>
 <div class="ttc" id="class_game_html_a07651e12402cbf4ffb116870594cb347"><div class="ttname"><a href="class_game.html#a07651e12402cbf4ffb116870594cb347">Game::Game</a></div><div class="ttdeci">Game(QDomDocument *dom)</div><div class="ttdoc">Constructeur de base de la classe Game. </div><div class="ttdef"><b>Definition:</b> game.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

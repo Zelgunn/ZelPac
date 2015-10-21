@@ -19,13 +19,13 @@ enum \hyperlink{class_grid_a473f8c5d768a1734d8911bf1213ce10f}{Collisions\+I\+D} 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_grid_ac9920f1d5b87c3b528fdfc1f73011b4e}{Grid} (Q\+Dom\+Element elem)
+\hyperlink{class_grid_a4d98f6e0a0a048fbce5b77fbc0cba646}{Grid} (Q\+Dom\+Element elem, \hyperlink{class_texture_handler}{Texture\+Handler} $\ast$texture\+Handler)
 \begin{DoxyCompactList}\small\item\em Constructeur de base de \hyperlink{class_grid}{Grid}. \end{DoxyCompactList}\item 
 Q\+Size \hyperlink{class_grid_aa79281119d2e4644d53c9fba286b5dad}{size} () const 
 \begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
 void \hyperlink{class_grid_ad7b1701e7ba881746363ad87aee5c879}{add\+Texture} (Q\+String filename)
 \begin{DoxyCompactList}\small\item\em Ajoute la texture à la liste des textures de la grille. \end{DoxyCompactList}\item 
-Q\+Image \hyperlink{class_grid_af8b6eb68deccf4cf8d9375ba52923599}{texture\+At} (int index)
+Q\+Pixmap \hyperlink{class_grid_a1e092c1365a7e1759a169de4e305c777}{texture\+At} (int index)
 \begin{DoxyCompactList}\small\item\em Donne la texture de la liste des textures de la grille à l\textquotesingle{}index donné. \end{DoxyCompactList}\item 
 int \hyperlink{class_grid_aeb52c62fd156c4169463d3f6cff8208e}{tile\+Texture} (Q\+Point p)
 \begin{DoxyCompactList}\small\item\em Donne le numéro de la texture à la case donnée. \end{DoxyCompactList}\item 
@@ -33,16 +33,28 @@ int \hyperlink{class_grid_af6f09b36ec823d16065f2f8c997ba071}{tile\+Texture} (int
 \begin{DoxyCompactList}\small\item\em Donne le numéro de la texture à la case donnée. \end{DoxyCompactList}\item 
 void \hyperlink{class_grid_abf2e8bc6fe111e3228fea6a496befc16}{set\+Tile\+Texture} (Q\+Point p, int texture)
 \begin{DoxyCompactList}\small\item\em Modifie la texture à la case donnée. \end{DoxyCompactList}\item 
-Q\+Size \hyperlink{class_grid_ac8e968e4f13ada41c29501722257427a}{tiles\+Size} () const 
+int \hyperlink{class_grid_af360f3f9d6df547d63829a3af47e5109}{tiles\+Size} () const 
 \begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
 int \hyperlink{class_grid_a711ac8dd739f2fded9160f467be76bf4}{collision\+At} (Q\+Point pos) const 
 \begin{DoxyCompactList}\small\item\em Donne la valeur de collision au point donné. \end{DoxyCompactList}\item 
-Q\+Image \hyperlink{class_grid_aad0be5d0410c8abd33b24f6c00db7946}{process\+Base\+Image} ()
+Q\+Pixmap \hyperlink{class_grid_a4a021bb5b8a2210cb8a773ae23131090}{process\+Base\+Image} ()
 \begin{DoxyCompactList}\small\item\em Calcule l\textquotesingle{}image de base de la grille. \end{DoxyCompactList}\item 
-Q\+Image \hyperlink{class_grid_afc924f671d0370c59237c21a94a8f421}{update\+Base\+Image} ()
+Q\+Pixmap \hyperlink{class_grid_a6186275b098df986400db17659895b23}{update\+Base\+Image} ()
 \begin{DoxyCompactList}\small\item\em Met à jour l\textquotesingle{}image de base de la grille. \end{DoxyCompactList}\item 
 Q\+Rect \hyperlink{class_grid_a96c1d1e403aa5e04aeb6b194795448c4}{ghost\+House} () const 
-\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_grid_acc9b139189e4242de864c5bc7a60987c}{empty\+Tile} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_grid_a8c6bd2ddd44b14bf887d5e0bfc7a6fb3}{set\+Empty\+Tile} (int \hyperlink{class_grid_acc9b139189e4242de864c5bc7a60987c}{empty\+Tile})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+int \hyperlink{class_grid_a9816017ce1a36bdad4d489383d19acc6}{pellet\+Tile} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_grid_ac97425f75ec6edde70f12a8d2f3b450f}{set\+Pellet\+Tile} (int \hyperlink{class_grid_a9816017ce1a36bdad4d489383d19acc6}{pellet\+Tile})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+int \hyperlink{class_grid_afa7b0cbe21203a8bf089ab537510392c}{energizer\+Tile} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_grid_a72e0bb85cb48c443e409b4fdffe8c40c}{set\+Energizer\+Tile} (int \hyperlink{class_grid_afa7b0cbe21203a8bf089ab537510392c}{energizer\+Tile})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -78,46 +90,26 @@ Types de collisions.
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_grid_ac9920f1d5b87c3b528fdfc1f73011b4e}{}\index{Grid@{Grid}!Grid@{Grid}}
+\hypertarget{class_grid_a4d98f6e0a0a048fbce5b77fbc0cba646}{}\index{Grid@{Grid}!Grid@{Grid}}
 \index{Grid@{Grid}!Grid@{Grid}}
-\subsubsection[{Grid(\+Q\+Dom\+Element elem)}]{\setlength{\rightskip}{0pt plus 5cm}Grid\+::\+Grid (
+\subsubsection[{Grid(\+Q\+Dom\+Element elem, Texture\+Handler $\ast$texture\+Handler)}]{\setlength{\rightskip}{0pt plus 5cm}Grid\+::\+Grid (
 \begin{DoxyParamCaption}
-\item[{Q\+Dom\+Element}]{elem}
+\item[{Q\+Dom\+Element}]{elem, }
+\item[{{\bf Texture\+Handler} $\ast$}]{texture\+Handler}
 \end{DoxyParamCaption}
-)}\label{class_grid_ac9920f1d5b87c3b528fdfc1f73011b4e}
+)}\label{class_grid_a4d98f6e0a0a048fbce5b77fbc0cba646}
 
 
 Constructeur de base de \hyperlink{class_grid}{Grid}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em elem} & Données X\+M\+L à charger lors de la contruction de l\textquotesingle{}objet.\\
+{\em elem} & Données X\+M\+L à charger lors de la contruction de l\textquotesingle{}objet. \\
+\hline
+{\em texture\+Handler} & Gestionnaire de texture déjà instancié d\textquotesingle{}où la grille va extraire les textures. \\
 \hline
 \end{DoxyParams}
-L\textquotesingle{}élément X\+M\+L doit ressembler au template suivant \+:
-\begin{DoxyItemize}
-\item $<$\hyperlink{class_grid}{Grid}$>$
-\begin{DoxyItemize}
-\item $<$Tile\+Count height=\char`\"{}3\char`\"{} width=\char`\"{}3\char`\"{}/$>$
-\item $<$Tile\+Size height=\char`\"{}24\char`\"{} width=\char`\"{}24\char`\"{}/$>$
-\item $<$Grid\+Values values=\char`\"{}aaacdebbb\char`\"{}/$>$
-\item $<$Texture filename=\char`\"{}\+Texture1.\+png\char`\"{}/$>$
-\item $<$Texture filename=\char`\"{}\+Texture2.\+png\char`\"{}/$>$
-\item $<$Texture filename=\char`\"{}\+Texture\+\_\+\+Pastille.\+png\char`\"{}/$>$
-\item $<$Texture filename=\char`\"{}\+Texture\+\_\+\+Energisant.\+png\char`\"{}/$>$
-\item $<$Texture filename=\char`\"{}\+Texture\+\_\+\+Vide.\+png\char`\"{}/$>$
-\item $<$Collisions\+Grid values=\char`\"{}000111000\char`\"{}/$>$
-\item $<$Ghost\+House x=\char`\"{}1\char`\"{} y=\char`\"{}1\char`\"{} width=\char`\"{}1\char`\"{} height=\char`\"{}1\char`\"{}/$>$
-\end{DoxyItemize}
-\item $<$/ \hyperlink{class_grid}{Grid}$>$
-\end{DoxyItemize}
 
-Tile\+Count \+: Nombre de cases (largeur/hauteur) ~\newline
- Tile\+Size \+: Taille des cases (largeur/hauteur) ~\newline
- Grid\+Values \+: Textures (a \+: première, ...) ~\newline
- Texture \+: Nom de fichier de la texture ~\newline
- Collision\+Grid \+: Collisions ~\newline
- Ghost\+House \+: Dimensions de la maison des fantômes 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_grid_ad7b1701e7ba881746363ad87aee5c879}{}\index{Grid@{Grid}!add\+Texture@{add\+Texture}}
@@ -155,6 +147,34 @@ Donne la valeur de collision au point donné.
 \begin{DoxyReturn}{Returns}
 Valeur de collision. 
 \end{DoxyReturn}
+\hypertarget{class_grid_acc9b139189e4242de864c5bc7a60987c}{}\index{Grid@{Grid}!empty\+Tile@{empty\+Tile}}
+\index{empty\+Tile@{empty\+Tile}!Grid@{Grid}}
+\subsubsection[{empty\+Tile() const }]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::empty\+Tile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_grid_acc9b139189e4242de864c5bc7a60987c}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Numero de case vide. 
+\end{DoxyReturn}
+\hypertarget{class_grid_afa7b0cbe21203a8bf089ab537510392c}{}\index{Grid@{Grid}!energizer\+Tile@{energizer\+Tile}}
+\index{energizer\+Tile@{energizer\+Tile}!Grid@{Grid}}
+\subsubsection[{energizer\+Tile() const }]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::energizer\+Tile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_grid_afa7b0cbe21203a8bf089ab537510392c}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Numero de case avec énergisant. 
+\end{DoxyReturn}
 \hypertarget{class_grid_a96c1d1e403aa5e04aeb6b194795448c4}{}\index{Grid@{Grid}!ghost\+House@{ghost\+House}}
 \index{ghost\+House@{ghost\+House}!Grid@{Grid}}
 \subsubsection[{ghost\+House() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Rect Grid\+::ghost\+House (
@@ -169,13 +189,27 @@ Getter.
 \begin{DoxyReturn}{Returns}
 Dimension de la maison des fantômes. 
 \end{DoxyReturn}
-\hypertarget{class_grid_aad0be5d0410c8abd33b24f6c00db7946}{}\index{Grid@{Grid}!process\+Base\+Image@{process\+Base\+Image}}
-\index{process\+Base\+Image@{process\+Base\+Image}!Grid@{Grid}}
-\subsubsection[{process\+Base\+Image()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Grid\+::process\+Base\+Image (
+\hypertarget{class_grid_a9816017ce1a36bdad4d489383d19acc6}{}\index{Grid@{Grid}!pellet\+Tile@{pellet\+Tile}}
+\index{pellet\+Tile@{pellet\+Tile}!Grid@{Grid}}
+\subsubsection[{pellet\+Tile() const }]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::pellet\+Tile (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_grid_aad0be5d0410c8abd33b24f6c00db7946}
+) const}\label{class_grid_a9816017ce1a36bdad4d489383d19acc6}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Numero de case avec pastille. 
+\end{DoxyReturn}
+\hypertarget{class_grid_a4a021bb5b8a2210cb8a773ae23131090}{}\index{Grid@{Grid}!process\+Base\+Image@{process\+Base\+Image}}
+\index{process\+Base\+Image@{process\+Base\+Image}!Grid@{Grid}}
+\subsubsection[{process\+Base\+Image()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pixmap Grid\+::process\+Base\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_grid_a4a021bb5b8a2210cb8a773ae23131090}
 
 
 Calcule l\textquotesingle{}image de base de la grille. 
@@ -183,6 +217,54 @@ Calcule l\textquotesingle{}image de base de la grille.
 \begin{DoxyReturn}{Returns}
 Image de base de la grille. 
 \end{DoxyReturn}
+\hypertarget{class_grid_a8c6bd2ddd44b14bf887d5e0bfc7a6fb3}{}\index{Grid@{Grid}!set\+Empty\+Tile@{set\+Empty\+Tile}}
+\index{set\+Empty\+Tile@{set\+Empty\+Tile}!Grid@{Grid}}
+\subsubsection[{set\+Empty\+Tile(int empty\+Tile)}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::set\+Empty\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{empty\+Tile}
+\end{DoxyParamCaption}
+)}\label{class_grid_a8c6bd2ddd44b14bf887d5e0bfc7a6fb3}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em empty\+Tile} & Numero de case vide. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_grid_a72e0bb85cb48c443e409b4fdffe8c40c}{}\index{Grid@{Grid}!set\+Energizer\+Tile@{set\+Energizer\+Tile}}
+\index{set\+Energizer\+Tile@{set\+Energizer\+Tile}!Grid@{Grid}}
+\subsubsection[{set\+Energizer\+Tile(int energizer\+Tile)}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::set\+Energizer\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{energizer\+Tile}
+\end{DoxyParamCaption}
+)}\label{class_grid_a72e0bb85cb48c443e409b4fdffe8c40c}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em energizer\+Tile} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_grid_ac97425f75ec6edde70f12a8d2f3b450f}{}\index{Grid@{Grid}!set\+Pellet\+Tile@{set\+Pellet\+Tile}}
+\index{set\+Pellet\+Tile@{set\+Pellet\+Tile}!Grid@{Grid}}
+\subsubsection[{set\+Pellet\+Tile(int pellet\+Tile)}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::set\+Pellet\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{pellet\+Tile}
+\end{DoxyParamCaption}
+)}\label{class_grid_ac97425f75ec6edde70f12a8d2f3b450f}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pellet\+Tile} & \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_grid_abf2e8bc6fe111e3228fea6a496befc16}{}\index{Grid@{Grid}!set\+Tile\+Texture@{set\+Tile\+Texture}}
 \index{set\+Tile\+Texture@{set\+Tile\+Texture}!Grid@{Grid}}
 \subsubsection[{set\+Tile\+Texture(\+Q\+Point p, int texture)}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+::set\+Tile\+Texture (
@@ -216,13 +298,13 @@ Getter.
 \begin{DoxyReturn}{Returns}
 Taille de la grille (nombre de cases). 
 \end{DoxyReturn}
-\hypertarget{class_grid_af8b6eb68deccf4cf8d9375ba52923599}{}\index{Grid@{Grid}!texture\+At@{texture\+At}}
+\hypertarget{class_grid_a1e092c1365a7e1759a169de4e305c777}{}\index{Grid@{Grid}!texture\+At@{texture\+At}}
 \index{texture\+At@{texture\+At}!Grid@{Grid}}
-\subsubsection[{texture\+At(int index)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Grid\+::texture\+At (
+\subsubsection[{texture\+At(int index)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pixmap Grid\+::texture\+At (
 \begin{DoxyParamCaption}
 \item[{int}]{index}
 \end{DoxyParamCaption}
-)}\label{class_grid_af8b6eb68deccf4cf8d9375ba52923599}
+)}\label{class_grid_a1e092c1365a7e1759a169de4e305c777}
 
 
 Donne la texture de la liste des textures de la grille à l\textquotesingle{}index donné. 
@@ -235,13 +317,13 @@ Donne la texture de la liste des textures de la grille à l\textquotesingle{}ind
 \begin{DoxyReturn}{Returns}
 Texture à l\textquotesingle{}index donné 
 \end{DoxyReturn}
-\hypertarget{class_grid_ac8e968e4f13ada41c29501722257427a}{}\index{Grid@{Grid}!tiles\+Size@{tiles\+Size}}
+\hypertarget{class_grid_af360f3f9d6df547d63829a3af47e5109}{}\index{Grid@{Grid}!tiles\+Size@{tiles\+Size}}
 \index{tiles\+Size@{tiles\+Size}!Grid@{Grid}}
-\subsubsection[{tiles\+Size() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Size Grid\+::tiles\+Size (
+\subsubsection[{tiles\+Size() const }]{\setlength{\rightskip}{0pt plus 5cm}int Grid\+::tiles\+Size (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}\label{class_grid_ac8e968e4f13ada41c29501722257427a}
+) const}\label{class_grid_af360f3f9d6df547d63829a3af47e5109}
 
 
 Getter. 
@@ -287,13 +369,13 @@ Donne le numéro de la texture à la case donnée.
 \begin{DoxyReturn}{Returns}
 Numéro de la texture.
 \end{DoxyReturn}
-Le numéro correspond à l\textquotesingle{}index de texture\+At. \hypertarget{class_grid_afc924f671d0370c59237c21a94a8f421}{}\index{Grid@{Grid}!update\+Base\+Image@{update\+Base\+Image}}
+Le numéro correspond à l\textquotesingle{}index de texture\+At. \hypertarget{class_grid_a6186275b098df986400db17659895b23}{}\index{Grid@{Grid}!update\+Base\+Image@{update\+Base\+Image}}
 \index{update\+Base\+Image@{update\+Base\+Image}!Grid@{Grid}}
-\subsubsection[{update\+Base\+Image()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Grid\+::update\+Base\+Image (
+\subsubsection[{update\+Base\+Image()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pixmap Grid\+::update\+Base\+Image (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_grid_afc924f671d0370c59237c21a94a8f421}
+)}\label{class_grid_a6186275b098df986400db17659895b23}
 
 
 Met à jour l\textquotesingle{}image de base de la grille. 

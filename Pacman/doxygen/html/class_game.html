@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
+<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-slots">Protected Slots</a> &#124;
 <a href="class_game-members.html">List of all members</a>  </div>
@@ -117,11 +118,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a5ec2daf2a7fe95ee03dea84b4f5d6883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relance le timer du jeu. <br /></td></tr>
 <tr class="separator:a5ec2daf2a7fe95ee03dea84b4f5d6883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:abb2334c12764f9b5d240315dc06e8698"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb2334c12764f9b5d240315dc06e8698"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#abb2334c12764f9b5d240315dc06e8698">gameFinished</a> ()</td></tr>
+<tr class="memdesc:abb2334c12764f9b5d240315dc06e8698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal émit lorsque le joueur gagne ou perd. <br /></td></tr>
+<tr class="separator:abb2334c12764f9b5d240315dc06e8698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a07651e12402cbf4ffb116870594cb347"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a07651e12402cbf4ffb116870594cb347">Game</a> (QDomDocument *dom)</td></tr>
 <tr class="memdesc:a07651e12402cbf4ffb116870594cb347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de la classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a>.  <a href="#a07651e12402cbf4ffb116870594cb347">More...</a><br /></td></tr>
 <tr class="separator:a07651e12402cbf4ffb116870594cb347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d112ca6e0e55150d2fdbc704474530"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3d112ca6e0e55150d2fdbc704474530"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">~Game</a> ()</td></tr>
+<tr class="memdesc:ae3d112ca6e0e55150d2fdbc704474530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de la classe. <br /></td></tr>
+<tr class="separator:ae3d112ca6e0e55150d2fdbc704474530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8638ccdb0ef3bf39a6affa30aa1258f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ae8638ccdb0ef3bf39a6affa30aa1258f">startGame</a> ()</td></tr>
 <tr class="memdesc:ae8638ccdb0ef3bf39a6affa30aa1258f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarre le jeu avec FPS (cf. <a class="el" href="pacmanparameters_8h_source.html">pacmanparameters.h</a>) images par seconde.  <a href="#ae8638ccdb0ef3bf39a6affa30aa1258f">More...</a><br /></td></tr>
 <tr class="separator:ae8638ccdb0ef3bf39a6affa30aa1258f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,12 +155,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c93ee78acb3dc311aaf5b7bae06e70c"><td class="memItemLeft" align="right" valign="top">QTimer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a8c93ee78acb3dc311aaf5b7bae06e70c">timer</a> () const </td></tr>
 <tr class="memdesc:a8c93ee78acb3dc311aaf5b7bae06e70c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#a8c93ee78acb3dc311aaf5b7bae06e70c">More...</a><br /></td></tr>
 <tr class="separator:a8c93ee78acb3dc311aaf5b7bae06e70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a355b625103201150c07114b4b2fccb03"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a355b625103201150c07114b4b2fccb03">image</a> () const </td></tr>
-<tr class="memdesc:a355b625103201150c07114b4b2fccb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#a355b625103201150c07114b4b2fccb03">More...</a><br /></td></tr>
-<tr class="separator:a355b625103201150c07114b4b2fccb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de3afc0984fe73c91ab3b4fdef6ef8f"><td class="memItemLeft" align="right" valign="top">QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a5de3afc0984fe73c91ab3b4fdef6ef8f">image</a> ()</td></tr>
+<tr class="memdesc:a5de3afc0984fe73c91ab3b4fdef6ef8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#a5de3afc0984fe73c91ab3b4fdef6ef8f">More...</a><br /></td></tr>
+<tr class="separator:a5de3afc0984fe73c91ab3b4fdef6ef8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9db7117b627f79bac876506fa6733d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aa9db7117b627f79bac876506fa6733d3">setPacmanDirection</a> (int direction)</td></tr>
 <tr class="memdesc:aa9db7117b627f79bac876506fa6733d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la direction actuelle du joueur.  <a href="#aa9db7117b627f79bac876506fa6733d3">More...</a><br /></td></tr>
 <tr class="separator:aa9db7117b627f79bac876506fa6733d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cbd90709b9a9924d5c541eb023a7600"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a2cbd90709b9a9924d5c541eb023a7600">isChangingLevel</a> () const </td></tr>
+<tr class="memdesc:a2cbd90709b9a9924d5c541eb023a7600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#a2cbd90709b9a9924d5c541eb023a7600">More...</a><br /></td></tr>
+<tr class="separator:a2cbd90709b9a9924d5c541eb023a7600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb00a545733e9241b62eedf8e92123d2"><td class="memItemLeft" align="right" valign="top">QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#abb00a545733e9241b62eedf8e92123d2">firstFrame</a> () const </td></tr>
+<tr class="memdesc:abb00a545733e9241b62eedf8e92123d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcul l'image que donnerait le jeu s'il commençait tout juste.  <a href="#abb00a545733e9241b62eedf8e92123d2">More...</a><br /></td></tr>
+<tr class="separator:abb00a545733e9241b62eedf8e92123d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cce97ff777796abe02d4b0a4218eb42"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a5cce97ff777796abe02d4b0a4218eb42">victory</a> () const </td></tr>
+<tr class="memdesc:a5cce97ff777796abe02d4b0a4218eb42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#a5cce97ff777796abe02d4b0a4218eb42">More...</a><br /></td></tr>
+<tr class="separator:a5cce97ff777796abe02d4b0a4218eb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1644c9e27d75c2f4a98e1f5de9f7d66b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a1644c9e27d75c2f4a98e1f5de9f7d66b">defeat</a> () const </td></tr>
+<tr class="memdesc:a1644c9e27d75c2f4a98e1f5de9f7d66b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#a1644c9e27d75c2f4a98e1f5de9f7d66b">More...</a><br /></td></tr>
+<tr class="separator:a1644c9e27d75c2f4a98e1f5de9f7d66b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
@@ -165,13 +189,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="textblock"><p>La classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a> gère l'ensemble des paramètres de Pacman. </p>
 <dl class="section author"><dt>Author</dt><dd>Valentin D.d.G. </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
-<p>La classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a> s'occupe de gérer l'ensemble des niveaux, en leur faisant calculer les déplacements des unités. La classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a> s'occupe aussi de tous les éléments qui sont communs à tous les niveaux (tels que le score ou le nombre de vies du Pacman). Enfin, la classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a> effectue le rendu final de la grille (sans les à côtés commme l'affichage du score) qu'il fait calculer au niveau actuellement en cours.</p>
-<p>NOTE :</p><ul>
-<li>La classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a> ne gère pas encore le passage d'un niveau à l'autre.</li>
-<li>La classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a> ne gère pas encore le son.</li>
-<li>La classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a> ne dispose pas encore de toutes les animations.</li>
-<li>La classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a> ne dispose pas encore de la table de correspondance des textures. </li>
-</ul>
+<p>La classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a> s'occupe de gérer l'ensemble des niveaux, en leur faisant calculer les déplacements des unités. La classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a> s'occupe aussi de tous les éléments qui sont communs à tous les niveaux (tels que le score ou le nombre de vies du Pacman). Enfin, la classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a> effectue le rendu final de la grille (sans les à côtés commme l'affichage du score) qu'il fait calculer au niveau actuellement en cours. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a07651e12402cbf4ffb116870594cb347"></a>
 <div class="memitem">
@@ -190,48 +208,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Constructeur de base de la classe <a class="el" href="class_game.html" title="La classe Game gère l&#39;ensemble des paramètres de Pacman. ">Game</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dom</td><td>Document XML d'où le jeu charge toutes les données.</td></tr>
+    <tr><td class="paramname">dom</td><td>Document XML d'où le jeu charge toutes les données. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Exemple (3x3 avec 5 textures):</p><ul>
-<li>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</li>
-<li>&lt;root&gt;<ul>
-<li>&lt;<a class="el" href="class_level.html" title="La classe de Niveau de Pacman. ">Level</a>&gt;<ul>
-<li>&lt;<a class="el" href="class_grid.html" title="Classe de grille de Pacman. ">Grid</a>&gt;<ul>
-<li>&lt;TileCount height="3" width="3"/&gt;</li>
-<li>&lt;TileSize height="24" width="24"/&gt;</li>
-<li>&lt;GridValues values="aaacdebbb"/&gt;</li>
-<li>&lt;Texture filename="Texture1.png"/&gt;</li>
-<li>&lt;Texture filename="Texture2.png"/&gt;</li>
-<li>&lt;Texture filename="Texture_Pastille.png"/&gt;</li>
-<li>&lt;Texture filename="Texture_Energisant.png"/&gt;</li>
-<li>&lt;Texture filename="Texture_Vide.png"/&gt;</li>
-<li>&lt;CollisionsGrid values="000111000"/&gt;</li>
-<li>&lt;GhostHouse x="1" y="1" width="1" height="1"/&gt;</li>
-</ul>
-</li>
-<li>&lt;/ <a class="el" href="class_grid.html" title="Classe de grille de Pacman. ">Grid</a>&gt;</li>
-<li>&lt;Player ix="0" iy="0" speed="77" sspeed = "91" fx = "half"/&gt;</li>
-<li>&lt;Blinky ix="1" iy="2" speed="71" sspeed = "50" cornerx="26" cornery="-2" fx = "half"/&gt;</li>
-<li>&lt;Pinky ix="2" iy="2" speed="71" sspeed = "50" cornerx="2" cornery="-2"/&gt;</li>
-<li>&lt;Inky ix="1" iy="2" speed="71" sspeed = "50" cornerx="28" cornery="32" fx = "half"/&gt;</li>
-<li>&lt;Clyde ix="2" iy="2" speed="71" sspeed = "50" cornerx="0" cornery="32"/&gt;</li>
-<li>&lt;<a class="el" href="class_ghost_timer.html" title="Classe de Timer pour les modes des fantômes. ">GhostTimer</a>&gt;<ul>
-<li>&lt;Step time="7" mode="0"/&gt;</li>
-<li>&lt;Step time="20" mode="1"/&gt;</li>
-<li>&lt;Step time="7" mode="0"/&gt;</li>
-</ul>
-</li>
-<li>&lt;/ <a class="el" href="class_ghost_timer.html" title="Classe de Timer pour les modes des fantômes. ">GhostTimer</a>&gt;</li>
-<li>&lt;ScaredMode duration="6000" flashs="5"/&gt;</li>
-</ul>
-</li>
-<li>&lt;/ <a class="el" href="class_level.html" title="La classe de Niveau de Pacman. ">Level</a>&gt;</li>
-</ul>
-</li>
-<li>&lt;/root&gt; </li>
-</ul>
 
 </div>
 </div>
@@ -254,12 +234,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a class="anchor" id="a355b625103201150c07114b4b2fccb03"></a>
+<a class="anchor" id="a1644c9e27d75c2f4a98e1f5de9f7d66b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QImage Game::image </td>
+          <td class="memname">bool Game::defeat </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -268,7 +248,61 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Vrai si le joueur a perdu, sinon Faux. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abb00a545733e9241b62eedf8e92123d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPixmap * Game::firstFrame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcul l'image que donnerait le jeu s'il commençait tout juste. </p>
+<dl class="section return"><dt>Returns</dt><dd>Première frame du jeu. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5de3afc0984fe73c91ab3b4fdef6ef8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPixmap Game::image </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter. </p>
 <dl class="section return"><dt>Returns</dt><dd>Grille du jeu sous forme d'image. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2cbd90709b9a9924d5c541eb023a7600"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Game::isChangingLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Vrai si le jeu est en pause suite à un changement de niveau. </dd></dl>
 
 </div>
 </div>
@@ -408,6 +442,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Getter. </p>
 <dl class="section return"><dt>Returns</dt><dd>Timer du Jeu. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5cce97ff777796abe02d4b0a4218eb42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Game::victory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Vrai si le joueur a gagné, sinon Faux. </dd></dl>
 
 </div>
 </div>

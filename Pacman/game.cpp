@@ -41,13 +41,15 @@ Game::Game(QDomDocument *dom)
     m_lifes = 3;
     m_isChangingLevel = true;
     m_shortSoundsPlayer = new QMediaPlayer;
+    m_victory = false;
+    m_defeat = false;
+    m_currentLevelImageReady = false;
 
     level = m_levels.at(0);
     level->startLevel();
 
     m_timer = new QTimer(this);
     QObject::connect(m_timer, SIGNAL(timeout()), this, SLOT(nextGameFrame()));
-    nextGameFrame();
 }
 
 Game::~Game()
@@ -100,20 +102,23 @@ void Game::nextGameFrame()
     collision.append(level->checkUnitsPositions());
     level->updateTimer();
     //
-    if(level->eatenPellets()==level->pelletCount())
+    if(level->eatenPellets() == level->pelletCount())
     {
         m_timer->stop();
         m_currentLevel++;
         if(m_currentLevel == m_levels.size())
         {
+            m_victory = true;
             emit gameFinished();
             return;
         }
         else
         {
             m_isChangingLevel = true;
+            m_currentLevelImageReady = false;
             Level *level = m_levels.at(m_currentLevel);
             level->startLevel();
+            return;
         }
     }
 
@@ -128,6 +133,7 @@ void Game::nextGameFrame()
             }
             else
             {
+                m_defeat = true;
                 emit gameFinished();
                 return;
             }
@@ -151,6 +157,7 @@ void Game::nextGameFrame()
     QPixmap *image = level->render();
     m_image = *image;
     delete image;
+    m_currentLevelImageReady = true;
 }
 
 void Game::resumeGame()
@@ -177,13 +184,30 @@ void Game::onEnergizerEaten()
 {
     m_score += 50;
 }
+bool Game::victory() const
+{
+    return m_victory;
+}
+
+bool Game::defeat() const
+{
+    return m_defeat;
+}
+
 bool Game::isChangingLevel() const
 {
     return m_isChangingLevel;
 }
 
-QPixmap Game::image() const
+QPixmap *Game::firstFrame() const
 {
+    return m_levels.at(m_currentLevel)->render();
+}
+
+QPixmap Game::image()
+{
+    if(!m_currentLevelImageReady)
+        m_image = *firstFrame();
     return m_image;
 }
 

@@ -92,47 +92,90 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QShortcut&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QMediaPlayer&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QMediaPlaylist&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;game.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;arduinohandler.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_pacscreen.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pacscreen.html">Pacscreen</a> : <span class="keyword">public</span> QWidget</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_pacscreen.html#a8dfe2adcf7e11f715664859db16c6710">Pacscreen</a>(QWidget *parent = 0);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_pacscreen.html#a4c4bd0bef62cc02bd3798b4d20cd765f">~Pacscreen</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#a6860cefac4b539818d5d78ace3f61b18">setGame</a>(<a class="code" href="class_game.html">Game</a> *game);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#a487bc9941a204557e94c942a4c95552c">paintEvent</a>(QPaintEvent *);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> on_Right();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> on_Left();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> on_Up();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> on_Down();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QFile&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;game.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;arduinohandler.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;firework.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_pacscreen.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pacscreen.html">Pacscreen</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_pacscreen.html#a28ad19885d3b4ebff6ec8fca42fe177a">Pacscreen</a>(QString dataFile = <span class="stringliteral">&quot;:/textures/pacman.xml&quot;</span>, QWidget *parent = 0);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_pacscreen.html#a4c4bd0bef62cc02bd3798b4d20cd765f">~Pacscreen</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#a3320b3943d0e14e262f2aac35f4f0028">initGame</a>(<span class="keyword">const</span> QString &amp;filename = <span class="stringliteral">&quot;:/textures/pacman.xml&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#afc8132b62b670a5bffc59abffda2ba5d">onKeyboardInput</a>(<span class="keywordtype">int</span> direction);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_pacscreen.html#a99449fdac361b7d947204e4298dabcea">restingTimeOff</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#a2ad3be852db68118d6eb50e979b6e2e9">paintEvent</a>(QPaintEvent *event);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="class_game.html">Game</a> *m_game;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_arduino_handler.html">ArduinoHandler</a> *m_handler;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    QMediaPlayer *m_audioPlayer;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    QMediaPlaylist *m_playlist;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QTime m_lastFrameTime;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> m_fps;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> m_frameCount;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif // PACSCREEN_H</span></div>
-<div class="ttc" id="class_pacscreen_html_a6860cefac4b539818d5d78ace3f61b18"><div class="ttname"><a href="class_pacscreen.html#a6860cefac4b539818d5d78ace3f61b18">Pacscreen::setGame</a></div><div class="ttdeci">void setGame(Game *game)</div><div class="ttdoc">Setter. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:44</div></div>
-<div class="ttc" id="class_pacscreen_html"><div class="ttname"><a href="class_pacscreen.html">Pacscreen</a></div><div class="ttdoc">Widget affichant l&#39;ensemble du jeu. </div><div class="ttdef"><b>Definition:</b> pacscreen.h:25</div></div>
-<div class="ttc" id="class_pacscreen_html_a487bc9941a204557e94c942a4c95552c"><div class="ttname"><a href="class_pacscreen.html#a487bc9941a204557e94c942a4c95552c">Pacscreen::paintEvent</a></div><div class="ttdeci">void paintEvent(QPaintEvent *)</div><div class="ttdoc">paintEvent de la classe, afin d&#39;afficher l&#39;ensemble du jeu. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:50</div></div>
-<div class="ttc" id="class_pacscreen_html_a4c4bd0bef62cc02bd3798b4d20cd765f"><div class="ttname"><a href="class_pacscreen.html#a4c4bd0bef62cc02bd3798b4d20cd765f">Pacscreen::~Pacscreen</a></div><div class="ttdeci">~Pacscreen()</div><div class="ttdoc">Destructeur de la classe Pacscreen. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:39</div></div>
-<div class="ttc" id="class_arduino_handler_html"><div class="ttname"><a href="class_arduino_handler.html">ArduinoHandler</a></div><div class="ttdoc">Classe gérant la connexion d&#39;un Arduino Uno pour le contrôle du Pacman. </div><div class="ttdef"><b>Definition:</b> arduinohandler.h:26</div></div>
-<div class="ttc" id="class_pacscreen_html_a8dfe2adcf7e11f715664859db16c6710"><div class="ttname"><a href="class_pacscreen.html#a8dfe2adcf7e11f715664859db16c6710">Pacscreen::Pacscreen</a></div><div class="ttdeci">Pacscreen(QWidget *parent=0)</div><div class="ttdoc">Constructeur de base de la classe Pacscreen. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:4</div></div>
-<div class="ttc" id="class_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdoc">La classe Game gère l&#39;ensemble des paramètres de Pacman. </div><div class="ttdef"><b>Definition:</b> game.h:35</div></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#aafb0eadb554235b7a777ec9caa61be3d">paintLifes</a>(QPainter *painter);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#a458fdc2040c60b27ca03ce936c94358a">paintScore</a>(QPainter *painter);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#afd28b9d528ac6bf79eaff0668eb71175">paintFPS</a>(QPainter *painter);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#a31ce0c981b27c21501d0fd49a79abe5f">paintLevelName</a>(QPainter *painter);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#a7cf6fe4c2b68c588de61b5111f29d7de">paintGame</a>(QPainter *painter);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#a7d75e03446f7e8edac55a6896b2a3c40">paintFirstFrame</a>(QPainter *painter);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#afeb89930eaa69c8b952af7b5653afc6c">paintStartAnimation</a>(QPainter *painter);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#a646b6aab801e38b3eae62b255183f83b">paintVictoryAnimation</a>(QPainter *painter);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pacscreen.html#ae1d6b203e0b0dcb57bb3e9065fab46fa">paintDefeatAnimation</a>(QPainter *painter);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> on_Right();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> on_Left();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> on_Up();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">void</span> on_Down();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">void</span> on_Enter();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span> on_GameFinished();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="class_game.html">Game</a> *m_game;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="class_arduino_handler.html">ArduinoHandler</a> *m_handler;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    QMediaPlayer *m_audioPlayer;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    QMediaPlaylist *m_playlist;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    QTime m_lastFrameTime;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">int</span> m_fps;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">int</span> m_frameCount;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    QTimer *m_timer;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">bool</span> m_startAnimationDone;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    QList&lt;Firework *&gt; m_fireworks;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    QTime m_restingTime;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;};</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#endif // PACSCREEN_H</span></div>
+<div class="ttc" id="class_pacscreen_html"><div class="ttname"><a href="class_pacscreen.html">Pacscreen</a></div><div class="ttdoc">Widget affichant l&#39;ensemble du jeu. </div><div class="ttdef"><b>Definition:</b> pacscreen.h:26</div></div>
+<div class="ttc" id="class_pacscreen_html_a7cf6fe4c2b68c588de61b5111f29d7de"><div class="ttname"><a href="class_pacscreen.html#a7cf6fe4c2b68c588de61b5111f29d7de">Pacscreen::paintGame</a></div><div class="ttdeci">void paintGame(QPainter *painter)</div><div class="ttdoc">Dessine le jeu sur PaintDevice sur lequel est branché le painter. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:197</div></div>
+<div class="ttc" id="class_pacscreen_html_a4c4bd0bef62cc02bd3798b4d20cd765f"><div class="ttname"><a href="class_pacscreen.html#a4c4bd0bef62cc02bd3798b4d20cd765f">Pacscreen::~Pacscreen</a></div><div class="ttdeci">~Pacscreen()</div><div class="ttdoc">Destructeur de la classe Pacscreen. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:45</div></div>
+<div class="ttc" id="class_pacscreen_html_a3320b3943d0e14e262f2aac35f4f0028"><div class="ttname"><a href="class_pacscreen.html#a3320b3943d0e14e262f2aac35f4f0028">Pacscreen::initGame</a></div><div class="ttdeci">void initGame(const QString &amp;filename=&quot;:/textures/pacman.xml&quot;)</div><div class="ttdoc">Démarre une session de jeu. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:50</div></div>
+<div class="ttc" id="class_pacscreen_html_a2ad3be852db68118d6eb50e979b6e2e9"><div class="ttname"><a href="class_pacscreen.html#a2ad3be852db68118d6eb50e979b6e2e9">Pacscreen::paintEvent</a></div><div class="ttdeci">void paintEvent(QPaintEvent *event)</div><div class="ttdoc">paintEvent de la classe, afin d&#39;afficher l&#39;ensemble du jeu. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:98</div></div>
+<div class="ttc" id="class_pacscreen_html_afd28b9d528ac6bf79eaff0668eb71175"><div class="ttname"><a href="class_pacscreen.html#afd28b9d528ac6bf79eaff0668eb71175">Pacscreen::paintFPS</a></div><div class="ttdeci">void paintFPS(QPainter *painter)</div><div class="ttdoc">Dessine les FPS du jeu sur le PaintDevice sur lequel est branché le painter. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:159</div></div>
+<div class="ttc" id="class_pacscreen_html_afeb89930eaa69c8b952af7b5653afc6c"><div class="ttname"><a href="class_pacscreen.html#afeb89930eaa69c8b952af7b5653afc6c">Pacscreen::paintStartAnimation</a></div><div class="ttdeci">void paintStartAnimation(QPainter *painter)</div><div class="ttdoc">Dessine l&#39;animation d&#39;introduction sur PaintDevice sur lequel est branché le painter. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:212</div></div>
+<div class="ttc" id="class_arduino_handler_html"><div class="ttname"><a href="class_arduino_handler.html">ArduinoHandler</a></div><div class="ttdoc">Classe gérant la connexion d&#39;un Arduino Uno pour le contrôle du Pacman. </div><div class="ttdef"><b>Definition:</b> arduinohandler.h:25</div></div>
+<div class="ttc" id="class_pacscreen_html_a646b6aab801e38b3eae62b255183f83b"><div class="ttname"><a href="class_pacscreen.html#a646b6aab801e38b3eae62b255183f83b">Pacscreen::paintVictoryAnimation</a></div><div class="ttdeci">void paintVictoryAnimation(QPainter *painter)</div><div class="ttdoc">Dessine l&#39;animation de victoire sur PaintDevice sur lequel est branché le painter. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:255</div></div>
+<div class="ttc" id="class_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdoc">La classe Game gère l&#39;ensemble des paramètres de Pacman. </div><div class="ttdef"><b>Definition:</b> game.h:31</div></div>
+<div class="ttc" id="class_pacscreen_html_a31ce0c981b27c21501d0fd49a79abe5f"><div class="ttname"><a href="class_pacscreen.html#a31ce0c981b27c21501d0fd49a79abe5f">Pacscreen::paintLevelName</a></div><div class="ttdeci">void paintLevelName(QPainter *painter)</div><div class="ttdoc">Dessine le nom du niveau sur le PaintDevice sur lequel est branché le painter. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:174</div></div>
+<div class="ttc" id="class_pacscreen_html_aafb0eadb554235b7a777ec9caa61be3d"><div class="ttname"><a href="class_pacscreen.html#aafb0eadb554235b7a777ec9caa61be3d">Pacscreen::paintLifes</a></div><div class="ttdeci">void paintLifes(QPainter *painter)</div><div class="ttdoc">Dessine les vies du pacman sur le PaintDevice sur lequel est branché le painter. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:139</div></div>
+<div class="ttc" id="class_pacscreen_html_a28ad19885d3b4ebff6ec8fca42fe177a"><div class="ttname"><a href="class_pacscreen.html#a28ad19885d3b4ebff6ec8fca42fe177a">Pacscreen::Pacscreen</a></div><div class="ttdeci">Pacscreen(QString dataFile=&quot;:/textures/pacman.xml&quot;, QWidget *parent=0)</div><div class="ttdoc">Constructeur de base de la classe Pacscreen. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:3</div></div>
+<div class="ttc" id="class_pacscreen_html_a458fdc2040c60b27ca03ce936c94358a"><div class="ttname"><a href="class_pacscreen.html#a458fdc2040c60b27ca03ce936c94358a">Pacscreen::paintScore</a></div><div class="ttdeci">void paintScore(QPainter *painter)</div><div class="ttdoc">Dessine le score du pacman sur le PaintDevice sur lequel est branché le painter. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:150</div></div>
+<div class="ttc" id="class_pacscreen_html_ae1d6b203e0b0dcb57bb3e9065fab46fa"><div class="ttname"><a href="class_pacscreen.html#ae1d6b203e0b0dcb57bb3e9065fab46fa">Pacscreen::paintDefeatAnimation</a></div><div class="ttdeci">void paintDefeatAnimation(QPainter *painter)</div><div class="ttdoc">Dessine l&#39;animation de défaite sur PaintDevice sur lequel est branché le painter. ...</div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:296</div></div>
+<div class="ttc" id="class_pacscreen_html_a7d75e03446f7e8edac55a6896b2a3c40"><div class="ttname"><a href="class_pacscreen.html#a7d75e03446f7e8edac55a6896b2a3c40">Pacscreen::paintFirstFrame</a></div><div class="ttdeci">void paintFirstFrame(QPainter *painter)</div><div class="ttdoc">Dessine la première image du jeu sur PaintDevice sur lequel est branché le painter. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:204</div></div>
+<div class="ttc" id="class_pacscreen_html_afc8132b62b670a5bffc59abffda2ba5d"><div class="ttname"><a href="class_pacscreen.html#afc8132b62b670a5bffc59abffda2ba5d">Pacscreen::onKeyboardInput</a></div><div class="ttdeci">void onKeyboardInput(int direction)</div><div class="ttdoc">Fonction de traitement des entrées de flèches directionnelles. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:71</div></div>
+<div class="ttc" id="class_pacscreen_html_a99449fdac361b7d947204e4298dabcea"><div class="ttname"><a href="class_pacscreen.html#a99449fdac361b7d947204e4298dabcea">Pacscreen::restingTimeOff</a></div><div class="ttdeci">bool restingTimeOff()</div><div class="ttdoc">Marque une pause entre une victoire ou une défaite du joueur avant de continuer. </div><div class="ttdef"><b>Definition:</b> pacscreen.cpp:92</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

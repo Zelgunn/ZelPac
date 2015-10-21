@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GRID_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GRID_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QImage&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QPixmap&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QDomDocument&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QGraphicsPixmapItem&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
@@ -96,69 +96,94 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;pacmanparameters.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_grid.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_grid.html">Grid</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10f">   31</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10f">CollisionsID</a>{<a class="code" href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10fa0a40927bb14a23a6aeb090abe9bfb517">CollisionOff</a>, </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10fa2b394e743be772d4a1da354d5b597623">   32</a></span>&#160;                      <a class="code" href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10fa2b394e743be772d4a1da354d5b597623">CollisionOn</a>   </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                     };</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_grid.html#ac9920f1d5b87c3b528fdfc1f73011b4e">Grid</a>(QDomElement elem);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    QSize <a class="code" href="class_grid.html#aa79281119d2e4644d53c9fba286b5dad">size</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_grid.html#ad7b1701e7ba881746363ad87aee5c879">addTexture</a>(QString filename);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    QImage <a class="code" href="class_grid.html#af8b6eb68deccf4cf8d9375ba52923599">textureAt</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;texturehandler.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_grid.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_grid.html">Grid</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10f">   32</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10f">CollisionsID</a>{<a class="code" href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10fa0a40927bb14a23a6aeb090abe9bfb517">CollisionOff</a>, </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10fa2b394e743be772d4a1da354d5b597623">   33</a></span>&#160;                      <a class="code" href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10fa2b394e743be772d4a1da354d5b597623">CollisionOn</a>   </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                     };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_grid.html#a4d98f6e0a0a048fbce5b77fbc0cba646">Grid</a>(QDomElement elem, <a class="code" href="class_texture_handler.html">TextureHandler</a> *textureHandler);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ~<a class="code" href="class_grid.html">Grid</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QSize <a class="code" href="class_grid.html#aa79281119d2e4644d53c9fba286b5dad">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_grid.html#ad7b1701e7ba881746363ad87aee5c879">addTexture</a>(QString filename);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    QPixmap <a class="code" href="class_grid.html#a1e092c1365a7e1759a169de4e305c777">textureAt</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_grid.html#aeb52c62fd156c4169463d3f6cff8208e">tileTexture</a>(QPoint p);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_grid.html#aeb52c62fd156c4169463d3f6cff8208e">tileTexture</a>(<span class="keywordtype">int</span> i);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_grid.html#aeb52c62fd156c4169463d3f6cff8208e">tileTexture</a>(QPoint p);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_grid.html#aeb52c62fd156c4169463d3f6cff8208e">tileTexture</a>(<span class="keywordtype">int</span> i);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_grid.html#abf2e8bc6fe111e3228fea6a496befc16">setTileTexture</a>(QPoint p, <span class="keywordtype">int</span> texture);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    QSize <a class="code" href="class_grid.html#ac8e968e4f13ada41c29501722257427a">tilesSize</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_grid.html#a711ac8dd739f2fded9160f467be76bf4">collisionAt</a>(QPoint pos) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    QImage <a class="code" href="class_grid.html#aad0be5d0410c8abd33b24f6c00db7946">processBaseImage</a>();</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    QImage <a class="code" href="class_grid.html#afc924f671d0370c59237c21a94a8f421">updateBaseImage</a>();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    QRect <a class="code" href="class_grid.html#a96c1d1e403aa5e04aeb6b194795448c4">ghostHouse</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">// Raw data</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"></span>    QSize m_size;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">int</span> *m_gridValues;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    QRect m_ghostHouse;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">int</span> *m_collisionGrid;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">// Display</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment"></span>    QSize m_tilesSize;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    QList&lt;QImage&gt; m_textures;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    QImage m_baseImage;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">// Autres</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"></span>    QList&lt;QPoint&gt; m_changedPoints;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;};</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#endif // GRID_H</span></div>
-<div class="ttc" id="class_grid_html_ac8e968e4f13ada41c29501722257427a"><div class="ttname"><a href="class_grid.html#ac8e968e4f13ada41c29501722257427a">Grid::tilesSize</a></div><div class="ttdeci">QSize tilesSize() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:176</div></div>
-<div class="ttc" id="class_grid_html_ac9920f1d5b87c3b528fdfc1f73011b4e"><div class="ttname"><a href="class_grid.html#ac9920f1d5b87c3b528fdfc1f73011b4e">Grid::Grid</a></div><div class="ttdeci">Grid(QDomElement elem)</div><div class="ttdoc">Constructeur de base de Grid. </div><div class="ttdef"><b>Definition:</b> grid.cpp:3</div></div>
-<div class="ttc" id="class_grid_html_aeb52c62fd156c4169463d3f6cff8208e"><div class="ttname"><a href="class_grid.html#aeb52c62fd156c4169463d3f6cff8208e">Grid::tileTexture</a></div><div class="ttdeci">int tileTexture(QPoint p)</div><div class="ttdoc">Donne le numéro de la texture à la case donnée. </div><div class="ttdef"><b>Definition:</b> grid.cpp:101</div></div>
-<div class="ttc" id="class_grid_html_a711ac8dd739f2fded9160f467be76bf4"><div class="ttname"><a href="class_grid.html#a711ac8dd739f2fded9160f467be76bf4">Grid::collisionAt</a></div><div class="ttdeci">int collisionAt(QPoint pos) const </div><div class="ttdoc">Donne la valeur de collision au point donné. </div><div class="ttdef"><b>Definition:</b> grid.cpp:181</div></div>
-<div class="ttc" id="class_grid_html_abf2e8bc6fe111e3228fea6a496befc16"><div class="ttname"><a href="class_grid.html#abf2e8bc6fe111e3228fea6a496befc16">Grid::setTileTexture</a></div><div class="ttdeci">void setTileTexture(QPoint p, int texture)</div><div class="ttdoc">Modifie la texture à la case donnée. </div><div class="ttdef"><b>Definition:</b> grid.cpp:112</div></div>
-<div class="ttc" id="class_grid_html_afc924f671d0370c59237c21a94a8f421"><div class="ttname"><a href="class_grid.html#afc924f671d0370c59237c21a94a8f421">Grid::updateBaseImage</a></div><div class="ttdeci">QImage updateBaseImage()</div><div class="ttdoc">Met à jour l&#39;image de base de la grille. </div><div class="ttdef"><b>Definition:</b> grid.cpp:148</div></div>
-<div class="ttc" id="class_grid_html_af8b6eb68deccf4cf8d9375ba52923599"><div class="ttname"><a href="class_grid.html#af8b6eb68deccf4cf8d9375ba52923599">Grid::textureAt</a></div><div class="ttdeci">QImage textureAt(int index)</div><div class="ttdoc">Donne la texture de la liste des textures de la grille à l&#39;index donné. </div><div class="ttdef"><b>Definition:</b> grid.cpp:89</div></div>
-<div class="ttc" id="class_grid_html_ad7b1701e7ba881746363ad87aee5c879"><div class="ttname"><a href="class_grid.html#ad7b1701e7ba881746363ad87aee5c879">Grid::addTexture</a></div><div class="ttdeci">void addTexture(QString filename)</div><div class="ttdoc">Ajoute la texture à la liste des textures de la grille. </div><div class="ttdef"><b>Definition:</b> grid.cpp:80</div></div>
-<div class="ttc" id="class_grid_html_a473f8c5d768a1734d8911bf1213ce10f"><div class="ttname"><a href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10f">Grid::CollisionsID</a></div><div class="ttdeci">CollisionsID</div><div class="ttdoc">Types de collisions. </div><div class="ttdef"><b>Definition:</b> grid.h:31</div></div>
-<div class="ttc" id="class_grid_html_aa79281119d2e4644d53c9fba286b5dad"><div class="ttname"><a href="class_grid.html#aa79281119d2e4644d53c9fba286b5dad">Grid::size</a></div><div class="ttdeci">QSize size() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:75</div></div>
-<div class="ttc" id="class_grid_html_a473f8c5d768a1734d8911bf1213ce10fa0a40927bb14a23a6aeb090abe9bfb517"><div class="ttname"><a href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10fa0a40927bb14a23a6aeb090abe9bfb517">Grid::CollisionOff</a></div><div class="ttdef"><b>Definition:</b> grid.h:31</div></div>
-<div class="ttc" id="class_grid_html_a473f8c5d768a1734d8911bf1213ce10fa2b394e743be772d4a1da354d5b597623"><div class="ttname"><a href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10fa2b394e743be772d4a1da354d5b597623">Grid::CollisionOn</a></div><div class="ttdef"><b>Definition:</b> grid.h:32</div></div>
-<div class="ttc" id="class_grid_html_aad0be5d0410c8abd33b24f6c00db7946"><div class="ttname"><a href="class_grid.html#aad0be5d0410c8abd33b24f6c00db7946">Grid::processBaseImage</a></div><div class="ttdeci">QImage processBaseImage()</div><div class="ttdoc">Calcule l&#39;image de base de la grille. </div><div class="ttdef"><b>Definition:</b> grid.cpp:122</div></div>
-<div class="ttc" id="class_grid_html"><div class="ttname"><a href="class_grid.html">Grid</a></div><div class="ttdoc">Classe de grille de Pacman. </div><div class="ttdef"><b>Definition:</b> grid.h:25</div></div>
-<div class="ttc" id="class_grid_html_a96c1d1e403aa5e04aeb6b194795448c4"><div class="ttname"><a href="class_grid.html#a96c1d1e403aa5e04aeb6b194795448c4">Grid::ghostHouse</a></div><div class="ttdeci">QRect ghostHouse() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:171</div></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_grid.html#abf2e8bc6fe111e3228fea6a496befc16">setTileTexture</a>(QPoint p, <span class="keywordtype">int</span> texture);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_grid.html#af360f3f9d6df547d63829a3af47e5109">tilesSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_grid.html#a711ac8dd739f2fded9160f467be76bf4">collisionAt</a>(QPoint pos) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    QPixmap <a class="code" href="class_grid.html#a4a021bb5b8a2210cb8a773ae23131090">processBaseImage</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    QPixmap <a class="code" href="class_grid.html#a6186275b098df986400db17659895b23">updateBaseImage</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    QRect <a class="code" href="class_grid.html#a96c1d1e403aa5e04aeb6b194795448c4">ghostHouse</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_grid.html#acc9b139189e4242de864c5bc7a60987c">emptyTile</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_grid.html#a8c6bd2ddd44b14bf887d5e0bfc7a6fb3">setEmptyTile</a>(<span class="keywordtype">int</span> <a class="code" href="class_grid.html#acc9b139189e4242de864c5bc7a60987c">emptyTile</a>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_grid.html#a9816017ce1a36bdad4d489383d19acc6">pelletTile</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_grid.html#ac97425f75ec6edde70f12a8d2f3b450f">setPelletTile</a>(<span class="keywordtype">int</span> <a class="code" href="class_grid.html#a9816017ce1a36bdad4d489383d19acc6">pelletTile</a>);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_grid.html#afa7b0cbe21203a8bf089ab537510392c">energizerTile</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_grid.html#a72e0bb85cb48c443e409b4fdffe8c40c">setEnergizerTile</a>(<span class="keywordtype">int</span> <a class="code" href="class_grid.html#afa7b0cbe21203a8bf089ab537510392c">energizerTile</a>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">// Raw data</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment"></span>    QSize m_size;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">int</span> *m_gridValues;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    QRect m_ghostHouse;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">int</span> *m_collisionGrid;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">int</span> m_emptyTile;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">int</span> m_pelletTile;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">int</span> m_energizerTile;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="comment">// Display</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment"></span>    QList&lt;QPixmap&gt; m_textures;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    QPixmap m_baseImage;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="class_texture_handler.html">TextureHandler</a> *m_textureHandler;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">// Autres</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment"></span>    QList&lt;QPoint&gt; m_changedPoints;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;};</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">#endif // GRID_H</span></div>
+<div class="ttc" id="class_grid_html_af360f3f9d6df547d63829a3af47e5109"><div class="ttname"><a href="class_grid.html#af360f3f9d6df547d63829a3af47e5109">Grid::tilesSize</a></div><div class="ttdeci">int tilesSize() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:198</div></div>
+<div class="ttc" id="class_grid_html_acc9b139189e4242de864c5bc7a60987c"><div class="ttname"><a href="class_grid.html#acc9b139189e4242de864c5bc7a60987c">Grid::emptyTile</a></div><div class="ttdeci">int emptyTile() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:168</div></div>
+<div class="ttc" id="class_grid_html_a1e092c1365a7e1759a169de4e305c777"><div class="ttname"><a href="class_grid.html#a1e092c1365a7e1759a169de4e305c777">Grid::textureAt</a></div><div class="ttdeci">QPixmap textureAt(int index)</div><div class="ttdoc">Donne la texture de la liste des textures de la grille à l&#39;index donné. </div><div class="ttdef"><b>Definition:</b> grid.cpp:90</div></div>
+<div class="ttc" id="class_grid_html_a72e0bb85cb48c443e409b4fdffe8c40c"><div class="ttname"><a href="class_grid.html#a72e0bb85cb48c443e409b4fdffe8c40c">Grid::setEnergizerTile</a></div><div class="ttdeci">void setEnergizerTile(int energizerTile)</div><div class="ttdoc">Setter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:193</div></div>
+<div class="ttc" id="class_grid_html_aeb52c62fd156c4169463d3f6cff8208e"><div class="ttname"><a href="class_grid.html#aeb52c62fd156c4169463d3f6cff8208e">Grid::tileTexture</a></div><div class="ttdeci">int tileTexture(QPoint p)</div><div class="ttdoc">Donne le numéro de la texture à la case donnée. </div><div class="ttdef"><b>Definition:</b> grid.cpp:95</div></div>
+<div class="ttc" id="class_grid_html_a711ac8dd739f2fded9160f467be76bf4"><div class="ttname"><a href="class_grid.html#a711ac8dd739f2fded9160f467be76bf4">Grid::collisionAt</a></div><div class="ttdeci">int collisionAt(QPoint pos) const </div><div class="ttdoc">Donne la valeur de collision au point donné. </div><div class="ttdef"><b>Definition:</b> grid.cpp:203</div></div>
+<div class="ttc" id="class_grid_html_abf2e8bc6fe111e3228fea6a496befc16"><div class="ttname"><a href="class_grid.html#abf2e8bc6fe111e3228fea6a496befc16">Grid::setTileTexture</a></div><div class="ttdeci">void setTileTexture(QPoint p, int texture)</div><div class="ttdoc">Modifie la texture à la case donnée. </div><div class="ttdef"><b>Definition:</b> grid.cpp:106</div></div>
+<div class="ttc" id="class_grid_html_a9816017ce1a36bdad4d489383d19acc6"><div class="ttname"><a href="class_grid.html#a9816017ce1a36bdad4d489383d19acc6">Grid::pelletTile</a></div><div class="ttdeci">int pelletTile() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:178</div></div>
+<div class="ttc" id="class_grid_html_ac97425f75ec6edde70f12a8d2f3b450f"><div class="ttname"><a href="class_grid.html#ac97425f75ec6edde70f12a8d2f3b450f">Grid::setPelletTile</a></div><div class="ttdeci">void setPelletTile(int pelletTile)</div><div class="ttdoc">Setter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:183</div></div>
+<div class="ttc" id="class_grid_html_afa7b0cbe21203a8bf089ab537510392c"><div class="ttname"><a href="class_grid.html#afa7b0cbe21203a8bf089ab537510392c">Grid::energizerTile</a></div><div class="ttdeci">int energizerTile() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:188</div></div>
+<div class="ttc" id="class_grid_html_a6186275b098df986400db17659895b23"><div class="ttname"><a href="class_grid.html#a6186275b098df986400db17659895b23">Grid::updateBaseImage</a></div><div class="ttdeci">QPixmap updateBaseImage()</div><div class="ttdoc">Met à jour l&#39;image de base de la grille. </div><div class="ttdef"><b>Definition:</b> grid.cpp:143</div></div>
+<div class="ttc" id="class_grid_html_a4d98f6e0a0a048fbce5b77fbc0cba646"><div class="ttname"><a href="class_grid.html#a4d98f6e0a0a048fbce5b77fbc0cba646">Grid::Grid</a></div><div class="ttdeci">Grid(QDomElement elem, TextureHandler *textureHandler)</div><div class="ttdoc">Constructeur de base de Grid. </div><div class="ttdef"><b>Definition:</b> grid.cpp:3</div></div>
+<div class="ttc" id="class_grid_html_ad7b1701e7ba881746363ad87aee5c879"><div class="ttname"><a href="class_grid.html#ad7b1701e7ba881746363ad87aee5c879">Grid::addTexture</a></div><div class="ttdeci">void addTexture(QString filename)</div><div class="ttdoc">Ajoute la texture à la liste des textures de la grille. </div><div class="ttdef"><b>Definition:</b> grid.cpp:81</div></div>
+<div class="ttc" id="class_grid_html_a473f8c5d768a1734d8911bf1213ce10f"><div class="ttname"><a href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10f">Grid::CollisionsID</a></div><div class="ttdeci">CollisionsID</div><div class="ttdoc">Types de collisions. </div><div class="ttdef"><b>Definition:</b> grid.h:32</div></div>
+<div class="ttc" id="class_grid_html_a4a021bb5b8a2210cb8a773ae23131090"><div class="ttname"><a href="class_grid.html#a4a021bb5b8a2210cb8a773ae23131090">Grid::processBaseImage</a></div><div class="ttdeci">QPixmap processBaseImage()</div><div class="ttdoc">Calcule l&#39;image de base de la grille. </div><div class="ttdef"><b>Definition:</b> grid.cpp:116</div></div>
+<div class="ttc" id="class_texture_handler_html"><div class="ttname"><a href="class_texture_handler.html">TextureHandler</a></div><div class="ttdoc">Gestionnaire de textures. </div><div class="ttdef"><b>Definition:</b> texturehandler.h:15</div></div>
+<div class="ttc" id="class_grid_html_aa79281119d2e4644d53c9fba286b5dad"><div class="ttname"><a href="class_grid.html#aa79281119d2e4644d53c9fba286b5dad">Grid::size</a></div><div class="ttdeci">QSize size() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:76</div></div>
+<div class="ttc" id="class_grid_html_a473f8c5d768a1734d8911bf1213ce10fa0a40927bb14a23a6aeb090abe9bfb517"><div class="ttname"><a href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10fa0a40927bb14a23a6aeb090abe9bfb517">Grid::CollisionOff</a></div><div class="ttdef"><b>Definition:</b> grid.h:32</div></div>
+<div class="ttc" id="class_grid_html_a473f8c5d768a1734d8911bf1213ce10fa2b394e743be772d4a1da354d5b597623"><div class="ttname"><a href="class_grid.html#a473f8c5d768a1734d8911bf1213ce10fa2b394e743be772d4a1da354d5b597623">Grid::CollisionOn</a></div><div class="ttdef"><b>Definition:</b> grid.h:33</div></div>
+<div class="ttc" id="class_grid_html"><div class="ttname"><a href="class_grid.html">Grid</a></div><div class="ttdoc">Classe de grille de Pacman. </div><div class="ttdef"><b>Definition:</b> grid.h:26</div></div>
+<div class="ttc" id="class_grid_html_a8c6bd2ddd44b14bf887d5e0bfc7a6fb3"><div class="ttname"><a href="class_grid.html#a8c6bd2ddd44b14bf887d5e0bfc7a6fb3">Grid::setEmptyTile</a></div><div class="ttdeci">void setEmptyTile(int emptyTile)</div><div class="ttdoc">Setter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:173</div></div>
+<div class="ttc" id="class_grid_html_a96c1d1e403aa5e04aeb6b194795448c4"><div class="ttname"><a href="class_grid.html#a96c1d1e403aa5e04aeb6b194795448c4">Grid::ghostHouse</a></div><div class="ttdeci">QRect ghostHouse() const </div><div class="ttdoc">Getter. </div><div class="ttdef"><b>Definition:</b> grid.cpp:163</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

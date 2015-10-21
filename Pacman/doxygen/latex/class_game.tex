@@ -24,11 +24,20 @@ Inheritance diagram for Game\+:\begin{figure}[H]
 \hypertarget{class_game_a5ec2daf2a7fe95ee03dea84b4f5d6883}{}void \hyperlink{class_game_a5ec2daf2a7fe95ee03dea84b4f5d6883}{resume\+Game} ()\label{class_game_a5ec2daf2a7fe95ee03dea84b4f5d6883}
 
 \begin{DoxyCompactList}\small\item\em Relance le timer du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_abb2334c12764f9b5d240315dc06e8698}{}void \hyperlink{class_game_abb2334c12764f9b5d240315dc06e8698}{game\+Finished} ()\label{class_game_abb2334c12764f9b5d240315dc06e8698}
+
+\begin{DoxyCompactList}\small\item\em Signal émit lorsque le joueur gagne ou perd. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_game_a07651e12402cbf4ffb116870594cb347}{Game} (Q\+Dom\+Document $\ast$dom)
 \begin{DoxyCompactList}\small\item\em Constructeur de base de la classe \hyperlink{class_game}{Game}. \end{DoxyCompactList}\item 
+\hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}{}\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game} ()\label{class_game_ae3d112ca6e0e55150d2fdbc704474530}
+
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe. \end{DoxyCompactList}\item 
 void \hyperlink{class_game_ae8638ccdb0ef3bf39a6affa30aa1258f}{start\+Game} ()
 \begin{DoxyCompactList}\small\item\em Démarre le jeu avec F\+P\+S (cf. \hyperlink{pacmanparameters_8h_source}{pacmanparameters.\+h}) images par seconde. \end{DoxyCompactList}\item 
 int \hyperlink{class_game_aa23771d9b5897ab65aae22f930b6e7a8}{current\+Level} () const 
@@ -43,10 +52,18 @@ int \hyperlink{class_game_a5cf4da142ff72734ee8713b2c37b2b9b}{lifes} () const
 \begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
 Q\+Timer $\ast$ \hyperlink{class_game_a8c93ee78acb3dc311aaf5b7bae06e70c}{timer} () const 
 \begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
-Q\+Image \hyperlink{class_game_a355b625103201150c07114b4b2fccb03}{image} () const 
+Q\+Pixmap \hyperlink{class_game_a5de3afc0984fe73c91ab3b4fdef6ef8f}{image} ()
 \begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
 void \hyperlink{class_game_aa9db7117b627f79bac876506fa6733d3}{set\+Pacman\+Direction} (int direction)
-\begin{DoxyCompactList}\small\item\em Modifie la direction actuelle du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Modifie la direction actuelle du joueur. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_a2cbd90709b9a9924d5c541eb023a7600}{is\+Changing\+Level} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+Q\+Pixmap $\ast$ \hyperlink{class_game_abb00a545733e9241b62eedf8e92123d2}{first\+Frame} () const 
+\begin{DoxyCompactList}\small\item\em Calcul l\textquotesingle{}image que donnerait le jeu s\textquotesingle{}il commençait tout juste. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_a5cce97ff777796abe02d4b0a4218eb42}{victory} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_a1644c9e27d75c2f4a98e1f5de9f7d66b}{defeat} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Slots}
 \begin{DoxyCompactItemize}
 \item 
@@ -67,15 +84,7 @@ Valentin D.\+d.\+G.
 \begin{DoxyVersion}{Version}
 1.\+0
 \end{DoxyVersion}
-La classe \hyperlink{class_game}{Game} s\textquotesingle{}occupe de gérer l\textquotesingle{}ensemble des niveaux, en leur faisant calculer les déplacements des unités. La classe \hyperlink{class_game}{Game} s\textquotesingle{}occupe aussi de tous les éléments qui sont communs à tous les niveaux (tels que le score ou le nombre de vies du Pacman). Enfin, la classe \hyperlink{class_game}{Game} effectue le rendu final de la grille (sans les à côtés commme l\textquotesingle{}affichage du score) qu\textquotesingle{}il fait calculer au niveau actuellement en cours.
-
-N\+O\+T\+E \+:
-\begin{DoxyItemize}
-\item La classe \hyperlink{class_game}{Game} ne gère pas encore le passage d\textquotesingle{}un niveau à l\textquotesingle{}autre.
-\item La classe \hyperlink{class_game}{Game} ne gère pas encore le son.
-\item La classe \hyperlink{class_game}{Game} ne dispose pas encore de toutes les animations.
-\item La classe \hyperlink{class_game}{Game} ne dispose pas encore de la table de correspondance des textures. 
-\end{DoxyItemize}
+La classe \hyperlink{class_game}{Game} s\textquotesingle{}occupe de gérer l\textquotesingle{}ensemble des niveaux, en leur faisant calculer les déplacements des unités. La classe \hyperlink{class_game}{Game} s\textquotesingle{}occupe aussi de tous les éléments qui sont communs à tous les niveaux (tels que le score ou le nombre de vies du Pacman). Enfin, la classe \hyperlink{class_game}{Game} effectue le rendu final de la grille (sans les à côtés commme l\textquotesingle{}affichage du score) qu\textquotesingle{}il fait calculer au niveau actuellement en cours. 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_game_a07651e12402cbf4ffb116870594cb347}{}\index{Game@{Game}!Game@{Game}}
@@ -91,48 +100,10 @@ Constructeur de base de la classe \hyperlink{class_game}{Game}.
 
 
 \begin{DoxyParams}{Parameters}
-{\em dom} & Document X\+M\+L d\textquotesingle{}où le jeu charge toutes les données.\\
+{\em dom} & Document X\+M\+L d\textquotesingle{}où le jeu charge toutes les données. \\
 \hline
 \end{DoxyParams}
-Exemple (3x3 avec 5 textures)\+:
-\begin{DoxyItemize}
-\item $<$?xml version=\char`\"{}1.\+0\char`\"{} encoding=\char`\"{}\+I\+S\+O-\/8859-\/1\char`\"{}?$>$
-\item $<$root$>$
-\begin{DoxyItemize}
-\item $<$\hyperlink{class_level}{Level}$>$
-\begin{DoxyItemize}
-\item $<$\hyperlink{class_grid}{Grid}$>$
-\begin{DoxyItemize}
-\item $<$Tile\+Count height=\char`\"{}3\char`\"{} width=\char`\"{}3\char`\"{}/$>$
-\item $<$Tile\+Size height=\char`\"{}24\char`\"{} width=\char`\"{}24\char`\"{}/$>$
-\item $<$Grid\+Values values=\char`\"{}aaacdebbb\char`\"{}/$>$
-\item $<$Texture filename=\char`\"{}\+Texture1.\+png\char`\"{}/$>$
-\item $<$Texture filename=\char`\"{}\+Texture2.\+png\char`\"{}/$>$
-\item $<$Texture filename=\char`\"{}\+Texture\+\_\+\+Pastille.\+png\char`\"{}/$>$
-\item $<$Texture filename=\char`\"{}\+Texture\+\_\+\+Energisant.\+png\char`\"{}/$>$
-\item $<$Texture filename=\char`\"{}\+Texture\+\_\+\+Vide.\+png\char`\"{}/$>$
-\item $<$Collisions\+Grid values=\char`\"{}000111000\char`\"{}/$>$
-\item $<$Ghost\+House x=\char`\"{}1\char`\"{} y=\char`\"{}1\char`\"{} width=\char`\"{}1\char`\"{} height=\char`\"{}1\char`\"{}/$>$
-\end{DoxyItemize}
-\item $<$/ \hyperlink{class_grid}{Grid}$>$
-\item $<$Player ix=\char`\"{}0\char`\"{} iy=\char`\"{}0\char`\"{} speed=\char`\"{}77\char`\"{} sspeed = \char`\"{}91\char`\"{} fx = \char`\"{}half\char`\"{}/$>$
-\item $<$Blinky ix=\char`\"{}1\char`\"{} iy=\char`\"{}2\char`\"{} speed=\char`\"{}71\char`\"{} sspeed = \char`\"{}50\char`\"{} cornerx=\char`\"{}26\char`\"{} cornery=\char`\"{}-\/2\char`\"{} fx = \char`\"{}half\char`\"{}/$>$
-\item $<$Pinky ix=\char`\"{}2\char`\"{} iy=\char`\"{}2\char`\"{} speed=\char`\"{}71\char`\"{} sspeed = \char`\"{}50\char`\"{} cornerx=\char`\"{}2\char`\"{} cornery=\char`\"{}-\/2\char`\"{}/$>$
-\item $<$Inky ix=\char`\"{}1\char`\"{} iy=\char`\"{}2\char`\"{} speed=\char`\"{}71\char`\"{} sspeed = \char`\"{}50\char`\"{} cornerx=\char`\"{}28\char`\"{} cornery=\char`\"{}32\char`\"{} fx = \char`\"{}half\char`\"{}/$>$
-\item $<$Clyde ix=\char`\"{}2\char`\"{} iy=\char`\"{}2\char`\"{} speed=\char`\"{}71\char`\"{} sspeed = \char`\"{}50\char`\"{} cornerx=\char`\"{}0\char`\"{} cornery=\char`\"{}32\char`\"{}/$>$
-\item $<$\hyperlink{class_ghost_timer}{Ghost\+Timer}$>$
-\begin{DoxyItemize}
-\item $<$Step time=\char`\"{}7\char`\"{} mode=\char`\"{}0\char`\"{}/$>$
-\item $<$Step time=\char`\"{}20\char`\"{} mode=\char`\"{}1\char`\"{}/$>$
-\item $<$Step time=\char`\"{}7\char`\"{} mode=\char`\"{}0\char`\"{}/$>$
-\end{DoxyItemize}
-\item $<$/ \hyperlink{class_ghost_timer}{Ghost\+Timer}$>$
-\item $<$Scared\+Mode duration=\char`\"{}6000\char`\"{} flashs=\char`\"{}5\char`\"{}/$>$
-\end{DoxyItemize}
-\item $<$/ \hyperlink{class_level}{Level}$>$
-\end{DoxyItemize}
-\item $<$/root$>$ 
-\end{DoxyItemize}
+
 
 \subsection{Member Function Documentation}
 \hypertarget{class_game_aa23771d9b5897ab65aae22f930b6e7a8}{}\index{Game@{Game}!current\+Level@{current\+Level}}
@@ -149,19 +120,61 @@ Getter.
 \begin{DoxyReturn}{Returns}
 Niveau actuellement utilisé par le Jeu. 
 \end{DoxyReturn}
-\hypertarget{class_game_a355b625103201150c07114b4b2fccb03}{}\index{Game@{Game}!image@{image}}
-\index{image@{image}!Game@{Game}}
-\subsubsection[{image() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Game\+::image (
+\hypertarget{class_game_a1644c9e27d75c2f4a98e1f5de9f7d66b}{}\index{Game@{Game}!defeat@{defeat}}
+\index{defeat@{defeat}!Game@{Game}}
+\subsubsection[{defeat() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+::defeat (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}\label{class_game_a355b625103201150c07114b4b2fccb03}
+) const}\label{class_game_a1644c9e27d75c2f4a98e1f5de9f7d66b}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si le joueur a perdu, sinon Faux. 
+\end{DoxyReturn}
+\hypertarget{class_game_abb00a545733e9241b62eedf8e92123d2}{}\index{Game@{Game}!first\+Frame@{first\+Frame}}
+\index{first\+Frame@{first\+Frame}!Game@{Game}}
+\subsubsection[{first\+Frame() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pixmap $\ast$ Game\+::first\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_game_abb00a545733e9241b62eedf8e92123d2}
+
+
+Calcul l\textquotesingle{}image que donnerait le jeu s\textquotesingle{}il commençait tout juste. 
+
+\begin{DoxyReturn}{Returns}
+Première frame du jeu. 
+\end{DoxyReturn}
+\hypertarget{class_game_a5de3afc0984fe73c91ab3b4fdef6ef8f}{}\index{Game@{Game}!image@{image}}
+\index{image@{image}!Game@{Game}}
+\subsubsection[{image()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pixmap Game\+::image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_a5de3afc0984fe73c91ab3b4fdef6ef8f}
 
 
 Getter. 
 
 \begin{DoxyReturn}{Returns}
 Grille du jeu sous forme d\textquotesingle{}image. 
+\end{DoxyReturn}
+\hypertarget{class_game_a2cbd90709b9a9924d5c541eb023a7600}{}\index{Game@{Game}!is\+Changing\+Level@{is\+Changing\+Level}}
+\index{is\+Changing\+Level@{is\+Changing\+Level}!Game@{Game}}
+\subsubsection[{is\+Changing\+Level() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+::is\+Changing\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_game_a2cbd90709b9a9924d5c541eb023a7600}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si le jeu est en pause suite à un changement de niveau. 
 \end{DoxyReturn}
 \hypertarget{class_game_a827328224e2d00cca5534a87b655e3c4}{}\index{Game@{Game}!levels@{levels}}
 \index{levels@{levels}!Game@{Game}}
@@ -261,6 +274,20 @@ Getter.
 
 \begin{DoxyReturn}{Returns}
 Timer du Jeu. 
+\end{DoxyReturn}
+\hypertarget{class_game_a5cce97ff777796abe02d4b0a4218eb42}{}\index{Game@{Game}!victory@{victory}}
+\index{victory@{victory}!Game@{Game}}
+\subsubsection[{victory() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+::victory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_game_a5cce97ff777796abe02d4b0a4218eb42}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si le joueur a gagné, sinon Faux. 
 \end{DoxyReturn}
 
 

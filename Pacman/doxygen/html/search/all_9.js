@@ -8,7 +8,6 @@ var searchData=
   ['m_5fscaredspeed',['m_scaredSpeed',['../class_unit.html#aa9dff9898710a724a36c04ef55b1eecd',1,'Unit']]],
   ['m_5fspeed',['m_speed',['../class_unit.html#a89e65c03176c3485a103c8d74fea84e4',1,'Unit']]],
   ['mainloop',['mainloop',['../class_arduino_handler.html#a2b34ab08c171c918bc711c93810dadde',1,'ArduinoHandler']]],
-  ['mainwindow',['MainWindow',['../class_main_window.html',1,'MainWindow'],['../class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db',1,'MainWindow::MainWindow()']]],
   ['move',['move',['../class_ghost.html#a231a741f4efcc40f47bddb7efa61a19d',1,'Ghost::move()'],['../class_pacman_unit.html#adc791959727ea73b022d37be8d60fa8f',1,'PacmanUnit::move()']]],
   ['moveghosts',['moveGhosts',['../class_level.html#a16b282122a4046e16e8b28bd1471b933',1,'Level']]],
   ['movepacman',['movePacman',['../class_level.html#ac61a6b945f5947beed35fea97495c719',1,'Level']]],

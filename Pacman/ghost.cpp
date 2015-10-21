@@ -34,8 +34,25 @@ Ghost::Ghost(Grid *grid, QDomElement elem, int id)
     m_id = id;
     m_free = false;
     m_previousDirection = Unit::Right;
-    m_scatterCorner.setX(elem.attribute("cornerx").toInt());
-    m_scatterCorner.setY(elem.attribute("cornery").toInt());
+    switch(id)
+    {
+    case Blinky:
+        m_scatterCorner.setX(26);
+        m_scatterCorner.setY(-2);
+        break;
+    case Pinky:
+        m_scatterCorner.setX(2);
+        m_scatterCorner.setY(-2);
+        break;
+    case Inky:
+        m_scatterCorner.setX(27);
+        m_scatterCorner.setY(31);
+        break;
+    case Clyde:
+        m_scatterCorner.setX(0);
+        m_scatterCorner.setY(31);
+        break;
+    }
 }
 
 bool Ghost::isInsideGhostHouse() const

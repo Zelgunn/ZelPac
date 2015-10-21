@@ -107,18 +107,18 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac9920f1d5b87c3b528fdfc1f73011b4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#ac9920f1d5b87c3b528fdfc1f73011b4e">Grid</a> (QDomElement elem)</td></tr>
-<tr class="memdesc:ac9920f1d5b87c3b528fdfc1f73011b4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de <a class="el" href="class_grid.html" title="Classe de grille de Pacman. ">Grid</a>.  <a href="#ac9920f1d5b87c3b528fdfc1f73011b4e">More...</a><br /></td></tr>
-<tr class="separator:ac9920f1d5b87c3b528fdfc1f73011b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d98f6e0a0a048fbce5b77fbc0cba646"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a4d98f6e0a0a048fbce5b77fbc0cba646">Grid</a> (QDomElement elem, <a class="el" href="class_texture_handler.html">TextureHandler</a> *textureHandler)</td></tr>
+<tr class="memdesc:a4d98f6e0a0a048fbce5b77fbc0cba646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de base de <a class="el" href="class_grid.html" title="Classe de grille de Pacman. ">Grid</a>.  <a href="#a4d98f6e0a0a048fbce5b77fbc0cba646">More...</a><br /></td></tr>
+<tr class="separator:a4d98f6e0a0a048fbce5b77fbc0cba646"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa79281119d2e4644d53c9fba286b5dad"><td class="memItemLeft" align="right" valign="top">QSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#aa79281119d2e4644d53c9fba286b5dad">size</a> () const </td></tr>
 <tr class="memdesc:aa79281119d2e4644d53c9fba286b5dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#aa79281119d2e4644d53c9fba286b5dad">More...</a><br /></td></tr>
 <tr class="separator:aa79281119d2e4644d53c9fba286b5dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7b1701e7ba881746363ad87aee5c879"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#ad7b1701e7ba881746363ad87aee5c879">addTexture</a> (QString filename)</td></tr>
 <tr class="memdesc:ad7b1701e7ba881746363ad87aee5c879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute la texture à la liste des textures de la grille.  <a href="#ad7b1701e7ba881746363ad87aee5c879">More...</a><br /></td></tr>
 <tr class="separator:ad7b1701e7ba881746363ad87aee5c879"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8b6eb68deccf4cf8d9375ba52923599"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#af8b6eb68deccf4cf8d9375ba52923599">textureAt</a> (int index)</td></tr>
-<tr class="memdesc:af8b6eb68deccf4cf8d9375ba52923599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne la texture de la liste des textures de la grille à l'index donné.  <a href="#af8b6eb68deccf4cf8d9375ba52923599">More...</a><br /></td></tr>
-<tr class="separator:af8b6eb68deccf4cf8d9375ba52923599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e092c1365a7e1759a169de4e305c777"><td class="memItemLeft" align="right" valign="top">QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a1e092c1365a7e1759a169de4e305c777">textureAt</a> (int index)</td></tr>
+<tr class="memdesc:a1e092c1365a7e1759a169de4e305c777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne la texture de la liste des textures de la grille à l'index donné.  <a href="#a1e092c1365a7e1759a169de4e305c777">More...</a><br /></td></tr>
+<tr class="separator:a1e092c1365a7e1759a169de4e305c777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb52c62fd156c4169463d3f6cff8208e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#aeb52c62fd156c4169463d3f6cff8208e">tileTexture</a> (QPoint p)</td></tr>
 <tr class="memdesc:aeb52c62fd156c4169463d3f6cff8208e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne le numéro de la texture à la case donnée.  <a href="#aeb52c62fd156c4169463d3f6cff8208e">More...</a><br /></td></tr>
 <tr class="separator:aeb52c62fd156c4169463d3f6cff8208e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,21 +128,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abf2e8bc6fe111e3228fea6a496befc16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#abf2e8bc6fe111e3228fea6a496befc16">setTileTexture</a> (QPoint p, int texture)</td></tr>
 <tr class="memdesc:abf2e8bc6fe111e3228fea6a496befc16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la texture à la case donnée.  <a href="#abf2e8bc6fe111e3228fea6a496befc16">More...</a><br /></td></tr>
 <tr class="separator:abf2e8bc6fe111e3228fea6a496befc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8e968e4f13ada41c29501722257427a"><td class="memItemLeft" align="right" valign="top">QSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#ac8e968e4f13ada41c29501722257427a">tilesSize</a> () const </td></tr>
-<tr class="memdesc:ac8e968e4f13ada41c29501722257427a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#ac8e968e4f13ada41c29501722257427a">More...</a><br /></td></tr>
-<tr class="separator:ac8e968e4f13ada41c29501722257427a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af360f3f9d6df547d63829a3af47e5109"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#af360f3f9d6df547d63829a3af47e5109">tilesSize</a> () const </td></tr>
+<tr class="memdesc:af360f3f9d6df547d63829a3af47e5109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#af360f3f9d6df547d63829a3af47e5109">More...</a><br /></td></tr>
+<tr class="separator:af360f3f9d6df547d63829a3af47e5109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a711ac8dd739f2fded9160f467be76bf4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a711ac8dd739f2fded9160f467be76bf4">collisionAt</a> (QPoint pos) const </td></tr>
 <tr class="memdesc:a711ac8dd739f2fded9160f467be76bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne la valeur de collision au point donné.  <a href="#a711ac8dd739f2fded9160f467be76bf4">More...</a><br /></td></tr>
 <tr class="separator:a711ac8dd739f2fded9160f467be76bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad0be5d0410c8abd33b24f6c00db7946"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#aad0be5d0410c8abd33b24f6c00db7946">processBaseImage</a> ()</td></tr>
-<tr class="memdesc:aad0be5d0410c8abd33b24f6c00db7946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule l'image de base de la grille.  <a href="#aad0be5d0410c8abd33b24f6c00db7946">More...</a><br /></td></tr>
-<tr class="separator:aad0be5d0410c8abd33b24f6c00db7946"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc924f671d0370c59237c21a94a8f421"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#afc924f671d0370c59237c21a94a8f421">updateBaseImage</a> ()</td></tr>
-<tr class="memdesc:afc924f671d0370c59237c21a94a8f421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Met à jour l'image de base de la grille.  <a href="#afc924f671d0370c59237c21a94a8f421">More...</a><br /></td></tr>
-<tr class="separator:afc924f671d0370c59237c21a94a8f421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a021bb5b8a2210cb8a773ae23131090"><td class="memItemLeft" align="right" valign="top">QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a4a021bb5b8a2210cb8a773ae23131090">processBaseImage</a> ()</td></tr>
+<tr class="memdesc:a4a021bb5b8a2210cb8a773ae23131090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule l'image de base de la grille.  <a href="#a4a021bb5b8a2210cb8a773ae23131090">More...</a><br /></td></tr>
+<tr class="separator:a4a021bb5b8a2210cb8a773ae23131090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6186275b098df986400db17659895b23"><td class="memItemLeft" align="right" valign="top">QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a6186275b098df986400db17659895b23">updateBaseImage</a> ()</td></tr>
+<tr class="memdesc:a6186275b098df986400db17659895b23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Met à jour l'image de base de la grille.  <a href="#a6186275b098df986400db17659895b23">More...</a><br /></td></tr>
+<tr class="separator:a6186275b098df986400db17659895b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96c1d1e403aa5e04aeb6b194795448c4"><td class="memItemLeft" align="right" valign="top">QRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a96c1d1e403aa5e04aeb6b194795448c4">ghostHouse</a> () const </td></tr>
 <tr class="memdesc:a96c1d1e403aa5e04aeb6b194795448c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#a96c1d1e403aa5e04aeb6b194795448c4">More...</a><br /></td></tr>
 <tr class="separator:a96c1d1e403aa5e04aeb6b194795448c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc9b139189e4242de864c5bc7a60987c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#acc9b139189e4242de864c5bc7a60987c">emptyTile</a> () const </td></tr>
+<tr class="memdesc:acc9b139189e4242de864c5bc7a60987c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#acc9b139189e4242de864c5bc7a60987c">More...</a><br /></td></tr>
+<tr class="separator:acc9b139189e4242de864c5bc7a60987c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c6bd2ddd44b14bf887d5e0bfc7a6fb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a8c6bd2ddd44b14bf887d5e0bfc7a6fb3">setEmptyTile</a> (int <a class="el" href="class_grid.html#acc9b139189e4242de864c5bc7a60987c">emptyTile</a>)</td></tr>
+<tr class="memdesc:a8c6bd2ddd44b14bf887d5e0bfc7a6fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter.  <a href="#a8c6bd2ddd44b14bf887d5e0bfc7a6fb3">More...</a><br /></td></tr>
+<tr class="separator:a8c6bd2ddd44b14bf887d5e0bfc7a6fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9816017ce1a36bdad4d489383d19acc6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a9816017ce1a36bdad4d489383d19acc6">pelletTile</a> () const </td></tr>
+<tr class="memdesc:a9816017ce1a36bdad4d489383d19acc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#a9816017ce1a36bdad4d489383d19acc6">More...</a><br /></td></tr>
+<tr class="separator:a9816017ce1a36bdad4d489383d19acc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac97425f75ec6edde70f12a8d2f3b450f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#ac97425f75ec6edde70f12a8d2f3b450f">setPelletTile</a> (int <a class="el" href="class_grid.html#a9816017ce1a36bdad4d489383d19acc6">pelletTile</a>)</td></tr>
+<tr class="memdesc:ac97425f75ec6edde70f12a8d2f3b450f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter.  <a href="#ac97425f75ec6edde70f12a8d2f3b450f">More...</a><br /></td></tr>
+<tr class="separator:ac97425f75ec6edde70f12a8d2f3b450f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa7b0cbe21203a8bf089ab537510392c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#afa7b0cbe21203a8bf089ab537510392c">energizerTile</a> () const </td></tr>
+<tr class="memdesc:afa7b0cbe21203a8bf089ab537510392c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter.  <a href="#afa7b0cbe21203a8bf089ab537510392c">More...</a><br /></td></tr>
+<tr class="separator:afa7b0cbe21203a8bf089ab537510392c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e0bb85cb48c443e409b4fdffe8c40c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a72e0bb85cb48c443e409b4fdffe8c40c">setEnergizerTile</a> (int <a class="el" href="class_grid.html#afa7b0cbe21203a8bf089ab537510392c">energizerTile</a>)</td></tr>
+<tr class="memdesc:a72e0bb85cb48c443e409b4fdffe8c40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter.  <a href="#a72e0bb85cb48c443e409b4fdffe8c40c">More...</a><br /></td></tr>
+<tr class="separator:a72e0bb85cb48c443e409b4fdffe8c40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Classe de grille de Pacman. </p>
@@ -174,7 +192,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac9920f1d5b87c3b528fdfc1f73011b4e"></a>
+<a class="anchor" id="a4d98f6e0a0a048fbce5b77fbc0cba646"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -182,8 +200,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">Grid::Grid </td>
           <td>(</td>
           <td class="paramtype">QDomElement&#160;</td>
-          <td class="paramname"><em>elem</em></td><td>)</td>
+          <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_texture_handler.html">TextureHandler</a> *&#160;</td>
+          <td class="paramname"><em>textureHandler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -191,32 +219,11 @@ Public Member Functions</h2></td></tr>
 <p>Constructeur de base de <a class="el" href="class_grid.html" title="Classe de grille de Pacman. ">Grid</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">elem</td><td>Données XML à charger lors de la contruction de l'objet.</td></tr>
+    <tr><td class="paramname">elem</td><td>Données XML à charger lors de la contruction de l'objet. </td></tr>
+    <tr><td class="paramname">textureHandler</td><td>Gestionnaire de texture déjà instancié d'où la grille va extraire les textures. </td></tr>
   </table>
   </dd>
 </dl>
-<p>L'élément XML doit ressembler au template suivant :</p><ul>
-<li>&lt;<a class="el" href="class_grid.html" title="Classe de grille de Pacman. ">Grid</a>&gt;<ul>
-<li>&lt;TileCount height="3" width="3"/&gt;</li>
-<li>&lt;TileSize height="24" width="24"/&gt;</li>
-<li>&lt;GridValues values="aaacdebbb"/&gt;</li>
-<li>&lt;Texture filename="Texture1.png"/&gt;</li>
-<li>&lt;Texture filename="Texture2.png"/&gt;</li>
-<li>&lt;Texture filename="Texture_Pastille.png"/&gt;</li>
-<li>&lt;Texture filename="Texture_Energisant.png"/&gt;</li>
-<li>&lt;Texture filename="Texture_Vide.png"/&gt;</li>
-<li>&lt;CollisionsGrid values="000111000"/&gt;</li>
-<li>&lt;GhostHouse x="1" y="1" width="1" height="1"/&gt;</li>
-</ul>
-</li>
-<li>&lt;/ <a class="el" href="class_grid.html" title="Classe de grille de Pacman. ">Grid</a>&gt;</li>
-</ul>
-<p>TileCount : Nombre de cases (largeur/hauteur) <br />
- TileSize : Taille des cases (largeur/hauteur) <br />
- GridValues : Textures (a : première, ...) <br />
- Texture : Nom de fichier de la texture <br />
- CollisionGrid : Collisions <br />
- GhostHouse : Dimensions de la maison des fantômes </p>
 
 </div>
 </div>
@@ -270,6 +277,42 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="acc9b139189e4242de864c5bc7a60987c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Grid::emptyTile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Numero de case vide. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afa7b0cbe21203a8bf089ab537510392c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Grid::energizerTile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Numero de case avec énergisant. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a96c1d1e403aa5e04aeb6b194795448c4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -288,12 +331,30 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aad0be5d0410c8abd33b24f6c00db7946"></a>
+<a class="anchor" id="a9816017ce1a36bdad4d489383d19acc6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QImage Grid::processBaseImage </td>
+          <td class="memname">int Grid::pelletTile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Numero de case avec pastille. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4a021bb5b8a2210cb8a773ae23131090"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPixmap Grid::processBaseImage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -303,6 +364,78 @@ Public Member Functions</h2></td></tr>
 
 <p>Calcule l'image de base de la grille. </p>
 <dl class="section return"><dt>Returns</dt><dd>Image de base de la grille. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8c6bd2ddd44b14bf887d5e0bfc7a6fb3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grid::setEmptyTile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>emptyTile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">emptyTile</td><td>Numero de case vide. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a72e0bb85cb48c443e409b4fdffe8c40c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grid::setEnergizerTile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>energizerTile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">energizerTile</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac97425f75ec6edde70f12a8d2f3b450f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grid::setPelletTile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pelletTile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pelletTile</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -359,12 +492,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af8b6eb68deccf4cf8d9375ba52923599"></a>
+<a class="anchor" id="a1e092c1365a7e1759a169de4e305c777"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QImage Grid::textureAt </td>
+          <td class="memname">QPixmap Grid::textureAt </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -384,12 +517,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac8e968e4f13ada41c29501722257427a"></a>
+<a class="anchor" id="af360f3f9d6df547d63829a3af47e5109"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QSize Grid::tilesSize </td>
+          <td class="memname">int Grid::tilesSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -454,12 +587,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afc924f671d0370c59237c21a94a8f421"></a>
+<a class="anchor" id="a6186275b098df986400db17659895b23"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QImage Grid::updateBaseImage </td>
+          <td class="memname">QPixmap Grid::updateBaseImage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

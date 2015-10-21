@@ -35,26 +35,7 @@ public:
     /**
      * @brief Constructeur de base de Grid
      * @param elem Données XML à charger lors de la contruction de l'objet.
-     * @details L'élément XML doit ressembler au template suivant :
-     * - \<Grid>
-     *  - \<TileCount height="3" width="3"/>
-     *  - \<TileSize height="24" width="24"/>
-     *  - \<GridValues values="aaacdebbb"/>
-     *  - \<Texture filename="Texture1.png"/>
-     *  - \<Texture filename="Texture2.png"/>
-     *  - \<Texture filename="Texture_Pastille.png"/>
-     *  - \<Texture filename="Texture_Energisant.png"/>
-     *  - \<Texture filename="Texture_Vide.png"/>
-     *  - \<CollisionsGrid values="000111000"/>
-     *  - \<GhostHouse x="1" y="1" width="1" height="1"/>
-     * - \</ Grid>
-     *
-     * TileCount : Nombre de cases (largeur/hauteur)
-     * \n TileSize : Taille des cases (largeur/hauteur)
-     * \n GridValues : Textures (a : première, ...)
-     * \n Texture : Nom de fichier de la texture
-     * \n CollisionGrid : Collisions
-     * \n GhostHouse : Dimensions de la maison des fantômes
+     * @param textureHandler Gestionnaire de texture déjà instancié d'où la grille va extraire les textures.
      */
     Grid(QDomElement elem, TextureHandler *textureHandler);
 

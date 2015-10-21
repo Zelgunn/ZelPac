@@ -8,8 +8,6 @@
 #include <QPainter>
 #include <SFML/Window.hpp>
 
-#include <QDebug>
-
 #define BUF_LENGHT 32
 #define LINE_SIZE 10
 

@@ -3,11 +3,6 @@
 
 /** \mainpage Documentation de Pacman
  *
- * \section to_do To Do
- * - La classe Game ne gère pas encore le passage d'un niveau à l'autre.
- * - La classe Game ne gère pas encore le son.
- * - La classe Game ne dispose pas encore de toutes les animations.
- * - La classe Game ne dispose pas encore de la table de correspondance des textures.
  *
  *
 */

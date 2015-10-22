@@ -18,6 +18,9 @@
 class GhostTimer
 {
 public:
+    /**
+     * @brief Identificateurs des modes de poursuite des fantômes.
+     */
     enum ghostChasingModeID{Scatter,    /**< Les fantômes se dirigent vers leur coin spécifique */
                            Chase,       /**< Les fantômes utilisent leur IA personnelle pour attraper le Pacman */
                            Caught       /**< Les fantômes attrapés se dirigent vers leur maison et y reste jusqu'à expiration */

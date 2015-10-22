@@ -31,7 +31,7 @@ int TextureSelectDialog::selectedTextureIndex() const
 
 void TextureSelectDialog::on_listWidget_currentRowChanged(int currentRow)
 {
-    ui->l_texturePreview->setPixmap(QPixmap::fromImage(m_textureHandler->textureAt(currentRow)));
+    ui->l_texturePreview->setPixmap(m_textureHandler->textureAt(currentRow));
 }
 
 void TextureSelectDialog::on_listWidget_itemDoubleClicked(QListWidgetItem *)

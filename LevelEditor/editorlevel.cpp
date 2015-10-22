@@ -302,7 +302,7 @@ QImage EditorLevel::renderBaseImage()
     int h = m_gridSize.height() * m_tileSize, w = m_gridSize.width() * m_tileSize;
     QImage res(w,h, QImage::Format_ARGB32);
     QPainter painter(&res);
-    QImage texture;
+    QPixmap texture;
 
     int x, y;
     for(int i=0; i<m_gridSize.width(); i++)
@@ -312,7 +312,7 @@ QImage EditorLevel::renderBaseImage()
         {
             y = j*m_tileSize;
             texture = m_textureHandler->textureAt(m_gridTextures[i + j*m_gridSize.width()]).scaled(m_tileSize, m_tileSize);
-            painter.drawImage(x, y, texture);
+            painter.drawPixmap(x, y, texture);
         }
     }
     painter.end();
@@ -326,8 +326,8 @@ QImage EditorLevel::updateBaseImage(QPoint changedPoint)
     QPainter painter(&m_baseImage);
 
     int textureId = m_gridTextures[changedPoint.x() + changedPoint.y() * m_gridSize.width()];
-    QImage texture = m_textureHandler->textureAt(textureId).scaled(m_tileSize, m_tileSize);;
-    painter.drawImage(changedPoint.x() * m_tileSize, changedPoint.y() * m_tileSize, texture);
+    QPixmap texture = m_textureHandler->textureAt(textureId).scaled(m_tileSize, m_tileSize);;
+    painter.drawPixmap(changedPoint.x() * m_tileSize, changedPoint.y() * m_tileSize, texture);
     painter.end();
 
     return m_baseImage;

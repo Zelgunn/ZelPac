@@ -1,0 +1,780 @@
+\hypertarget{class_editor_level}{}\section{Editor\+Level Class Reference}
+\label{class_editor_level}\index{Editor\+Level@{Editor\+Level}}
+
+
+La classe \hyperlink{class_editor_level}{Editor\+Level} permet de paramétrer un niveau dans Pacman.  
+
+
+
+
+{\ttfamily \#include $<$editorlevel.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_editor_level_adf05726a383094d778d951c075bceb59}{Unit\+I\+Ds} \{ \\*
+\hyperlink{class_editor_level_adf05726a383094d778d951c075bceb59a953d321d77018b2117fcb084de1c3136}{Pacman}, 
+\hyperlink{class_editor_level_adf05726a383094d778d951c075bceb59acd032aeb95f0a518d8495108838a8edb}{Blinky}, 
+\hyperlink{class_editor_level_adf05726a383094d778d951c075bceb59aad79d7ec47fb4acc41928dae8597de12}{Pinky}, 
+\hyperlink{class_editor_level_adf05726a383094d778d951c075bceb59a43e8ae5b35772e1223b6b9097c10e477}{Inky}, 
+\\*
+\hyperlink{class_editor_level_adf05726a383094d778d951c075bceb59abf16acba9b6d575e6426e2609e92bf78}{Clyde}
+ \}\begin{DoxyCompactList}\small\item\em Identifiants des unités. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_editor_level_a584cef2dd87020e4998472ed42393b33}{}\hyperlink{class_editor_level_a584cef2dd87020e4998472ed42393b33}{Editor\+Level} ()\label{class_editor_level_a584cef2dd87020e4998472ed42393b33}
+
+\begin{DoxyCompactList}\small\item\em Constructeur \hyperlink{class_editor_level}{Editor\+Level} invalide. \end{DoxyCompactList}\item 
+\hyperlink{class_editor_level_aeca7a61d95d490886d20511d23d14bc6}{Editor\+Level} (const Q\+String \&\hyperlink{class_editor_level_a9f9dbcffe902389116e3456e7f154a63}{name}, Q\+Size \hyperlink{class_editor_level_af1274ae16db55ca0f0458771f9b492f7}{grid\+Size}, int \hyperlink{class_editor_level_a017777a7184231516d4052b83a61c2ec}{tile\+Size}, \hyperlink{class_texture_handler}{Texture\+Handler} $\ast$\hyperlink{class_editor_level_a1c7d7af96145635ca7a6b896bc00a2ee}{texture\+Handler})
+\begin{DoxyCompactList}\small\item\em Constructeur principale d\textquotesingle{}\hyperlink{class_editor_level}{Editor\+Level}. \end{DoxyCompactList}\item 
+\hyperlink{class_editor_level_a238746863d07574a8cccfe291d699118}{Editor\+Level} (Q\+Dom\+Element elem, \hyperlink{class_texture_handler}{Texture\+Handler} $\ast$\hyperlink{class_editor_level_a1c7d7af96145635ca7a6b896bc00a2ee}{texture\+Handler})
+\begin{DoxyCompactList}\small\item\em Surcharge du constructeur de base pour X\+M\+L. \end{DoxyCompactList}\item 
+\hyperlink{class_editor_level_a43461c77563a236e93434729fafbf670}{Editor\+Level} (const Q\+String \&\hyperlink{class_editor_level_a9f9dbcffe902389116e3456e7f154a63}{name}, const \hyperlink{class_editor_level}{Editor\+Level} $\ast$copy)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie d\textquotesingle{}objet. \end{DoxyCompactList}\item 
+Q\+Dom\+Element \hyperlink{class_editor_level_ad8997f78f2a066e8430f5927c881f6b6}{to\+X\+M\+L} (Q\+Dom\+Document $\ast$dom) const 
+\begin{DoxyCompactList}\small\item\em Ajoute l\textquotesingle{}élément X\+M\+L dans l\textquotesingle{}arbre donné, les paramètres dépendent de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_editor_level_a9f9dbcffe902389116e3456e7f154a63}{name} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_level_a04a0104522b5d989a92a778d276f9630}{set\+Name} (const Q\+String \&\hyperlink{class_editor_level_a9f9dbcffe902389116e3456e7f154a63}{name})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+bool \hyperlink{class_editor_level_a67a93de9672f6fccee0b8ebe787d976d}{is\+Valid} () const 
+\begin{DoxyCompactList}\small\item\em Vérifie la validité de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+Q\+Size \hyperlink{class_editor_level_af1274ae16db55ca0f0458771f9b492f7}{grid\+Size} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_editor_level_a017777a7184231516d4052b83a61c2ec}{tile\+Size} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+\hyperlink{class_texture_handler}{Texture\+Handler} $\ast$ \hyperlink{class_editor_level_a1c7d7af96145635ca7a6b896bc00a2ee}{texture\+Handler} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+Q\+List$<$ int $>$ \hyperlink{class_editor_level_a55d8b5bb811bd19ff03207aa5139cd29}{used\+Textures} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+Q\+Image \hyperlink{class_editor_level_a11a8c1c65373fb434a5dcd10f6289ab6}{base\+Image} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+Q\+Rect \hyperlink{class_editor_level_a59be959931be8add111ae0e71e29efde}{ghost\+House} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_editor_level_ae3f053e341c76724d8c04f8af45ca628}{texture\+At} (int i) const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_editor_level_a9e423202c7d444df59a94f232b764d3f}{texture\+At} (const Q\+Point \&tile) const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_level_a936bf5bbed34ea2b4348a9e536abe485}{set\+Tile\+Texture} (const Q\+Point \&tile, int texture)
+\begin{DoxyCompactList}\small\item\em Modifie la texture au point donné. \end{DoxyCompactList}\item 
+int \hyperlink{class_editor_level_ac4666cba00b23cbc18587d00074d1f43}{collision\+At} (int i) const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_editor_level_a32fd50e0edbc1fbe718266de7346ff07}{collision\+At} (const Q\+Point \&tile) const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_level_a043669a22f9a5eb598c2157603ecc3a9}{set\+Collision\+At} (const Q\+Point \&tile, int collision)
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+Q\+Image \hyperlink{class_editor_level_a22e354423f919cbc72baa6a5b3839e2c}{render\+Base\+Image} ()
+\begin{DoxyCompactList}\small\item\em Calcule entièrement l\textquotesingle{}image à partir des valeurs stockées. \end{DoxyCompactList}\item 
+Q\+Image \hyperlink{class_editor_level_a8e4d29469af6e4b7385099b55ace342a}{update\+Base\+Image} (Q\+Point changed\+Point)
+\begin{DoxyCompactList}\small\item\em Met à jour l\textquotesingle{}image au point donné. \end{DoxyCompactList}\item 
+Q\+Point \hyperlink{class_editor_level_abc294de71bda94b177aa2d00968a0e30}{screen\+To\+Tile} (Q\+Point screen\+Position)
+\begin{DoxyCompactList}\small\item\em Trouve la case correpondant à la position dans l\textquotesingle{}image. \end{DoxyCompactList}\item 
+\hyperlink{struct_unit_data__str}{Unit\+Data} $\ast$ \hyperlink{class_editor_level_a7f940dbe1b6700b1d46e1fb7e2babd7b}{units\+Data} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_level_afa3508ad464eb7d64b125362810f6587}{set\+Units\+Data\+At} (\hyperlink{struct_unit_data__str}{Unit\+Data} \hyperlink{class_editor_level_a7f940dbe1b6700b1d46e1fb7e2babd7b}{units\+Data}, int idx)
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_level_a310f8584dad7701e9eae52e0aac545fc}{set\+Empty\+Tile\+Texture} (int \hyperlink{class_editor_level_a6c85fe38496b6818f46e01769dac0149}{empty\+Tile\+Texture})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_level_ad74061a119c6861c01aebb5995cca76b}{set\+Pellet\+Tile\+Texture} (int \hyperlink{class_editor_level_acced1d750cf3645b0f7146f4c8e8c3b8}{pellet\+Tile\+Texture})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_level_ae087a222e9cbd7fc37373b5cc928b150}{set\+Energizer\+Tile\+Texture} (int \hyperlink{class_editor_level_aeb370a3927426307b29765ff53805a66}{energizer\+Tile\+Texture})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+int \hyperlink{class_editor_level_a6c85fe38496b6818f46e01769dac0149}{empty\+Tile\+Texture} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_editor_level_acced1d750cf3645b0f7146f4c8e8c3b8}{pellet\+Tile\+Texture} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_editor_level_aeb370a3927426307b29765ff53805a66}{energizer\+Tile\+Texture} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+\hyperlink{class_ghost_timer}{Ghost\+Timer} \hyperlink{class_editor_level_a1a4017c0adb3d6075fa0191016d9ed40}{ghost\+Timer} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_level_a81ebd2fb2f1eae67077f9c8b33b7d8d7}{set\+Ghost\+Timer} (const \hyperlink{class_ghost_timer}{Ghost\+Timer} \&\hyperlink{class_editor_level_a1a4017c0adb3d6075fa0191016d9ed40}{ghost\+Timer})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_level_aaa808dce67eb1a6e41b9ca9f49e9c3f6}{append\+Ghost\+Timer\+Step} (double time, int mode)
+\begin{DoxyCompactList}\small\item\em Ajoute une étape à la liste des timers. \end{DoxyCompactList}\item 
+double \hyperlink{class_editor_level_a4da8f723176d8e8e1091056aba676f38}{scared\+Time} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_level_a1ac5852301763c0541d44d468562839e}{set\+Scared\+Time} (double \hyperlink{class_editor_level_a4da8f723176d8e8e1091056aba676f38}{scared\+Time})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{struct_unit_data__str}{Unit\+Data} \hyperlink{class_editor_level_a9bb6e11a045b6e8d75428ab88f18e641}{init\+Unit\+Data} ()
+\begin{DoxyCompactList}\small\item\em Créé une structure dont les valeurs sont nulles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_editor_level_a1752f37447373aa75f33fff146637489}{load\+Grid} (Q\+Dom\+Element elem)
+\begin{DoxyCompactList}\small\item\em Charge les données de la grille à partir d\textquotesingle{}un fichier X\+M\+L. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_level_a1f7d90b4d294aa188b45cebaf510f667}{load\+Ghost\+Timer} (Q\+Dom\+Element elem)
+\begin{DoxyCompactList}\small\item\em Charge le timer des fantômes à partir d\textquotesingle{}un fichier X\+M\+L. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+La classe \hyperlink{class_editor_level}{Editor\+Level} permet de paramétrer un niveau dans Pacman. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_editor_level_adf05726a383094d778d951c075bceb59}{}\index{Editor\+Level@{Editor\+Level}!Unit\+I\+Ds@{Unit\+I\+Ds}}
+\index{Unit\+I\+Ds@{Unit\+I\+Ds}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{Unit\+I\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Editor\+Level\+::\+Unit\+I\+Ds}}\label{class_editor_level_adf05726a383094d778d951c075bceb59}
+
+
+Identifiants des unités. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Pacman@{Pacman}!Editor\+Level@{Editor\+Level}}\index{Editor\+Level@{Editor\+Level}!Pacman@{Pacman}}\item[{\em 
+\hypertarget{class_editor_level_adf05726a383094d778d951c075bceb59a953d321d77018b2117fcb084de1c3136}{}Pacman\label{class_editor_level_adf05726a383094d778d951c075bceb59a953d321d77018b2117fcb084de1c3136}
+}]Identifiant du Pacman \index{Blinky@{Blinky}!Editor\+Level@{Editor\+Level}}\index{Editor\+Level@{Editor\+Level}!Blinky@{Blinky}}\item[{\em 
+\hypertarget{class_editor_level_adf05726a383094d778d951c075bceb59acd032aeb95f0a518d8495108838a8edb}{}Blinky\label{class_editor_level_adf05726a383094d778d951c075bceb59acd032aeb95f0a518d8495108838a8edb}
+}]Identifiant de Shadow (aka Blinky) \index{Pinky@{Pinky}!Editor\+Level@{Editor\+Level}}\index{Editor\+Level@{Editor\+Level}!Pinky@{Pinky}}\item[{\em 
+\hypertarget{class_editor_level_adf05726a383094d778d951c075bceb59aad79d7ec47fb4acc41928dae8597de12}{}Pinky\label{class_editor_level_adf05726a383094d778d951c075bceb59aad79d7ec47fb4acc41928dae8597de12}
+}]Identifiant de Speedy (aka Pinky) \index{Inky@{Inky}!Editor\+Level@{Editor\+Level}}\index{Editor\+Level@{Editor\+Level}!Inky@{Inky}}\item[{\em 
+\hypertarget{class_editor_level_adf05726a383094d778d951c075bceb59a43e8ae5b35772e1223b6b9097c10e477}{}Inky\label{class_editor_level_adf05726a383094d778d951c075bceb59a43e8ae5b35772e1223b6b9097c10e477}
+}]Identifiant de Bashful (aka Inky) \index{Clyde@{Clyde}!Editor\+Level@{Editor\+Level}}\index{Editor\+Level@{Editor\+Level}!Clyde@{Clyde}}\item[{\em 
+\hypertarget{class_editor_level_adf05726a383094d778d951c075bceb59abf16acba9b6d575e6426e2609e92bf78}{}Clyde\label{class_editor_level_adf05726a383094d778d951c075bceb59abf16acba9b6d575e6426e2609e92bf78}
+}]Identifiant de Pokey (aka Clyde) \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_editor_level_aeca7a61d95d490886d20511d23d14bc6}{}\index{Editor\+Level@{Editor\+Level}!Editor\+Level@{Editor\+Level}}
+\index{Editor\+Level@{Editor\+Level}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{Editor\+Level(const Q\+String \&name, Q\+Size grid\+Size, int tile\+Size, Texture\+Handler $\ast$texture\+Handler)}]{\setlength{\rightskip}{0pt plus 5cm}Editor\+Level\+::\+Editor\+Level (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{name, }
+\item[{Q\+Size}]{grid\+Size, }
+\item[{int}]{tile\+Size, }
+\item[{{\bf Texture\+Handler} $\ast$}]{texture\+Handler}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_aeca7a61d95d490886d20511d23d14bc6}
+
+
+Constructeur principale d\textquotesingle{}\hyperlink{class_editor_level}{Editor\+Level}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nom du niveau. \\
+\hline
+{\em grid\+Size} & Taille du niveau (en nombre de cases). \\
+\hline
+{\em tile\+Size} & Tailles des cases du niveau (en pixels). \\
+\hline
+{\em texture\+Handler} & Gestionnaire de texture commun.\\
+\hline
+\end{DoxyParams}
+Construit un \hyperlink{class_editor_level}{Editor\+Level} valide. \hypertarget{class_editor_level_a238746863d07574a8cccfe291d699118}{}\index{Editor\+Level@{Editor\+Level}!Editor\+Level@{Editor\+Level}}
+\index{Editor\+Level@{Editor\+Level}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{Editor\+Level(\+Q\+Dom\+Element elem, Texture\+Handler $\ast$texture\+Handler)}]{\setlength{\rightskip}{0pt plus 5cm}Editor\+Level\+::\+Editor\+Level (
+\begin{DoxyParamCaption}
+\item[{Q\+Dom\+Element}]{elem, }
+\item[{{\bf Texture\+Handler} $\ast$}]{texture\+Handler}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_a238746863d07574a8cccfe291d699118}
+
+
+Surcharge du constructeur de base pour X\+M\+L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Element X\+M\+L à charger. \\
+\hline
+{\em texture\+Handler} & Gestionnaire de texture commun. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_a43461c77563a236e93434729fafbf670}{}\index{Editor\+Level@{Editor\+Level}!Editor\+Level@{Editor\+Level}}
+\index{Editor\+Level@{Editor\+Level}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{Editor\+Level(const Q\+String \&name, const Editor\+Level $\ast$copy)}]{\setlength{\rightskip}{0pt plus 5cm}Editor\+Level\+::\+Editor\+Level (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{name, }
+\item[{const {\bf Editor\+Level} $\ast$}]{copy}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_a43461c77563a236e93434729fafbf670}
+
+
+Constructeur de copie d\textquotesingle{}objet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nom du niveau. \\
+\hline
+{\em copy} & Niveau à partir duquel se fait la copie.\\
+\hline
+\end{DoxyParams}
+Dupplique en mémoire les éléments alloués dynamiquement. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_editor_level_aaa808dce67eb1a6e41b9ca9f49e9c3f6}{}\index{Editor\+Level@{Editor\+Level}!append\+Ghost\+Timer\+Step@{append\+Ghost\+Timer\+Step}}
+\index{append\+Ghost\+Timer\+Step@{append\+Ghost\+Timer\+Step}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{append\+Ghost\+Timer\+Step(double time, int mode)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::append\+Ghost\+Timer\+Step (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_aaa808dce67eb1a6e41b9ca9f49e9c3f6}
+
+
+Ajoute une étape à la liste des timers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Durée de l\textquotesingle{}étape. \\
+\hline
+{\em mode} & Type d\textquotesingle{}étape. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_a11a8c1c65373fb434a5dcd10f6289ab6}{}\index{Editor\+Level@{Editor\+Level}!base\+Image@{base\+Image}}
+\index{base\+Image@{base\+Image}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{base\+Image() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Editor\+Level\+::base\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a11a8c1c65373fb434a5dcd10f6289ab6}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Image de base du niveau. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_ac4666cba00b23cbc18587d00074d1f43}{}\index{Editor\+Level@{Editor\+Level}!collision\+At@{collision\+At}}
+\index{collision\+At@{collision\+At}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{collision\+At(int i) const }]{\setlength{\rightskip}{0pt plus 5cm}int Editor\+Level\+::collision\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_ac4666cba00b23cbc18587d00074d1f43}
+
+
+Getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index de la case à inspecter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type de collision utilisé à l\textquotesingle{}index donnée. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a32fd50e0edbc1fbe718266de7346ff07}{}\index{Editor\+Level@{Editor\+Level}!collision\+At@{collision\+At}}
+\index{collision\+At@{collision\+At}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{collision\+At(const Q\+Point \&tile) const }]{\setlength{\rightskip}{0pt plus 5cm}int Editor\+Level\+::collision\+At (
+\begin{DoxyParamCaption}
+\item[{const Q\+Point \&}]{tile}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a32fd50e0edbc1fbe718266de7346ff07}
+
+
+Getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & Case à inspecter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type de collision utilisé à la case donnée. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a6c85fe38496b6818f46e01769dac0149}{}\index{Editor\+Level@{Editor\+Level}!empty\+Tile\+Texture@{empty\+Tile\+Texture}}
+\index{empty\+Tile\+Texture@{empty\+Tile\+Texture}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{empty\+Tile\+Texture() const }]{\setlength{\rightskip}{0pt plus 5cm}int Editor\+Level\+::empty\+Tile\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a6c85fe38496b6818f46e01769dac0149}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Index de la texture des cases vides. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_aeb370a3927426307b29765ff53805a66}{}\index{Editor\+Level@{Editor\+Level}!energizer\+Tile\+Texture@{energizer\+Tile\+Texture}}
+\index{energizer\+Tile\+Texture@{energizer\+Tile\+Texture}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{energizer\+Tile\+Texture() const }]{\setlength{\rightskip}{0pt plus 5cm}int Editor\+Level\+::energizer\+Tile\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_aeb370a3927426307b29765ff53805a66}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Index de la texture des cases avec énergisant. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a59be959931be8add111ae0e71e29efde}{}\index{Editor\+Level@{Editor\+Level}!ghost\+House@{ghost\+House}}
+\index{ghost\+House@{ghost\+House}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{ghost\+House() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Rect Editor\+Level\+::ghost\+House (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a59be959931be8add111ae0e71e29efde}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Dimensions de la maison des fantômes du niveau. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a1a4017c0adb3d6075fa0191016d9ed40}{}\index{Editor\+Level@{Editor\+Level}!ghost\+Timer@{ghost\+Timer}}
+\index{ghost\+Timer@{ghost\+Timer}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{ghost\+Timer() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ghost\+Timer} Editor\+Level\+::ghost\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a1a4017c0adb3d6075fa0191016d9ed40}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Timers de changement de mode des fantômes. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_af1274ae16db55ca0f0458771f9b492f7}{}\index{Editor\+Level@{Editor\+Level}!grid\+Size@{grid\+Size}}
+\index{grid\+Size@{grid\+Size}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{grid\+Size() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Size Editor\+Level\+::grid\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_af1274ae16db55ca0f0458771f9b492f7}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Taille de la grille (en nombre de cases). 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a9bb6e11a045b6e8d75428ab88f18e641}{}\index{Editor\+Level@{Editor\+Level}!init\+Unit\+Data@{init\+Unit\+Data}}
+\index{init\+Unit\+Data@{init\+Unit\+Data}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{init\+Unit\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unit\+Data} Editor\+Level\+::init\+Unit\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_editor_level_a9bb6e11a045b6e8d75428ab88f18e641}
+
+
+Créé une structure dont les valeurs sont nulles. 
+
+\begin{DoxyReturn}{Returns}
+Unit\+Data initialisée. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a67a93de9672f6fccee0b8ebe787d976d}{}\index{Editor\+Level@{Editor\+Level}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{is\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Editor\+Level\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a67a93de9672f6fccee0b8ebe787d976d}
+
+
+Vérifie la validité de l\textquotesingle{}objet. 
+
+\begin{DoxyReturn}{Returns}
+true si l\textquotesingle{}objet a des paramètres corrects, false sinon. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a1f7d90b4d294aa188b45cebaf510f667}{}\index{Editor\+Level@{Editor\+Level}!load\+Ghost\+Timer@{load\+Ghost\+Timer}}
+\index{load\+Ghost\+Timer@{load\+Ghost\+Timer}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{load\+Ghost\+Timer(\+Q\+Dom\+Element elem)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::load\+Ghost\+Timer (
+\begin{DoxyParamCaption}
+\item[{Q\+Dom\+Element}]{elem}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_editor_level_a1f7d90b4d294aa188b45cebaf510f667}
+
+
+Charge le timer des fantômes à partir d\textquotesingle{}un fichier X\+M\+L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Element X\+M\+L d\textquotesingle{}où les données du timer sont chargées. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_a1752f37447373aa75f33fff146637489}{}\index{Editor\+Level@{Editor\+Level}!load\+Grid@{load\+Grid}}
+\index{load\+Grid@{load\+Grid}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{load\+Grid(\+Q\+Dom\+Element elem)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::load\+Grid (
+\begin{DoxyParamCaption}
+\item[{Q\+Dom\+Element}]{elem}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_editor_level_a1752f37447373aa75f33fff146637489}
+
+
+Charge les données de la grille à partir d\textquotesingle{}un fichier X\+M\+L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Element X\+M\+L d\textquotesingle{}où les données de la grille sont chargées. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_a9f9dbcffe902389116e3456e7f154a63}{}\index{Editor\+Level@{Editor\+Level}!name@{name}}
+\index{name@{name}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{name() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Editor\+Level\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a9f9dbcffe902389116e3456e7f154a63}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Nom du niveau. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_acced1d750cf3645b0f7146f4c8e8c3b8}{}\index{Editor\+Level@{Editor\+Level}!pellet\+Tile\+Texture@{pellet\+Tile\+Texture}}
+\index{pellet\+Tile\+Texture@{pellet\+Tile\+Texture}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{pellet\+Tile\+Texture() const }]{\setlength{\rightskip}{0pt plus 5cm}int Editor\+Level\+::pellet\+Tile\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_acced1d750cf3645b0f7146f4c8e8c3b8}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Index de la texture des cases avec pastilles. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a22e354423f919cbc72baa6a5b3839e2c}{}\index{Editor\+Level@{Editor\+Level}!render\+Base\+Image@{render\+Base\+Image}}
+\index{render\+Base\+Image@{render\+Base\+Image}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{render\+Base\+Image()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Editor\+Level\+::render\+Base\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_a22e354423f919cbc72baa6a5b3839e2c}
+
+
+Calcule entièrement l\textquotesingle{}image à partir des valeurs stockées. 
+
+\begin{DoxyReturn}{Returns}
+Image de base du niveau. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a4da8f723176d8e8e1091056aba676f38}{}\index{Editor\+Level@{Editor\+Level}!scared\+Time@{scared\+Time}}
+\index{scared\+Time@{scared\+Time}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{scared\+Time() const }]{\setlength{\rightskip}{0pt plus 5cm}double Editor\+Level\+::scared\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a4da8f723176d8e8e1091056aba676f38}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Durée de l\textquotesingle{}effet de peur. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_abc294de71bda94b177aa2d00968a0e30}{}\index{Editor\+Level@{Editor\+Level}!screen\+To\+Tile@{screen\+To\+Tile}}
+\index{screen\+To\+Tile@{screen\+To\+Tile}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{screen\+To\+Tile(\+Q\+Point screen\+Position)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Editor\+Level\+::screen\+To\+Tile (
+\begin{DoxyParamCaption}
+\item[{Q\+Point}]{screen\+Position}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_abc294de71bda94b177aa2d00968a0e30}
+
+
+Trouve la case correpondant à la position dans l\textquotesingle{}image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen\+Position} & Position à l\textquotesingle{}écran. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Case sous le curseur. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a043669a22f9a5eb598c2157603ecc3a9}{}\index{Editor\+Level@{Editor\+Level}!set\+Collision\+At@{set\+Collision\+At}}
+\index{set\+Collision\+At@{set\+Collision\+At}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{set\+Collision\+At(const Q\+Point \&tile, int collision)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::set\+Collision\+At (
+\begin{DoxyParamCaption}
+\item[{const Q\+Point \&}]{tile, }
+\item[{int}]{collision}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_a043669a22f9a5eb598c2157603ecc3a9}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & Case à modifier. \\
+\hline
+{\em collision} & Nouveau type de collision à appliquer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_a310f8584dad7701e9eae52e0aac545fc}{}\index{Editor\+Level@{Editor\+Level}!set\+Empty\+Tile\+Texture@{set\+Empty\+Tile\+Texture}}
+\index{set\+Empty\+Tile\+Texture@{set\+Empty\+Tile\+Texture}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{set\+Empty\+Tile\+Texture(int empty\+Tile\+Texture)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::set\+Empty\+Tile\+Texture (
+\begin{DoxyParamCaption}
+\item[{int}]{empty\+Tile\+Texture}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_a310f8584dad7701e9eae52e0aac545fc}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em empty\+Tile\+Texture} & Index de la texture des cases vides. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_ae087a222e9cbd7fc37373b5cc928b150}{}\index{Editor\+Level@{Editor\+Level}!set\+Energizer\+Tile\+Texture@{set\+Energizer\+Tile\+Texture}}
+\index{set\+Energizer\+Tile\+Texture@{set\+Energizer\+Tile\+Texture}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{set\+Energizer\+Tile\+Texture(int energizer\+Tile\+Texture)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::set\+Energizer\+Tile\+Texture (
+\begin{DoxyParamCaption}
+\item[{int}]{energizer\+Tile\+Texture}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_ae087a222e9cbd7fc37373b5cc928b150}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em energizer\+Tile\+Texture} & Index de la texture des cases avec énergisant. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_a81ebd2fb2f1eae67077f9c8b33b7d8d7}{}\index{Editor\+Level@{Editor\+Level}!set\+Ghost\+Timer@{set\+Ghost\+Timer}}
+\index{set\+Ghost\+Timer@{set\+Ghost\+Timer}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{set\+Ghost\+Timer(const Ghost\+Timer \&ghost\+Timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::set\+Ghost\+Timer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ghost\+Timer} \&}]{ghost\+Timer}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_a81ebd2fb2f1eae67077f9c8b33b7d8d7}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ghost\+Timer} & Nouveau timers de changement de mode des fantômes. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_a04a0104522b5d989a92a778d276f9630}{}\index{Editor\+Level@{Editor\+Level}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{set\+Name(const Q\+String \&name)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{name}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_a04a0104522b5d989a92a778d276f9630}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nouveau nom du niveau. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_ad74061a119c6861c01aebb5995cca76b}{}\index{Editor\+Level@{Editor\+Level}!set\+Pellet\+Tile\+Texture@{set\+Pellet\+Tile\+Texture}}
+\index{set\+Pellet\+Tile\+Texture@{set\+Pellet\+Tile\+Texture}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{set\+Pellet\+Tile\+Texture(int pellet\+Tile\+Texture)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::set\+Pellet\+Tile\+Texture (
+\begin{DoxyParamCaption}
+\item[{int}]{pellet\+Tile\+Texture}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_ad74061a119c6861c01aebb5995cca76b}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pellet\+Tile\+Texture} & Index de la texture des cases avec pastilles. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_a1ac5852301763c0541d44d468562839e}{}\index{Editor\+Level@{Editor\+Level}!set\+Scared\+Time@{set\+Scared\+Time}}
+\index{set\+Scared\+Time@{set\+Scared\+Time}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{set\+Scared\+Time(double scared\+Time)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::set\+Scared\+Time (
+\begin{DoxyParamCaption}
+\item[{double}]{scared\+Time}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_a1ac5852301763c0541d44d468562839e}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scared\+Time} & Durée de l\textquotesingle{}effet de peur. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_a936bf5bbed34ea2b4348a9e536abe485}{}\index{Editor\+Level@{Editor\+Level}!set\+Tile\+Texture@{set\+Tile\+Texture}}
+\index{set\+Tile\+Texture@{set\+Tile\+Texture}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{set\+Tile\+Texture(const Q\+Point \&tile, int texture)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::set\+Tile\+Texture (
+\begin{DoxyParamCaption}
+\item[{const Q\+Point \&}]{tile, }
+\item[{int}]{texture}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_a936bf5bbed34ea2b4348a9e536abe485}
+
+
+Modifie la texture au point donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & Position de la case. \\
+\hline
+{\em texture} & Nouvelle texture.\\
+\hline
+\end{DoxyParams}
+Si l\textquotesingle{}indice de la texture est correct et n\textquotesingle{}a pas encore été utilisé par le niveau, il est ajouté à sa liste. \hypertarget{class_editor_level_afa3508ad464eb7d64b125362810f6587}{}\index{Editor\+Level@{Editor\+Level}!set\+Units\+Data\+At@{set\+Units\+Data\+At}}
+\index{set\+Units\+Data\+At@{set\+Units\+Data\+At}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{set\+Units\+Data\+At(\+Unit\+Data units\+Data, int idx)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Level\+::set\+Units\+Data\+At (
+\begin{DoxyParamCaption}
+\item[{{\bf Unit\+Data}}]{units\+Data, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_afa3508ad464eb7d64b125362810f6587}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em units\+Data} & Nouvelle données de l\textquotesingle{}unité. \\
+\hline
+{\em idx} & Index de l\textquotesingle{}unité modifiée. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_ae3f053e341c76724d8c04f8af45ca628}{}\index{Editor\+Level@{Editor\+Level}!texture\+At@{texture\+At}}
+\index{texture\+At@{texture\+At}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{texture\+At(int i) const }]{\setlength{\rightskip}{0pt plus 5cm}int Editor\+Level\+::texture\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_ae3f053e341c76724d8c04f8af45ca628}
+
+
+Getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index de la case à inspecter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index de la texture utilisée à l\textquotesingle{}index donné. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a9e423202c7d444df59a94f232b764d3f}{}\index{Editor\+Level@{Editor\+Level}!texture\+At@{texture\+At}}
+\index{texture\+At@{texture\+At}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{texture\+At(const Q\+Point \&tile) const }]{\setlength{\rightskip}{0pt plus 5cm}int Editor\+Level\+::texture\+At (
+\begin{DoxyParamCaption}
+\item[{const Q\+Point \&}]{tile}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a9e423202c7d444df59a94f232b764d3f}
+
+
+Getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & Case à inspecter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index de la texture utilisée à la case donnée. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a1c7d7af96145635ca7a6b896bc00a2ee}{}\index{Editor\+Level@{Editor\+Level}!texture\+Handler@{texture\+Handler}}
+\index{texture\+Handler@{texture\+Handler}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{texture\+Handler() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Texture\+Handler} $\ast$ Editor\+Level\+::texture\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a1c7d7af96145635ca7a6b896bc00a2ee}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Gestionnaire de textures. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a017777a7184231516d4052b83a61c2ec}{}\index{Editor\+Level@{Editor\+Level}!tile\+Size@{tile\+Size}}
+\index{tile\+Size@{tile\+Size}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{tile\+Size() const }]{\setlength{\rightskip}{0pt plus 5cm}int Editor\+Level\+::tile\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a017777a7184231516d4052b83a61c2ec}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Taille des cases de la grille (en pixels). 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_ad8997f78f2a066e8430f5927c881f6b6}{}\index{Editor\+Level@{Editor\+Level}!to\+X\+M\+L@{to\+X\+M\+L}}
+\index{to\+X\+M\+L@{to\+X\+M\+L}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{to\+X\+M\+L(\+Q\+Dom\+Document $\ast$dom) const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dom\+Element Editor\+Level\+::to\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{Q\+Dom\+Document $\ast$}]{dom}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_ad8997f78f2a066e8430f5927c881f6b6}
+
+
+Ajoute l\textquotesingle{}élément X\+M\+L dans l\textquotesingle{}arbre donné, les paramètres dépendent de l\textquotesingle{}objet. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em dom} & Document X\+M\+L où l\textquotesingle{}élément est rajouté. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_level_a7f940dbe1b6700b1d46e1fb7e2babd7b}{}\index{Editor\+Level@{Editor\+Level}!units\+Data@{units\+Data}}
+\index{units\+Data@{units\+Data}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{units\+Data() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unit\+Data} $\ast$ Editor\+Level\+::units\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a7f940dbe1b6700b1d46e1fb7e2babd7b}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Liste des données des unités. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a8e4d29469af6e4b7385099b55ace342a}{}\index{Editor\+Level@{Editor\+Level}!update\+Base\+Image@{update\+Base\+Image}}
+\index{update\+Base\+Image@{update\+Base\+Image}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{update\+Base\+Image(\+Q\+Point changed\+Point)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Editor\+Level\+::update\+Base\+Image (
+\begin{DoxyParamCaption}
+\item[{Q\+Point}]{changed\+Point}
+\end{DoxyParamCaption}
+)}\label{class_editor_level_a8e4d29469af6e4b7385099b55ace342a}
+
+
+Met à jour l\textquotesingle{}image au point donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em changed\+Point} & Point où la mise à jour est effectuée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Image de base du niveau mise à jour. 
+\end{DoxyReturn}
+\hypertarget{class_editor_level_a55d8b5bb811bd19ff03207aa5139cd29}{}\index{Editor\+Level@{Editor\+Level}!used\+Textures@{used\+Textures}}
+\index{used\+Textures@{used\+Textures}!Editor\+Level@{Editor\+Level}}
+\subsubsection[{used\+Textures() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+List$<$ int $>$ Editor\+Level\+::used\+Textures (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_level_a55d8b5bb811bd19ff03207aa5139cd29}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Liste des index des textures utilisée par le niveau. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+editorlevel.\+h\item 
+editorlevel.\+cpp\end{DoxyCompactItemize}

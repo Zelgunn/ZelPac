@@ -13,14 +13,14 @@ void TextureHandler::addTexture(QString completeFilename)
 
     m_texturenames.append(shortFilename);
     m_filenames.append(completeFilename);
-    m_textures.append(QImage(completeFilename));
+    m_textures.append(QPixmap(completeFilename));
 }
 
-QImage TextureHandler::textureAt(int index) const
+QPixmap TextureHandler::textureAt(int index) const
 {
     if((index < 0) || (index >= m_textures.size()))
     {
-        QImage errorTexture(32,32, QImage::Format_ARGB32);
+        QPixmap errorTexture(32,32);
         errorTexture.fill(Qt::red);
         return errorTexture;
     }

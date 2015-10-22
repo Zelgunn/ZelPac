@@ -345,7 +345,7 @@ void MainWindow::on_actionNouveau_triggered()
 
 void MainWindow::on_listWidget_currentRowChanged(int currentRow)
 {
-    ui->label_SelectedTexture->setPixmap(QPixmap::fromImage(m_game->textureHandler()->textureAt(currentRow)));
+    ui->label_SelectedTexture->setPixmap(m_game->textureHandler()->textureAt(currentRow));
 }
 
 void MainWindow::on_actionSauvegarder_sous_triggered()
@@ -452,13 +452,13 @@ void MainWindow::on_levelsComboBox_currentIndexChanged(int index)
     ui->dsb_scaredTime->setValue(currentLevel()->scaredTime());
     //ui->sb
 
-    ui->l_emptyTilePreview->setPixmap(QPixmap::fromImage(m_game->textureHandler()->textureAt(currentLevel()->emptyTileTexture())));
+    ui->l_emptyTilePreview->setPixmap(m_game->textureHandler()->textureAt(currentLevel()->emptyTileTexture()));
     ui->le_emptyTileFilename->setText(m_game->textureHandler()->textureNameAt(currentLevel()->emptyTileTexture()));
 
-    ui->l_pelletTilePreview->setPixmap(QPixmap::fromImage(m_game->textureHandler()->textureAt(currentLevel()->pelletTileTexture())));
+    ui->l_pelletTilePreview->setPixmap(m_game->textureHandler()->textureAt(currentLevel()->pelletTileTexture()));
     ui->le_pelletTileFilename->setText(m_game->textureHandler()->textureNameAt(currentLevel()->pelletTileTexture()));
 
-    ui->l_energizerTilePreview->setPixmap(QPixmap::fromImage(m_game->textureHandler()->textureAt(currentLevel()->energizerTileTexture())));
+    ui->l_energizerTilePreview->setPixmap(m_game->textureHandler()->textureAt(currentLevel()->energizerTileTexture()));
     ui->le_energizerTileFilename->setText(m_game->textureHandler()->textureNameAt(currentLevel()->energizerTileTexture()));
 }
 
@@ -517,7 +517,7 @@ void MainWindow::on_tb_emptyTile_clicked()
     if(dialog.exec())
     {
         int selectedTextureIndex = dialog.selectedTextureIndex();
-        ui->l_emptyTilePreview->setPixmap(QPixmap::fromImage(m_game->textureHandler()->textureAt(selectedTextureIndex)));
+        ui->l_emptyTilePreview->setPixmap(m_game->textureHandler()->textureAt(selectedTextureIndex));
         ui->le_emptyTileFilename->setText(m_game->textureHandler()->textureNameAt(selectedTextureIndex));
         currentLevel()->setEmptyTileTexture(selectedTextureIndex);
     }
@@ -530,7 +530,7 @@ void MainWindow::on_tb_pelletTile_clicked()
     if(dialog.exec())
     {
         int selectedTextureIndex = dialog.selectedTextureIndex();
-        ui->l_pelletTilePreview->setPixmap(QPixmap::fromImage(m_game->textureHandler()->textureAt(selectedTextureIndex)));
+        ui->l_pelletTilePreview->setPixmap(m_game->textureHandler()->textureAt(selectedTextureIndex));
         ui->le_pelletTileFilename->setText(m_game->textureHandler()->textureNameAt(selectedTextureIndex));
         currentLevel()->setPelletTileTexture(selectedTextureIndex);
     }
@@ -543,7 +543,7 @@ void MainWindow::on_tb_energizerTile_clicked()
     if(dialog.exec())
     {
         int selectedTextureIndex = dialog.selectedTextureIndex();
-        ui->l_energizerTilePreview->setPixmap(QPixmap::fromImage(m_game->textureHandler()->textureAt(selectedTextureIndex)));
+        ui->l_energizerTilePreview->setPixmap(m_game->textureHandler()->textureAt(selectedTextureIndex));
         ui->le_energizerTileFilename->setText(m_game->textureHandler()->textureNameAt(selectedTextureIndex));
         currentLevel()->setEnergizerTileTexture(selectedTextureIndex);
     }

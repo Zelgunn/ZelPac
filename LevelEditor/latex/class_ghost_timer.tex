@@ -1,0 +1,190 @@
+\hypertarget{class_ghost_timer}{}\section{Ghost\+Timer Class Reference}
+\label{class_ghost_timer}\index{Ghost\+Timer@{Ghost\+Timer}}
+
+
+Classe de Timer pour les modes des fantômes.  
+
+
+
+
+{\ttfamily \#include $<$ghosttimer.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376}{ghost\+Chasing\+Mode\+I\+D} \{ \hyperlink{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376a6e29811e4274cb53894ef379a7dcf352}{Scatter}, 
+\hyperlink{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376a87af289aa3e260abda0563f393ef21a9}{Chase}, 
+\hyperlink{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376a3e6680ea135bad0232bff23046d10b77}{Caught}
+ \}\begin{DoxyCompactList}\small\item\em Identificateurs des modes de poursuite des fantômes. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ghost_timer_adebf7cf8bb544e23f6fd8ce7095b8394}{Ghost\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de base de la classe \hyperlink{class_ghost_timer}{Ghost\+Timer}. \end{DoxyCompactList}\item 
+\hyperlink{class_ghost_timer_a363147268fa53ea5e7f9e4b50b8453ef}{Ghost\+Timer} (Q\+Dom\+Element elem)
+\begin{DoxyCompactList}\small\item\em Surcharge du constructeur pour utiliser X\+M\+L. \end{DoxyCompactList}\item 
+int \hyperlink{class_ghost_timer_adf6ae0f333a95d4fe3e6f8a132a8201d}{current\+Mode} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_ghost_timer_acca62ab4734e961d46965a7d10a886ad}{increase\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Augmente la valeur du timer de 16 mscs. \end{DoxyCompactList}\item 
+void \hyperlink{class_ghost_timer_a5455ccb72e8404c464d41511e62c38d9}{add\+Step} (double duration, int mode)
+\begin{DoxyCompactList}\small\item\em Ajoute une étape au timer. \end{DoxyCompactList}\item 
+Q\+List$<$ double $>$ \hyperlink{class_ghost_timer_a39ac041b62126d669736383d299f4afe}{steps\+Time} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+Q\+List$<$ int $>$ \hyperlink{class_ghost_timer_a18606ac671580c3e30f741c2d2cd0f83}{ghost\+Mode} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe de Timer pour les modes des fantômes. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1
+\end{DoxyVersion}
+Cette classe permet de suivre le mode de poursuite des fantômes en fonction du temps écoulé dans la partie.
+
+Il est nécessaire d\textquotesingle{}appeler manuellement la fonction de mise à jour du timer. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376}{}\index{Ghost\+Timer@{Ghost\+Timer}!ghost\+Chasing\+Mode\+I\+D@{ghost\+Chasing\+Mode\+I\+D}}
+\index{ghost\+Chasing\+Mode\+I\+D@{ghost\+Chasing\+Mode\+I\+D}!Ghost\+Timer@{Ghost\+Timer}}
+\subsubsection[{ghost\+Chasing\+Mode\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Ghost\+Timer\+::ghost\+Chasing\+Mode\+I\+D}}\label{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376}
+
+
+Identificateurs des modes de poursuite des fantômes. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Scatter@{Scatter}!Ghost\+Timer@{Ghost\+Timer}}\index{Ghost\+Timer@{Ghost\+Timer}!Scatter@{Scatter}}\item[{\em 
+\hypertarget{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376a6e29811e4274cb53894ef379a7dcf352}{}Scatter\label{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376a6e29811e4274cb53894ef379a7dcf352}
+}]Les fantômes se dirigent vers leur coin spécifique \index{Chase@{Chase}!Ghost\+Timer@{Ghost\+Timer}}\index{Ghost\+Timer@{Ghost\+Timer}!Chase@{Chase}}\item[{\em 
+\hypertarget{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376a87af289aa3e260abda0563f393ef21a9}{}Chase\label{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376a87af289aa3e260abda0563f393ef21a9}
+}]Les fantômes utilisent leur I\+A personnelle pour attraper le Pacman \index{Caught@{Caught}!Ghost\+Timer@{Ghost\+Timer}}\index{Ghost\+Timer@{Ghost\+Timer}!Caught@{Caught}}\item[{\em 
+\hypertarget{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376a3e6680ea135bad0232bff23046d10b77}{}Caught\label{class_ghost_timer_ab0d7214f12a7a296873f7066da0dd376a3e6680ea135bad0232bff23046d10b77}
+}]Les fantômes attrapés se dirigent vers leur maison et y reste jusqu\textquotesingle{}à expiration \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_ghost_timer_adebf7cf8bb544e23f6fd8ce7095b8394}{}\index{Ghost\+Timer@{Ghost\+Timer}!Ghost\+Timer@{Ghost\+Timer}}
+\index{Ghost\+Timer@{Ghost\+Timer}!Ghost\+Timer@{Ghost\+Timer}}
+\subsubsection[{Ghost\+Timer()}]{\setlength{\rightskip}{0pt plus 5cm}Ghost\+Timer\+::\+Ghost\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ghost_timer_adebf7cf8bb544e23f6fd8ce7095b8394}
+
+
+Constructeur de base de la classe \hyperlink{class_ghost_timer}{Ghost\+Timer}. 
+
+Note \+: Cette version du constructeur n\textquotesingle{}est pas destinée à être utilisée en dehors de l\textquotesingle{}initialisation d\textquotesingle{}une classe qui la contient. L\textquotesingle{}objet créé n\textquotesingle{}est pas valide. \hypertarget{class_ghost_timer_a363147268fa53ea5e7f9e4b50b8453ef}{}\index{Ghost\+Timer@{Ghost\+Timer}!Ghost\+Timer@{Ghost\+Timer}}
+\index{Ghost\+Timer@{Ghost\+Timer}!Ghost\+Timer@{Ghost\+Timer}}
+\subsubsection[{Ghost\+Timer(\+Q\+Dom\+Element elem)}]{\setlength{\rightskip}{0pt plus 5cm}Ghost\+Timer\+::\+Ghost\+Timer (
+\begin{DoxyParamCaption}
+\item[{Q\+Dom\+Element}]{elem}
+\end{DoxyParamCaption}
+)}\label{class_ghost_timer_a363147268fa53ea5e7f9e4b50b8453ef}
+
+
+Surcharge du constructeur pour utiliser X\+M\+L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & Données X\+M\+L à charger lors de la contruction de l\textquotesingle{}objet.\\
+\hline
+\end{DoxyParams}
+L\textquotesingle{}élément X\+M\+L doit ressembler au template suivant \+:
+\begin{DoxyItemize}
+\item $<$\hyperlink{class_ghost_timer}{Ghost\+Timer}$>$
+\begin{DoxyItemize}
+\item $<$Step time=\char`\"{}7\char`\"{} mode=\char`\"{}0\char`\"{}/$>$ // Mode Scatter (0) pendant 7 secondes.
+\item $<$Step time=\char`\"{}20\char`\"{} mode=\char`\"{}1\char`\"{}/$>$ // Puis Chase(1) pendant 20 secondes.
+\item $<$Step time=\char`\"{}7\char`\"{} mode=\char`\"{}0\char`\"{}/$>$ // Puis Scatter (0) jusqu\textquotesingle{}à la fin (time ignoré).
+\end{DoxyItemize}
+\item $<$/\+Ghost\+Timer$>$ 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ghost_timer_a5455ccb72e8404c464d41511e62c38d9}{}\index{Ghost\+Timer@{Ghost\+Timer}!add\+Step@{add\+Step}}
+\index{add\+Step@{add\+Step}!Ghost\+Timer@{Ghost\+Timer}}
+\subsubsection[{add\+Step(double duration, int mode)}]{\setlength{\rightskip}{0pt plus 5cm}void Ghost\+Timer\+::add\+Step (
+\begin{DoxyParamCaption}
+\item[{double}]{duration, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\label{class_ghost_timer_a5455ccb72e8404c464d41511e62c38d9}
+
+
+Ajoute une étape au timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & Durée de l\textquotesingle{}étape. \\
+\hline
+{\em mode} & Mode utilisé pendant la nouvelle étape. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ghost_timer_adf6ae0f333a95d4fe3e6f8a132a8201d}{}\index{Ghost\+Timer@{Ghost\+Timer}!current\+Mode@{current\+Mode}}
+\index{current\+Mode@{current\+Mode}!Ghost\+Timer@{Ghost\+Timer}}
+\subsubsection[{current\+Mode() const }]{\setlength{\rightskip}{0pt plus 5cm}int Ghost\+Timer\+::current\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ghost_timer_adf6ae0f333a95d4fe3e6f8a132a8201d}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Mode de poursuite actuel du timer. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_timer_a18606ac671580c3e30f741c2d2cd0f83}{}\index{Ghost\+Timer@{Ghost\+Timer}!ghost\+Mode@{ghost\+Mode}}
+\index{ghost\+Mode@{ghost\+Mode}!Ghost\+Timer@{Ghost\+Timer}}
+\subsubsection[{ghost\+Mode() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+List$<$ int $>$ Ghost\+Timer\+::ghost\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ghost_timer_a18606ac671580c3e30f741c2d2cd0f83}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Liste des modes du timer. 
+\end{DoxyReturn}
+\hypertarget{class_ghost_timer_acca62ab4734e961d46965a7d10a886ad}{}\index{Ghost\+Timer@{Ghost\+Timer}!increase\+Timer@{increase\+Timer}}
+\index{increase\+Timer@{increase\+Timer}!Ghost\+Timer@{Ghost\+Timer}}
+\subsubsection[{increase\+Timer()}]{\setlength{\rightskip}{0pt plus 5cm}void Ghost\+Timer\+::increase\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ghost_timer_acca62ab4734e961d46965a7d10a886ad}
+
+
+Augmente la valeur du timer de 16 mscs. 
+
+Si la valeur excède la prochaine limite de temps, le timer passe au prochain mode et réinitialise sa valeur de temps. \hypertarget{class_ghost_timer_a39ac041b62126d669736383d299f4afe}{}\index{Ghost\+Timer@{Ghost\+Timer}!steps\+Time@{steps\+Time}}
+\index{steps\+Time@{steps\+Time}!Ghost\+Timer@{Ghost\+Timer}}
+\subsubsection[{steps\+Time() const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+List$<$ double $>$ Ghost\+Timer\+::steps\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ghost_timer_a39ac041b62126d669736383d299f4afe}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Temps entre chaque mode. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ghosttimer.\+h\item 
+ghosttimer.\+cpp\end{DoxyCompactItemize}

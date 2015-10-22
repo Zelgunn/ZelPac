@@ -1,0 +1,223 @@
+\hypertarget{class_texture_handler}{}\section{Texture\+Handler Class Reference}
+\label{class_texture_handler}\index{Texture\+Handler@{Texture\+Handler}}
+
+
+Gestionnaire de textures.  
+
+
+
+
+{\ttfamily \#include $<$texturehandler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_texture_handler_a9056de3d9a44b2e696c8e8b39462dd46}{Texture\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de base de \hyperlink{class_texture_handler}{Texture\+Handler}. \end{DoxyCompactList}\item 
+void \hyperlink{class_texture_handler_a67bc892bd24dfd85bc1eb3af78b8ca40}{add\+Texture} (Q\+String complete\+Filename)
+\begin{DoxyCompactList}\small\item\em Ajoute une texture via le chemin du fichier. \end{DoxyCompactList}\item 
+Q\+Pixmap \hyperlink{class_texture_handler_a608d66882a46775d1ce498895cf3679b}{texture\+At} (int index) const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_texture_handler_a0cdb224be8b1980733698f41b856a55c}{filename\+At} (int index) const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_texture_handler_aa6d8737d949687142ffff1e163a15b4f}{texture\+Name\+At} (int index) const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+bool \hyperlink{class_texture_handler_a28014e2b89614335ec2131cdfb94c0be}{contains} (Q\+String filename) const 
+\begin{DoxyCompactList}\small\item\em Vérifie si le gestionnaire connait déjà la texture donnée. \end{DoxyCompactList}\item 
+int \hyperlink{class_texture_handler_a4753c03df1e7718542557000c04988b1}{index\+Of\+Texture\+Name} (Q\+String texture\+Name) const 
+\begin{DoxyCompactList}\small\item\em Récupère l\textquotesingle{}index de la texture dans le gestionnaire. \end{DoxyCompactList}\item 
+int \hyperlink{class_texture_handler_aa3fe3f090ff350d2357b4b6fdb570eb7}{count} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_texture_handler_a57242ce71321d2d3376f621486bd432c}{tiles\+Size} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_texture_handler_aecf95d09a430bbc7b92f0a2189b9ff7d}{set\+Tiles\+Size} (int \hyperlink{class_texture_handler_a57242ce71321d2d3376f621486bd432c}{tiles\+Size})
+\begin{DoxyCompactList}\small\item\em Setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gestionnaire de textures. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+Ce gestionnaire de textures permet de faire le lien entre le nom complet d\textquotesingle{}un fichier, son nom en court et son index dans le gestionnaire. Le gestionnaire par défaut modifie la taille des textures. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_texture_handler_a9056de3d9a44b2e696c8e8b39462dd46}{}\index{Texture\+Handler@{Texture\+Handler}!Texture\+Handler@{Texture\+Handler}}
+\index{Texture\+Handler@{Texture\+Handler}!Texture\+Handler@{Texture\+Handler}}
+\subsubsection[{Texture\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Handler\+::\+Texture\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_texture_handler_a9056de3d9a44b2e696c8e8b39462dd46}
+
+
+Constructeur de base de \hyperlink{class_texture_handler}{Texture\+Handler}. 
+
+Crée un gestionnaire totalement vide. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_texture_handler_a67bc892bd24dfd85bc1eb3af78b8ca40}{}\index{Texture\+Handler@{Texture\+Handler}!add\+Texture@{add\+Texture}}
+\index{add\+Texture@{add\+Texture}!Texture\+Handler@{Texture\+Handler}}
+\subsubsection[{add\+Texture(\+Q\+String complete\+Filename)}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\+Handler\+::add\+Texture (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{complete\+Filename}
+\end{DoxyParamCaption}
+)}\label{class_texture_handler_a67bc892bd24dfd85bc1eb3af78b8ca40}
+
+
+Ajoute une texture via le chemin du fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em complete\+Filename} & Chemin complet vers la texture ajoutée. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_texture_handler_a28014e2b89614335ec2131cdfb94c0be}{}\index{Texture\+Handler@{Texture\+Handler}!contains@{contains}}
+\index{contains@{contains}!Texture\+Handler@{Texture\+Handler}}
+\subsubsection[{contains(\+Q\+String filename) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Texture\+Handler\+::contains (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{filename}
+\end{DoxyParamCaption}
+) const}\label{class_texture_handler_a28014e2b89614335ec2131cdfb94c0be}
+
+
+Vérifie si le gestionnaire connait déjà la texture donnée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Chemin complet vers la texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si le gestionnaire contient la texture, sinon Faux. 
+\end{DoxyReturn}
+\hypertarget{class_texture_handler_aa3fe3f090ff350d2357b4b6fdb570eb7}{}\index{Texture\+Handler@{Texture\+Handler}!count@{count}}
+\index{count@{count}!Texture\+Handler@{Texture\+Handler}}
+\subsubsection[{count() const }]{\setlength{\rightskip}{0pt plus 5cm}int Texture\+Handler\+::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_texture_handler_aa3fe3f090ff350d2357b4b6fdb570eb7}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Nombre de textures différentes stockées. 
+\end{DoxyReturn}
+\hypertarget{class_texture_handler_a0cdb224be8b1980733698f41b856a55c}{}\index{Texture\+Handler@{Texture\+Handler}!filename\+At@{filename\+At}}
+\index{filename\+At@{filename\+At}!Texture\+Handler@{Texture\+Handler}}
+\subsubsection[{filename\+At(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Texture\+Handler\+::filename\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_texture_handler_a0cdb224be8b1980733698f41b856a55c}
+
+
+Getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index de la texture dans le gestionnaire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Chemin complet de la texture à l\textquotesingle{}index donné. 
+\end{DoxyReturn}
+\hypertarget{class_texture_handler_a4753c03df1e7718542557000c04988b1}{}\index{Texture\+Handler@{Texture\+Handler}!index\+Of\+Texture\+Name@{index\+Of\+Texture\+Name}}
+\index{index\+Of\+Texture\+Name@{index\+Of\+Texture\+Name}!Texture\+Handler@{Texture\+Handler}}
+\subsubsection[{index\+Of\+Texture\+Name(\+Q\+String texture\+Name) const }]{\setlength{\rightskip}{0pt plus 5cm}int Texture\+Handler\+::index\+Of\+Texture\+Name (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{texture\+Name}
+\end{DoxyParamCaption}
+) const}\label{class_texture_handler_a4753c03df1e7718542557000c04988b1}
+
+
+Récupère l\textquotesingle{}index de la texture dans le gestionnaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+Name} & Nom du fichier de la texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index de la texture qui porte le nom donné. 
+\end{DoxyReturn}
+\hypertarget{class_texture_handler_aecf95d09a430bbc7b92f0a2189b9ff7d}{}\index{Texture\+Handler@{Texture\+Handler}!set\+Tiles\+Size@{set\+Tiles\+Size}}
+\index{set\+Tiles\+Size@{set\+Tiles\+Size}!Texture\+Handler@{Texture\+Handler}}
+\subsubsection[{set\+Tiles\+Size(int tiles\+Size)}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\+Handler\+::set\+Tiles\+Size (
+\begin{DoxyParamCaption}
+\item[{int}]{tiles\+Size}
+\end{DoxyParamCaption}
+)}\label{class_texture_handler_aecf95d09a430bbc7b92f0a2189b9ff7d}
+
+
+Setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tiles\+Size} & Taille des textures du gestionnaire. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_texture_handler_a608d66882a46775d1ce498895cf3679b}{}\index{Texture\+Handler@{Texture\+Handler}!texture\+At@{texture\+At}}
+\index{texture\+At@{texture\+At}!Texture\+Handler@{Texture\+Handler}}
+\subsubsection[{texture\+At(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pixmap Texture\+Handler\+::texture\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_texture_handler_a608d66882a46775d1ce498895cf3679b}
+
+
+Getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index de la texture dans le gestionnaire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Texture à l\textquotesingle{}index donné. 
+\end{DoxyReturn}
+\hypertarget{class_texture_handler_aa6d8737d949687142ffff1e163a15b4f}{}\index{Texture\+Handler@{Texture\+Handler}!texture\+Name\+At@{texture\+Name\+At}}
+\index{texture\+Name\+At@{texture\+Name\+At}!Texture\+Handler@{Texture\+Handler}}
+\subsubsection[{texture\+Name\+At(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Texture\+Handler\+::texture\+Name\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_texture_handler_aa6d8737d949687142ffff1e163a15b4f}
+
+
+Getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index de la texture dans le gestionnaire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nom du fichier de la texture à l\textquotesingle{}index donné. 
+\end{DoxyReturn}
+\hypertarget{class_texture_handler_a57242ce71321d2d3376f621486bd432c}{}\index{Texture\+Handler@{Texture\+Handler}!tiles\+Size@{tiles\+Size}}
+\index{tiles\+Size@{tiles\+Size}!Texture\+Handler@{Texture\+Handler}}
+\subsubsection[{tiles\+Size() const }]{\setlength{\rightskip}{0pt plus 5cm}int Texture\+Handler\+::tiles\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_texture_handler_a57242ce71321d2d3376f621486bd432c}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Taille des textures du gestionnaire. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+texturehandler.\+h\item 
+texturehandler.\+cpp\end{DoxyCompactItemize}

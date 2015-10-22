@@ -1,0 +1,89 @@
+\hypertarget{class_texture_select_dialog}{}\section{Texture\+Select\+Dialog Class Reference}
+\label{class_texture_select_dialog}\index{Texture\+Select\+Dialog@{Texture\+Select\+Dialog}}
+
+
+Classe de fenêtre de sélection de texture.  
+
+
+
+
+{\ttfamily \#include $<$textureselectdialog.\+h$>$}
+
+Inheritance diagram for Texture\+Select\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_texture_select_dialog}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_texture_select_dialog_a76784e782a28dd37c8739cd93a77ee95}{Texture\+Select\+Dialog} (\hyperlink{class_texture_handler}{Texture\+Handler} $\ast$texture\+Handler, Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructeur de base de la fenêtre \hyperlink{class_texture_select_dialog}{Texture\+Select\+Dialog}. \end{DoxyCompactList}\item 
+\hyperlink{class_texture_select_dialog_afa8268eacb42fa8ff6b6372e7a8da9fd}{$\sim$\+Texture\+Select\+Dialog} ()
+\item 
+int \hyperlink{class_texture_select_dialog_aac9d46bff08b03776e5da51ffe5e8527}{selected\+Texture\+Index} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe de fenêtre de sélection de texture. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+En fonction du gestionnaire de texture passé en paramètre, la fenêtre affiche les textures que le gestionnaire contient et les affiche en forme de liste. Lorsque la fenêtre se ferme, il est possible de récupérer l\textquotesingle{}index de la dernière texture sélectionnée via la fonction selected\+Texture\+Index. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_texture_select_dialog_a76784e782a28dd37c8739cd93a77ee95}{}\index{Texture\+Select\+Dialog@{Texture\+Select\+Dialog}!Texture\+Select\+Dialog@{Texture\+Select\+Dialog}}
+\index{Texture\+Select\+Dialog@{Texture\+Select\+Dialog}!Texture\+Select\+Dialog@{Texture\+Select\+Dialog}}
+\subsubsection[{Texture\+Select\+Dialog(\+Texture\+Handler $\ast$texture\+Handler, Q\+Widget $\ast$parent=0)}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Select\+Dialog\+::\+Texture\+Select\+Dialog (
+\begin{DoxyParamCaption}
+\item[{{\bf Texture\+Handler} $\ast$}]{texture\+Handler, }
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\label{class_texture_select_dialog_a76784e782a28dd37c8739cd93a77ee95}
+
+
+Constructeur de base de la fenêtre \hyperlink{class_texture_select_dialog}{Texture\+Select\+Dialog}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+Handler} & Gestionnaire de texture que la fenêtre liste. \\
+\hline
+{\em parent} & Parent de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_texture_select_dialog_afa8268eacb42fa8ff6b6372e7a8da9fd}{}\index{Texture\+Select\+Dialog@{Texture\+Select\+Dialog}!````~Texture\+Select\+Dialog@{$\sim$\+Texture\+Select\+Dialog}}
+\index{````~Texture\+Select\+Dialog@{$\sim$\+Texture\+Select\+Dialog}!Texture\+Select\+Dialog@{Texture\+Select\+Dialog}}
+\subsubsection[{$\sim$\+Texture\+Select\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Select\+Dialog\+::$\sim$\+Texture\+Select\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_texture_select_dialog_afa8268eacb42fa8ff6b6372e7a8da9fd}
+Destructeur de \hyperlink{class_texture_select_dialog}{Texture\+Select\+Dialog}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_texture_select_dialog_aac9d46bff08b03776e5da51ffe5e8527}{}\index{Texture\+Select\+Dialog@{Texture\+Select\+Dialog}!selected\+Texture\+Index@{selected\+Texture\+Index}}
+\index{selected\+Texture\+Index@{selected\+Texture\+Index}!Texture\+Select\+Dialog@{Texture\+Select\+Dialog}}
+\subsubsection[{selected\+Texture\+Index() const }]{\setlength{\rightskip}{0pt plus 5cm}int Texture\+Select\+Dialog\+::selected\+Texture\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_texture_select_dialog_aac9d46bff08b03776e5da51ffe5e8527}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Index de la dernière texture sélectionnée. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+textureselectdialog.\+h\item 
+textureselectdialog.\+cpp\end{DoxyCompactItemize}

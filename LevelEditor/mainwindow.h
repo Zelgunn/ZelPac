@@ -20,13 +20,23 @@
 #include "editorgame.h"
 #include "editorunit.h"
 
+/**
+ * @struct unitWidgetSet_str
+ * @brief Structure contenant les objets d'interface lié à une unité.
+ */
 typedef struct unitWidgetSet_str
 {
+    /** @brief SpinBox réglant la vitesse. */
     QSpinBox *speed;
+    /** @brief SpinBox réglant la vitesse lors du mode Appeuré. */
     QSpinBox *sspeed;
+    /** @brief SpinBox réglant la position en largeur. */
     QSpinBox *posx;
+    /** @brief SpinBox réglant la position en hauteur. */
     QSpinBox *posy;
+    /** @brief Case à cocher réglant l'offset d'une demi-case en largeur. */
     QCheckBox *halfx;
+    /** @brief Case à cocher réglant l'offset d'une demi-case en hauteur. */
     QCheckBox *halfy;
 } UnitWidgetSet;
 

@@ -1,0 +1,186 @@
+\hypertarget{class_editor_game}{}\section{Editor\+Game Class Reference}
+\label{class_editor_game}\index{Editor\+Game@{Editor\+Game}}
+
+
+La classe \hyperlink{class_editor_game}{Editor\+Game} gère l\textquotesingle{}ensemble des paramètres pouvant être passés au programme Pacman.  
+
+
+
+
+{\ttfamily \#include $<$editorgame.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_editor_game_a81d7f33e9c0f5ce417db16ac121c3ca7}{Editor\+Game} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de base de \hyperlink{class_editor_game}{Editor\+Game}. \end{DoxyCompactList}\item 
+\hyperlink{class_editor_game_aa39c9fa83c78da05b03477ac172c03e6}{Editor\+Game} (Q\+Dom\+Document dom)
+\begin{DoxyCompactList}\small\item\em Constructeur X\+M\+L de \hyperlink{class_editor_game}{Editor\+Game}. \end{DoxyCompactList}\item 
+\hyperlink{class_editor_game_a910df7a6be24a5ab77f51ab04bfa2a64}{$\sim$\+Editor\+Game} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \hyperlink{class_editor_game}{Editor\+Game}. \end{DoxyCompactList}\item 
+\hyperlink{class_editor_level}{Editor\+Level} $\ast$ \hyperlink{class_editor_game_a071f3a0c8398c26e3d8ffcd8f38f71df}{level} (int index) const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_game_a08a34b285392ce950141e92e8a3e2490}{add\+Level} (\hyperlink{class_editor_level}{Editor\+Level} $\ast$\hyperlink{class_editor_game_a071f3a0c8398c26e3d8ffcd8f38f71df}{level})
+\begin{DoxyCompactList}\small\item\em Ajoute un niveau à l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+int \hyperlink{class_editor_game_a84465e0451cf75b8732630452263584c}{levels\+Count} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_editor_game_afb6b6a5ac54114f098d840592f64c6cb}{texture\+Count} () const 
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+\hyperlink{class_texture_handler}{Texture\+Handler} $\ast$ \hyperlink{class_editor_game_acc719e48b13201125f52dbddb530e77e}{texture\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_editor_game_a181792868a77319e18860e4887a15bd3}{save} (Q\+String filename) const 
+\begin{DoxyCompactList}\small\item\em Sauvegarde l\textquotesingle{}ensemble des paramètres dans le fichier donné. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+La classe \hyperlink{class_editor_game}{Editor\+Game} gère l\textquotesingle{}ensemble des paramètres pouvant être passés au programme Pacman. 
+
+\begin{DoxyAuthor}{Author}
+Valentin D.\+d.\+G. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+La classe gère un ensemble de niveaux dont les paramètres sont via une U\+I. \hyperlink{class_editor_game}{Editor\+Game} peut s\textquotesingle{}instancier avec un document X\+M\+L et s\textquotesingle{}exporter de la même façon afin de sauvegarder les données. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_editor_game_a81d7f33e9c0f5ce417db16ac121c3ca7}{}\index{Editor\+Game@{Editor\+Game}!Editor\+Game@{Editor\+Game}}
+\index{Editor\+Game@{Editor\+Game}!Editor\+Game@{Editor\+Game}}
+\subsubsection[{Editor\+Game()}]{\setlength{\rightskip}{0pt plus 5cm}Editor\+Game\+::\+Editor\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_editor_game_a81d7f33e9c0f5ce417db16ac121c3ca7}
+
+
+Constructeur de base de \hyperlink{class_editor_game}{Editor\+Game}. 
+
+Crée une instance de \hyperlink{class_editor_game}{Editor\+Game} vide qui ne dispose d\textquotesingle{}aucun niveau ni d\textquotesingle{}aucun paramètres. Lors de cette instanciation, le gestionnaire de texture est créé afin d\textquotesingle{}être utilisé par l\textquotesingle{}ensemble des niveaux. \hypertarget{class_editor_game_aa39c9fa83c78da05b03477ac172c03e6}{}\index{Editor\+Game@{Editor\+Game}!Editor\+Game@{Editor\+Game}}
+\index{Editor\+Game@{Editor\+Game}!Editor\+Game@{Editor\+Game}}
+\subsubsection[{Editor\+Game(\+Q\+Dom\+Document dom)}]{\setlength{\rightskip}{0pt plus 5cm}Editor\+Game\+::\+Editor\+Game (
+\begin{DoxyParamCaption}
+\item[{Q\+Dom\+Document}]{dom}
+\end{DoxyParamCaption}
+)}\label{class_editor_game_aa39c9fa83c78da05b03477ac172c03e6}
+
+
+Constructeur X\+M\+L de \hyperlink{class_editor_game}{Editor\+Game}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dom} & Document X\+M\+L contenant les paramètres sauvegardés.\\
+\hline
+\end{DoxyParams}
+Crée une instance de \hyperlink{class_editor_game}{Editor\+Game} qui charge les paramètres se trouvant dans le document X\+M\+L. \hypertarget{class_editor_game_a910df7a6be24a5ab77f51ab04bfa2a64}{}\index{Editor\+Game@{Editor\+Game}!````~Editor\+Game@{$\sim$\+Editor\+Game}}
+\index{````~Editor\+Game@{$\sim$\+Editor\+Game}!Editor\+Game@{Editor\+Game}}
+\subsubsection[{$\sim$\+Editor\+Game()}]{\setlength{\rightskip}{0pt plus 5cm}Editor\+Game\+::$\sim$\+Editor\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_editor_game_a910df7a6be24a5ab77f51ab04bfa2a64}
+
+
+Destructeur de \hyperlink{class_editor_game}{Editor\+Game}. 
+
+Désalloue la mémoire de l\textquotesingle{}objet en plus de celles des niveaux qu\textquotesingle{}il contient. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_editor_game_a08a34b285392ce950141e92e8a3e2490}{}\index{Editor\+Game@{Editor\+Game}!add\+Level@{add\+Level}}
+\index{add\+Level@{add\+Level}!Editor\+Game@{Editor\+Game}}
+\subsubsection[{add\+Level(\+Editor\+Level $\ast$level)}]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Game\+::add\+Level (
+\begin{DoxyParamCaption}
+\item[{{\bf Editor\+Level} $\ast$}]{level}
+\end{DoxyParamCaption}
+)}\label{class_editor_game_a08a34b285392ce950141e92e8a3e2490}
+
+
+Ajoute un niveau à l\textquotesingle{}objet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Pointeur sur le niveau ajouté. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_game_a071f3a0c8398c26e3d8ffcd8f38f71df}{}\index{Editor\+Game@{Editor\+Game}!level@{level}}
+\index{level@{level}!Editor\+Game@{Editor\+Game}}
+\subsubsection[{level(int index) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Editor\+Level} $\ast$ Editor\+Game\+::level (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_editor_game_a071f3a0c8398c26e3d8ffcd8f38f71df}
+
+
+Getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index du niveau à renvoyer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointeur sur le niveau à l\textquotesingle{}index donné. 
+\end{DoxyReturn}
+\hypertarget{class_editor_game_a84465e0451cf75b8732630452263584c}{}\index{Editor\+Game@{Editor\+Game}!levels\+Count@{levels\+Count}}
+\index{levels\+Count@{levels\+Count}!Editor\+Game@{Editor\+Game}}
+\subsubsection[{levels\+Count() const }]{\setlength{\rightskip}{0pt plus 5cm}int Editor\+Game\+::levels\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_game_a84465e0451cf75b8732630452263584c}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Nombre de niveaux contenus dans l\textquotesingle{}objet. 
+\end{DoxyReturn}
+\hypertarget{class_editor_game_a181792868a77319e18860e4887a15bd3}{}\index{Editor\+Game@{Editor\+Game}!save@{save}}
+\index{save@{save}!Editor\+Game@{Editor\+Game}}
+\subsubsection[{save(\+Q\+String filename) const }]{\setlength{\rightskip}{0pt plus 5cm}void Editor\+Game\+::save (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{filename}
+\end{DoxyParamCaption}
+) const}\label{class_editor_game_a181792868a77319e18860e4887a15bd3}
+
+
+Sauvegarde l\textquotesingle{}ensemble des paramètres dans le fichier donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Chemin (complet) vers le fichier. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_editor_game_afb6b6a5ac54114f098d840592f64c6cb}{}\index{Editor\+Game@{Editor\+Game}!texture\+Count@{texture\+Count}}
+\index{texture\+Count@{texture\+Count}!Editor\+Game@{Editor\+Game}}
+\subsubsection[{texture\+Count() const }]{\setlength{\rightskip}{0pt plus 5cm}int Editor\+Game\+::texture\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_editor_game_afb6b6a5ac54114f098d840592f64c6cb}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Nombre de textures contenues dans le gestionnaire de textures. 
+\end{DoxyReturn}
+\hypertarget{class_editor_game_acc719e48b13201125f52dbddb530e77e}{}\index{Editor\+Game@{Editor\+Game}!texture\+Handler@{texture\+Handler}}
+\index{texture\+Handler@{texture\+Handler}!Editor\+Game@{Editor\+Game}}
+\subsubsection[{texture\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Texture\+Handler} $\ast$ Editor\+Game\+::texture\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_editor_game_acc719e48b13201125f52dbddb530e77e}
+
+
+Getter. 
+
+\begin{DoxyReturn}{Returns}
+Pointeur sur le gestionnaire de texture. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+editorgame.\+h\item 
+editorgame.\+cpp\end{DoxyCompactItemize}

@@ -9,13 +9,21 @@
 
 #include <QDebug>
 
-
+/**
+ * @struct UnitData_str
+ * @brief Petite structure regroupant les paramètres principaux d'une unité.
+ */
 typedef struct UnitData_str
 {
+    /** @brief Position de l'unité. */
     QPoint position;
+    /** @brief Si vrai, la position est décalé d'une demi case vers la droite. */
     bool halfx;
+    /** @brief Si vrai, la position est décalé d'une demi case vers le bas. */
     bool halfy;
+    /** @brief Vitesse normale de l'unité. */
     int speed;
+    /** @brief Vitesse de l'unité lorsque les fantômes sont appeurés. */
     int sspeed;
 } UnitData;
 
@@ -71,8 +79,7 @@ public:
 
     /**
      * @brief Ajoute l'élément XML dans l'arbre donné, les paramètres dépendent de l'objet.
-     * @param[out] elem Document XML où l'élément est rajouté.
-     * @details Note : L'élément n'est pas inséré afin de laisser libre le choix de l'emplacement.
+     * @param[out] dom Document XML où l'élément est rajouté.
      */
     QDomElement toXML(QDomDocument *dom) const;
 
@@ -84,7 +91,7 @@ public:
 
     /**
      * @brief Setter
-     * @param Nouveau nom du niveau.
+     * @param name Nouveau nom du niveau.
      */
     void setName(const QString &name);
 
@@ -222,13 +229,13 @@ public:
 
     /**
      * @brief Setter
-     * @param emptyTileTexture Index de la texture des cases avec pastilles.
+     * @param pelletTileTexture Index de la texture des cases avec pastilles.
      */
     void setPelletTileTexture(int pelletTileTexture);
 
     /**
      * @brief Setter
-     * @param emptyTileTexture Index de la texture des cases avec énergisant.
+     * @param energizerTileTexture Index de la texture des cases avec énergisant.
      */
     void setEnergizerTileTexture(int energizerTileTexture);
 

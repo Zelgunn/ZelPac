@@ -26,21 +26,58 @@ public:
     explicit NewLevelDialog(bool previousGridAvailable, QWidget *parent = 0);
 
     /**
-     *
+     * Destructeur de NewLevelDialog
      */
     ~NewLevelDialog();
 
+    /**
+     * @brief Getter
+     * @return Taille de la grille (nombre de case).
+     */
     QSize gridSize() const;
+
+    /**
+     * @brief Getter
+     * @return Nombre de case en largeur.
+     */
     int tileCountWidth() const;
+
+    /**
+     * @brief Getter
+     * @return Nombre de case en hauteur.
+     */
     int tileCountHeight() const;
+
+    /**
+     * @brief Getter
+     * @return Taille d'une case (en pixels).
+     */
     int tileSize() const;
+
+    /**
+     * @brief Getter
+     * @return Nom du niveau.
+     */
     QString levelName() const;
+
+    /**
+     * @brief Getter
+     * @return Vrai si l'option "Utiliser grille précédente" a été cochée, Faux sinon.
+     */
     bool usePreviousGrid() const;
 
 private slots:
+
+    /**
+     * @brief Bloque le reste de l'UI si le nom du niveau n'est pas renseigné.
+     */
     void on_levelNameLineEdit_textChanged(const QString &);
 
 private:
+
+    /**
+     * @brief Fichier d'interface de la fenêtre.
+     */
     Ui::NewLevelDialog *ui;
 };
 

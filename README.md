@@ -1,6 +1,7 @@
 # ZelPac
 
 Zelpac is a very simple game of Pacman made with Qt, coming with a level editor.
+For for information about the project itself, you will find a Doxygen documentation with it.
 
 Includes :
 

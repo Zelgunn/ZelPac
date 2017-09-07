@@ -52,7 +52,5 @@ RESOURCES += \
 win32:CONFIG(debug, debug|release): LIBS += -LD:/SFML/lib/ -lsfml-system-d -lsfml-graphics-d -lsfml-window-d
 else:win32:CONFIG(release, debug|release): LIBS += -LD:/SFML/lib/ -lsfml-system -lsfml-graphics -lsfml-window
 
-#MSVC_2012_64
-
 INCLUDEPATH += D:/SFML/include
 DEPENDPATH += D:/SFML/include

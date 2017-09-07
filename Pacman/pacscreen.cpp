@@ -24,7 +24,7 @@ Pacscreen::Pacscreen(QString dataFile, QWidget *parent) :
 
     m_playlist = new QMediaPlaylist;
     m_playlist->setPlaybackMode(QMediaPlaylist::Loop);
-    m_playlist->addMedia(QUrl("qrc:/sounds/sounds/Get Jinxed.mp3"));
+    m_playlist->addMedia(QUrl("qrc:/sounds/sounds/Music (Bensound).mp3"));
     m_audioPlayer->setVolume(50);
 
     m_audioPlayer->setPlaylist(m_playlist);

@@ -24,7 +24,7 @@ Music: [Bensound - Happy rock](www.bensound.com)
 
 ## Requierements
 
-- [SFML] (https://www.sfml-dev.org/download/sfml/2.4.2/index-fr.php)
+- [SFML](https://www.sfml-dev.org/download/sfml/2.4.2/index-fr.php)
 
 ## Build instructions
 

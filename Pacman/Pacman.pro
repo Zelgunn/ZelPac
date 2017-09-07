@@ -49,10 +49,10 @@ FORMS    +=
 RESOURCES += \
     depedencies.qrc
 
-win32:CONFIG(release, debug|release): LIBS += -LC:/SFML/MinGW/lib/ -lsfml-system-d -lsfml-graphics-d -lsfml-window-d
-else:win32:CONFIG(debug, debug|release): LIBS += -LC:/SFML/MinGW/lib/ -lsfml-system -lsfml-graphics -lsfml-window
+win32:CONFIG(debug, debug|release): LIBS += -LD:/SFML/lib/ -lsfml-system-d -lsfml-graphics-d -lsfml-window-d
+else:win32:CONFIG(release, debug|release): LIBS += -LD:/SFML/lib/ -lsfml-system -lsfml-graphics -lsfml-window
 
 #MSVC_2012_64
 
-INCLUDEPATH += C:/SFML/MinGW/include
-DEPENDPATH += C:/SFML/MinGW/include
+INCLUDEPATH += D:/SFML/include
+DEPENDPATH += D:/SFML/include

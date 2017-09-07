@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
  <TileSize value="24"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Double_Bas_Droite.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Double_Bas_Gauche.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Double_Haut_Droite.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Double_Haut_Gauche.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Simple_Bas_Droite.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Simple_Bas_Gauche.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Simple_Gaut_Droite.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Corner_Simple_Haut_Gauche.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Door.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Empty_Tile.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Energizer_Tile.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Horizontal_Double_Bas.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Horizontal_Double_Haut.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Horizontal_Simple.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Pellet_Tile.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Vertical_Double_Droit.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Vertical_Double_Gauche.png"/>
- <Texture filename="C:/Users/degva_000/Documents/C++/ZelPac/LevelEditor/images/Vertical_Simple.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Corner_Double_Bas_Droite.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Corner_Double_Bas_Gauche.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Corner_Double_Haut_Droite.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Corner_Double_Haut_Gauche.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Corner_Simple_Bas_Droite.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Corner_Simple_Bas_Gauche.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Corner_Simple_Gaut_Droite.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Corner_Simple_Haut_Gauche.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Door.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Empty_Tile.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Energizer_Tile.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Horizontal_Double_Bas.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Horizontal_Double_Haut.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Horizontal_Simple.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Pellet_Tile.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Vertical_Double_Droit.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Vertical_Double_Gauche.png"/>
+ <Texture filename="D:/Zelgunn/Documents/GitHub/ZelPac/LevelEditor/images/Vertical_Simple.png"/>
  <Level name="Niveau 1">
   <Grid>
    <TileCount height="31" width="28"/>

@@ -2,7 +2,7 @@
 Includes :
 
 - A pacman game
-![Screenshot](Illustrations/My pacman.png)
+![Alt text](/Illustrations/My_pacman.png)
 
 - A level editor for the pacman game
 

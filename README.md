@@ -3,9 +3,13 @@
 Zelpac is a very simple game of Pacman made with Qt, coming with a level editor.
 For for information about the project itself, you will find a Doxygen documentation with it.
 
-Includes :
+## Table of contents
+[Content](#content)
+[Requirements](#requirements)
+[Build instructions](#build-instructions)
 
-- A pacman game
+## Content
+1) A pacman game
 
 Ghosts behave the same way they did in the original version.
 There is currenlty only one level available and no fruits.
@@ -16,7 +20,7 @@ Music: [Bensound - Happy rock](www.bensound.com)
 
 ![Alt text](/Illustrations/My_pacman.png)
 
-- A level editor for the pacman game (in French)
+2) A level editor for the pacman game (in French)
 	- You can change the textures used for the tiles and for the dots
 	- You can change difficulty (by changing Pacman and Ghosts' speed)
 	- You can change timers used by ghosts (to switch between Dispersion and Chasing)

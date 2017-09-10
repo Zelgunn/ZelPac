@@ -6,7 +6,7 @@ For for information about the project itself, you will find a Doxygen documentat
 ## Table of contents
 [Content](#content)  
 [Requirements](#requirements)  
-[Build instructions](#build-instructions)
+[Build instructions](#build-instructions)  
 
 ## Content
 1) A pacman game
